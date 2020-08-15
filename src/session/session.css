@@ -1,0 +1,52 @@
+.postCard{
+    width: auto;
+    margin: auto;
+    border: 1px solid #eee;
+    box-shadow: 2px 2px 3px;
+    padding: 16px;
+    text-align: left;
+    background-color: rgba(243, 239, 239, 0);
+}
+.sub{
+    width: auto;
+    margin: auto;
+    border: 5px solid #eee;
+    box-shadow: 2px 2px 3px;
+    padding: 10px;
+    text-align: left;
+    background-color: antiquewhite;
+    display: flex;
+    
+}
+.forbuttons{
+    display: flex;
+    margin-right: 50px;
+
+}
+
+p{
+    margin: 1px;
+}
+
+.hyper{
+    margin-left: 1px;
+}
+.button {
+    background-color: lightblue;
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 70%;
+  }
+
+.part{
+    display: flex;
+
+}
+ 
