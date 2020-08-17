@@ -27,10 +27,7 @@ const postCard=(props)=>{
           email.then((result)=>{
               console.log(result.status)
               if(result.status==='200'){
-                return (<div class="alert success">
-                <span class="closebtn">&times;</span>  
-                <strong>Success!</strong> Indicates a successful or positive action.
-              </div>)
+
               }
           }).catch((e)=>{
             console.log('error')
@@ -45,7 +42,7 @@ const postCard=(props)=>{
          <p> <b>description :</b>{props.description}</p>
          <p> <b>date :</b>{props.date}</p>
          </div>
-         <div><button className="button" onClick={triggerEmail}>send email</button></div>
+         <div><button className="button" onClick={triggerEmail}>Notify</button></div>
          </div>
          <div>{sub}</div>
 

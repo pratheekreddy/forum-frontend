@@ -15,7 +15,7 @@
     padding: 10px;
     text-align: left;
     background-color: antiquewhite;
-    display: flex;
+
     
 }
 .forbuttons{
@@ -27,9 +27,14 @@
 p{
     margin: 1px;
 }
+a{
+    padding: 6px;
+}
 
 .hyper{
-    margin-left: 1px;
+    margin-left: 5px;
+    padding: 2px;
+    display: flex;
 }
 .button {
     background-color: lightblue;

@@ -15,17 +15,21 @@ class App extends Component {
   //   // this.state.persons[0].name='gautam'
   //   this.setState({persons:[{name:'gautam',age:22},{name:'hartheek',age:33}]})
   // }
-  componentDidMount(){
-    const post=axios.get('https://cors-anywhere.herokuapp.com/https://bvirvg1malxybxpacap-njs-forum-srv.cfapps.us10.hana.ondemand.com/agenda/sessions?$expand=topics');
-    post.then((result)=>{
 
-      // console.log(result,result.data)
-      // console.log('respose')
-      this.setState({session:result.data.value})
- 
-    }).catch((e)=>{
-      this.setState({session:[]})
-    })
+ reset=()=>{
+  const post=axios.get('https://cors-anywhere.herokuapp.com/https://bvirvg1malxybxpacap-njs-forum-srv.cfapps.us10.hana.ondemand.com/agenda/sessions?$expand=topics');
+  post.then((result)=>{
+
+    // console.log(result,result.data)
+    // console.log('respose')
+    this.setState({session:result.data.value})
+
+  }).catch((e)=>{
+    this.setState({session:[]})
+  })
+  }
+  componentDidMount(){
+    this.reset()
   }
 
   state={session:[
@@ -67,6 +71,32 @@ showSessions:false
       )
     //}
 
+    let timeout =  0;
+
+        //search 
+    let search=(value)=>{
+      if(value.length!==0){
+    if(timeout) clearTimeout(timeout);
+
+    timeout = setTimeout(() => {
+      
+      let search=axios.get('https://cors-anywhere.herokuapp.com/https://zrfwopzy3iqv2cwirum-rbei-cap-node.cfapps.us10.hana.ondemand.com/search?search='+value);
+      search.then((result)=>{
+        console.log('this is results',result)
+        this.setState({session:result.data})
+        
+      }).catch((e)=>{
+        console.log('error')
+        this.setState({session:[]})
+      })
+      console.log(value)
+    }, 600);
+  }
+  else {console.log('else')
+  this.reset()
+}
+    }
+
     return (
       <div>
 
@@ -75,7 +105,10 @@ showSessions:false
         <h1>Sessions</h1>
         {/* uncomment button and if statement for toggle option */}
         {/* <button onClick={this.display}>toggle sessions</button> */}
-        
+        <input
+          placeholder="search topics"
+          onChange={event=>search(event.target.value)}
+        />
           {session}
         
        </div>
@@ -83,7 +116,6 @@ showSessions:false
     );
   }
 }
-
 
 
 export default App;
