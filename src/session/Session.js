@@ -12,12 +12,12 @@ const postCard=(props)=>{
         {topics.map(topic=>{
           return <div >
           <SubTopic className="subtopic"
-          name={topic.user_email} 
-          sub_topic={topic.sub_topic } 
-          key={topic.sub_topic_id}
-          file1={topic.file_01}
-          file2={topic.file_02}
-          file3={topic.file_03}
+          name={topic.USER_EMAIL} 
+          sub_topic={topic.SUB_TOPIC } 
+          key={topic.SUB_TOPIC_ID}
+          file1={topic.FILE_01}
+          file2={topic.FILE_02}
+          file3={topic.FILE_03}
           /> </div>
         })}
           </div>
