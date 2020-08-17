@@ -102,10 +102,10 @@ showSessions:false
 
        <div className="App">
       
-        <h1>Sessions</h1>
+        <h1 class = 'main-heading'>Sessions</h1>
         {/* uncomment button and if statement for toggle option */}
         {/* <button onClick={this.display}>toggle sessions</button> */}
-        <input
+        <input class = 'search'
           placeholder="search topics"
           onChange={event=>search(event.target.value)}
         />

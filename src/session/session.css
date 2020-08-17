@@ -1,7 +1,22 @@
+body {
+    background-color: #fadcac;
+}
+
+.main-heading {
+    color: #158467;
+    font-family:'Roboto',sans-serif;
+}
+
+.search {
+    font-family: 'Roboto',sans-serif;
+    border: 0.3em solid #FFFFFF;
+    font-weight: 600;
+}
+
 .postCard{
     width: auto;
     margin: auto;
-    border: 1px solid #eee;
+    border: 1px solid #d3c09a;
     box-shadow: 2px 2px 3px;
     padding: 16px;
     text-align: left;
@@ -37,18 +52,27 @@ a{
     display: flex;
 }
 .button {
-    background-color: lightblue;
-    border: none;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 12px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 70%;
+    background-color: #fadcac;
+    width: 100px;
+    height: 50px;
+    border:0.3em solid #FFFFFF;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    margin:0.3em;
+    color: #197163;
+    font-family:'Roboto',sans-serif;
+    font-weight:500;
+    font-size: medium;
+    text-align : center; 
+    padding: 0.35em 1.2em;
+    transition: all 0.1s;
   }
+
+  .button:hover{
+    color: #000000;
+    background-color: #FFFFFF;
+
+    }
 
 .part{
     display: flex;
