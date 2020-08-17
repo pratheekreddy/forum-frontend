@@ -11,7 +11,7 @@ body {
     font-family: 'Roboto',sans-serif;
     border: 0.3em solid #FFFFFF;
     font-weight: 500;
-    margin : 1em
+    margin : 1em;
 }
 
 .postCard{
@@ -21,7 +21,6 @@ body {
     box-shadow: 2px 2px 3px;
     padding: 16px;
     text-align: left;
-    overflow: hidden;
 }
 .sub{
     width: auto;

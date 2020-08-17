@@ -38,9 +38,9 @@ const postCard=(props)=>{
         <div className="postCard">
         <div className="forbuttons">
         <div>
-         <p><b>session:</b> {props.title}</p>
-         <p> <b>description :</b>{props.description}</p>
-         <p> <b>date :</b>{props.date}</p>
+         <p><b>Session:</b> {props.title}</p><br/>
+         <p><b>Description :</b>{props.description}</p><br/>
+         <p><b>Date :</b>{props.date}</p><br/>
          </div>
          <div><button className="button" onClick={triggerEmail}>Notify</button></div>
          </div>

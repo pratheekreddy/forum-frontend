@@ -4,8 +4,19 @@ const subTopic=(props)=>{
     // console.log(props)
     let file1,file2,file3
     return(<div className="sub">
-        <div><p>topic:{props.sub_topic}</p>
-        <p>presentor :{props.name}</p>
+        <div>
+        <table>
+        <tr>
+            <td><p>Topic</p></td>
+            <td><p>Presentor</p></td>
+        </tr>
+        <tr>
+            
+            <td>{props.sub_topic}</td>
+            <td>{props.name}</td>
+        </tr>
+        </table>
+        
         </div>
         <div className="hyper">
         <a href="https://kp9jdncx7nlupys6bei-cap-njs-reuse.cfapps.us10.hana.ondemand.com/bulk/sample">file 1</a><br/>
