@@ -17,7 +17,7 @@ class App extends Component {
   // }
 
  reset=()=>{
-  const post=axios.get('https://cors-anywhere.herokuapp.com/https://bvirvg1malxybxpacap-njs-forum-srv.cfapps.us10.hana.ondemand.com/agenda/sessions?$expand=topics');
+  const post=axios.get('https://cors-anywhere.herokuapp.com/https://bvirvg1malxybxpacap-njs-forum-srv.cfapps.us10.hana.ondemand.com/agenda/sessions?$expand=TOPICS');
   post.then((result)=>{
 
     // console.log(result,result.data)
@@ -58,13 +58,14 @@ showSessions:false
         <div >
         {console.log('div',this.state.session)}
         {this.state.session.map(sessions=>{
+          {console.log(sessions.ID)}
           return <div><PostCard className="postCard"
-          title={sessions.title} 
-          description={sessions.desc } 
-          date={sessions.date}
-          key={sessions.id}
-          session_id={sessions.id}
-          topics={sessions.topics}
+          title={sessions.TITLE} 
+          description={sessions.DESC } 
+          date={sessions.DATE}
+          key={sessions.ID}
+          session_id={sessions.ID}
+          topics={sessions.TOPICS}
           > </PostCard></div>
         })}
           </div>
@@ -80,7 +81,7 @@ showSessions:false
 
     timeout = setTimeout(() => {
       
-      let search=axios.get('https://cors-anywhere.herokuapp.com/https://zrfwopzy3iqv2cwirum-rbei-cap-node.cfapps.us10.hana.ondemand.com/search?search='+value);
+      let search=axios.get('https://zrfwopzy3iqv2cwirum-rbei-cap-node.cfapps.us10.hana.ondemand.com/search?search='+value);
       search.then((result)=>{
         console.log('this is results',result)
         this.setState({session:result.data})
