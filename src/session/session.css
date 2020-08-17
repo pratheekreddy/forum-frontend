@@ -10,17 +10,18 @@ body {
 .search {
     font-family: 'Roboto',sans-serif;
     border: 0.3em solid #FFFFFF;
-    font-weight: 600;
+    font-weight: 500;
+    margin : 1em
 }
 
 .postCard{
     width: auto;
-    margin: auto;
-    border: 1px solid #d3c09a;
+    margin: 10px;
+    border: 0.3em solid #065446;
     box-shadow: 2px 2px 3px;
     padding: 16px;
     text-align: left;
-    background-color: rgba(243, 239, 239, 0);
+    overflow: hidden;
 }
 .sub{
     width: auto;
@@ -52,14 +53,14 @@ a{
     display: flex;
 }
 .button {
-    background-color: #fadcac;
+    background-color: #065446;
     width: 100px;
     height: 50px;
     border:0.3em solid #FFFFFF;
     border-radius:0.12em;
     box-sizing: border-box;
     margin:0.3em;
-    color: #197163;
+    color: #fadcac;
     font-family:'Roboto',sans-serif;
     font-weight:500;
     font-size: medium;
