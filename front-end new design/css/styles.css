@@ -77,9 +77,11 @@ h6 {
     margin-inline-end: 1.5em;
 }
 
-.resources-heading {
-    margin-block-start: 0.35em;
+.resources-button {
+    margin-block-start: 0em;
     margin-block-end: 0.35em;
+    margin-inline-start: 2em;
+    margin-inline-end: 2.5em;
 }
 
 /* .presenter-list:hover + .ordered-list {
@@ -117,12 +119,13 @@ h6 {
   color: #fff;
 }
 
-.rb-button--tertiary:hover {
+.rb-button--secondary:hover {
   color: #7fc6e7;
+  border-color: #7fc6e7;
 }
 
-.rb-button--secondary:hover {
-    background-color: #7fc6e7;
+.rb-button--primary:hover {
+    background-color: #7FC6E7;
     color : #fff;
   }
 
@@ -157,9 +160,10 @@ h6 {
   color: #000000;
   display: none;
   margin-block-start: 0.5em;
+  margin-inline-start: 1.5em;
 }
 
-.resources-heading:hover + .unordered-list {
+.resources-button:hover + .unordered-list {
   display: block;
 }
 ul li {
