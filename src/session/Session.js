@@ -23,7 +23,7 @@ const postCard=(props)=>{
           </div>
       )
       let triggerEmail=()=>{
-        const email=axios.get('https://cors-anywhere.herokuapp.com/https://zrfwopzy3iqv2cwirum-rbei-cap-node.cfapps.us10.hana.ondemand.com/publishagenda?session_id='+props.session_id);
+        const email=axios.get('https://cors-anywhere.herokuapp.com/https://i4jihdlx4gjr0iuaum-rbei-njs-forum.cfapps.us10.hana.ondemand.com/publishagenda?session_id='+props.session_id);
           email.then((result)=>{
               console.log(result.status)
               if(result.status==='200'){
@@ -38,9 +38,9 @@ const postCard=(props)=>{
         <div className="postCard">
         <div className="forbuttons">
         <div>
-         <p><b>Session:</b> {props.title}</p><br/>
-         <p><b>Description :</b>{props.description}</p><br/>
-         <p><b>Date :</b>{props.date}</p><br/>
+         <p><b>session: </b> {props.title}</p>
+         <p> <b>description : </b>{props.description}</p>
+         <p> <b>date : </b>{props.date}</p>
          </div>
          <div><button className="button" onClick={triggerEmail}>Notify</button></div>
          </div>

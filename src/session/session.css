@@ -11,13 +11,14 @@ body {
     font-family: 'Roboto',sans-serif;
     border: 0.3em solid #FFFFFF;
     font-weight: 500;
-    margin : 1em;
+    margin : 1em
 }
 
 .postCard{
     width: 80%;
     padding: 16px;
     text-align: left;
+    overflow: hidden;
 }
 .sub{
     width: auto;
@@ -63,6 +64,7 @@ a{
     text-align : center; 
     padding: 0.35em 1.2em;
     transition: all 0.1s;
+    cursor: pointer;
   }
 
   .button:hover{

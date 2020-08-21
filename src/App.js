@@ -6,27 +6,19 @@ import './session/session.css'
 import axios from 'axios';
 
 class App extends Component {
-  // state={
-  //   persons:[{name:'pratheek',age:22},{name:'hartheek',age:1}]
-  // }
-
-  // switchnameHandler=()=>{
-  //   // console.log('was clicked')
-  //   // this.state.persons[0].name='gautam'
-  //   this.setState({persons:[{name:'gautam',age:22},{name:'hartheek',age:33}]})
-  // }
 
  reset=()=>{
-  const post=axios.get('https://cors-anywhere.herokuapp.com/https://jcd3kdanmie5ahu9cap-njs-forum-srv.cfapps.eu10.hana.ondemand.com/agenda/sessions?$expand=TOPICS');
+  const post=axios.get('https://cors-anywhere.herokuapp.com/https://0ze03xvnwoa4ncstcap-njs-forum-srv.cfapps.eu10.hana.ondemand.com/agenda/sessions?$expand=TOPICS,FILES');
   post.then((result)=>{
 
-    // console.log(result,result.data)
-    // console.log('respose')
+    // console.log(result.data)
     this.setState({session:result.data.value})
 
   }).catch((e)=>{
     this.setState({session:[]})
   })
+
+
   }
   componentDidMount(){
     this.reset()
@@ -44,10 +36,6 @@ showSessions:false
   display=()=>{
     const status=this.state.showSessions
     this.setState({showSessions:!status})
-  }
-
-  deleteSession=()=>{
-
   }
 
   render() {
@@ -81,7 +69,7 @@ showSessions:false
 
     timeout = setTimeout(() => {
       
-      let search=axios.get('https://zrfwopzy3iqv2cwirum-rbei-cap-node.cfapps.us10.hana.ondemand.com/search?search='+value);
+      let search=axios.get('https://i4jihdlx4gjr0iuaum-rbei-njs-forum.cfapps.us10.hana.ondemand.com/search?search='+value);
       search.then((result)=>{
         console.log('this is results',result)
         this.setState({session:result.data})
