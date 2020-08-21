@@ -45,7 +45,6 @@ const postCard=(props)=>{
          <div><button className="button" onClick={triggerEmail}>Notify</button></div>
          </div>
          <div>{sub}</div>
-
         </div>
     )
 }

@@ -17,7 +17,7 @@ class App extends Component {
   // }
 
  reset=()=>{
-  const post=axios.get('https://cors-anywhere.herokuapp.com/https://bvirvg1malxybxpacap-njs-forum-srv.cfapps.us10.hana.ondemand.com/agenda/sessions?$expand=TOPICS');
+  const post=axios.get('https://cors-anywhere.herokuapp.com/https://jcd3kdanmie5ahu9cap-njs-forum-srv.cfapps.eu10.hana.ondemand.com/agenda/sessions?$expand=TOPICS');
   post.then((result)=>{
 
     // console.log(result,result.data)

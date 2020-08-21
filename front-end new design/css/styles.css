@@ -1,0 +1,134 @@
+h1 {
+  color: #000000;
+  background-color: #ffffff;
+  font-family: Bosch Sans;
+  font-size: 48px;
+  line-height: 52px;
+  font-weight: 200;
+}
+
+h3 {
+    color: #000000;
+    background-color: #ffffff;
+    font-family: Bosch Sans;
+    font-size: 28px;
+    line-height: 32px;
+    font-weight: 200;
+  }
+
+
+h4 {
+    color: #000000;
+    background-color: #ffffff;
+    font-family: Bosch Sans;
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 200;
+  }
+
+  h6 {
+    color: #000000;
+    background-color: #ffffff;
+    font-family: Bosch Sans;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 200;
+  }
+
+.postcard {
+    border-bottom : solid 1px #ccc;
+    align-content: flex-start;
+}
+
+.content {
+    color: #000000;
+    background-color: #ffffff;
+    font-family: Bosch Sans;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 200;
+}
+
+.presenter-list {
+    margin-block-start: 1em;
+    margin-block-end: 0.5em;
+    display: inline-block;
+}
+
+.presenter-list:hover + .ordered-list {
+    display: block;
+}
+
+.rb-button {
+    appearance: none;
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity cubic-bezier(0.38, 0.04, 0.35, 0.96) 600ms;
+    border: 1px solid transparent;
+    border-radius: 0;
+    cursor: pointer;
+    padding-top: 0;
+    padding-bottom: 0;
+    text-decoration: none;
+    font-weight: 300;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding-right: 16px;
+    padding-left: 16px;
+    height: 48px;
+    font-size: 16px;
+    margin-bottom : 5px;
+}
+
+.rb-button--primary {
+    border-color: #005691;
+    background-color: #005691;
+    color: #fff;
+}
+
+.rb-button--primary:hover { 
+    background-color:#7FC6E7;
+    color : #ffffff;
+}
+
+.rb-button--tertiary:hover { 
+    color:#7FC6E7;
+
+}
+
+.rb-button--secondary {
+    border-color: #005691;
+    background-color: transparent;
+    color: #005691
+}
+
+.rb-button--tertiary {
+    border-color: transparent;
+    background-color: transparent;
+    color: #005691;
+}
+
+.ordered-list {
+    font-family: Bosch Sans;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 200;
+    color : #000000;
+    display: none;
+}
+
+.unordered-list {
+    font-family: Bosch Sans;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 200;
+    color : #000000;
+
+}
+ul li{
+    list-style-type: square;
+}

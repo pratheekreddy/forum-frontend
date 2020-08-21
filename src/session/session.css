@@ -1,9 +1,9 @@
 body {
-    background-color: #fadcac;
+    background-color: #e0ece4;
 }
 
 .main-heading {
-    color: #158467;
+    color: #797a7e;
     font-family:'Roboto',sans-serif;
 }
 
@@ -15,10 +15,7 @@ body {
 }
 
 .postCard{
-    width: auto;
-    margin: 10px;
-    border: 0.3em solid #065446;
-    box-shadow: 2px 2px 3px;
+    width: 80%;
     padding: 16px;
     text-align: left;
 }
