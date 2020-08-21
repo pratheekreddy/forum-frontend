@@ -8,6 +8,16 @@ h1 {
   text-align: center;
 }
 
+h2 {
+    color: #000000;
+    background-color: #ffffff;
+    font-family: Bosch Sans;
+    font-size: 36px;
+    line-height: 40px;
+    font-weight: 200;
+    text-align: center;
+  }
+
 h3 {
   color: #000000;
   background-color: #ffffff;
