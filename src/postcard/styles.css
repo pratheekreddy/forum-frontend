@@ -118,6 +118,17 @@ h6 {
   color: #fff;
 }
 
+.resources-button {
+  margin-block-start: 0em;
+  margin-block-end: 0.35em;
+  margin-inline-start: 2em;
+  margin-inline-end: 2.5em;
+}
+
+.resources-button:hover + .unordered-list {
+  display: block;
+}
+
 .rb-button--tertiary:hover {
   color: #7fc6e7;
 }

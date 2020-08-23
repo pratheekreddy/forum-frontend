@@ -1,26 +1,36 @@
 import React from "react";
-import axios from "axios";
 import "./header.css";
 import "./styles.css";
-import logo from "./bosch_logo.jpg";
 
 const postCard = (props) => {
     // console.log(props.topics)
     let topics=[]
     let presento=[]
+    let resorc=[]
     for(let i=0;i<props.topics.length;i++){
         topics.push(props.topics[i].SUB_TOPIC)
         presento.push(props.topics[i].USER_EMAIL)
     }
+    for(let j=0;j<props.files.length;j++){
+      resorc.push([props.files[j].FILE_NAME.split('-')[1],props.files[j].FILE_NAME])
+    }
     let presentors=[...new Set(presento)]
     let str=topics.toString()
-    // console.log('hello',presentors)
+
     let list=(
         <ol className="ordered-list">
             {presentors.map((presontor,i)=>{
                    return <li key={i}>{presontor}</li>
                 })}
         </ol>
+    )
+
+    let download=(
+      <ul className='unordered-lis'>
+          {resorc.map((down,i)=>{
+            return <li key={i}><a href={"https://0appkh5ipbo57270um-rbei-njs-forum.cfapps.eu10.hana.ondemand.com/file/download?filename="+down[1]}>{down[0]}</a></li>
+          })}
+      </ul>
     )
 
   return (
@@ -45,9 +55,10 @@ const postCard = (props) => {
             {list}        
           </div>
           <div className="resources">
-            <button className="rb-button rb-button--primary resources-button">
+            <button className="rb-button rb-button--primary resources-button" >
               View Resources
             </button>
+            {download}
             {/* list of files */}
           </div>
 
