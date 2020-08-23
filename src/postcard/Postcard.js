@@ -1,4 +1,5 @@
 import React from "react";
+
 import "./header.css";
 import "./styles.css";
 
@@ -32,7 +33,7 @@ const postCard = (props) => {
           })}
       </ul>
     )
-
+          console.log(props.showPopup )
   return (
     <div>
       <div className="postcard">
