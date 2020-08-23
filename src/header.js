@@ -6,7 +6,7 @@ const header=()=>{
     return(
         <div>
         <header className="class">
-        <img className="img" src={logo}></img>   
+        <img className="img" src={logo} alt="Bosch Logo"></img>   
         </header>
         <h1 className = 'application-name'>Forum Feed</h1>
         </div>

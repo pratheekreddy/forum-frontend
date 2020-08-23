@@ -1,10 +1,11 @@
 import React from "react";
+import axios from 'axios'
 
 import "./header.css";
 import "./styles.css";
 
 const postCard = (props) => {
-    // console.log(props.topics)
+
     let topics=[]
     let presento=[]
     let resorc=[]
@@ -33,7 +34,28 @@ const postCard = (props) => {
           })}
       </ul>
     )
-          console.log(props.showPopup )
+          let file
+      let formSubmit=(e)=>{
+        e.preventDefault();
+        const formData = new FormData();
+        formData.append('files',file);
+        formData.append('session_id',props.session_id)
+        const config = {
+            headers: {
+                'content-type': 'multipart/form-data'
+            }
+        };
+        axios.post("https://0appkh5ipbo57270um-rbei-njs-forum.cfapps.eu10.hana.ondemand.com/file/upload",formData,config)
+            .then((response) => {
+                alert("The file is successfully uploaded");
+            }).catch((error) => {
+        });
+      }
+      
+      let onChange=(e)=>{
+        file=e.target.files[0]
+      }
+
   return (
     <div>
       <div className="postcard">
@@ -63,11 +85,12 @@ const postCard = (props) => {
             {/* list of files */}
           </div>
 
-          <div className="upload">
-            <button className="rb-button rb-button--secondary">
-              Upload Files
-            </button>
-          </div>
+          <div className='upload'>
+                <form onSubmit={formSubmit}> 
+                    <button className='rb-button rb-button--secondary'>Upload Files</button>
+                    <input multiple type="file" name="files" onChange={onChange}/>
+                </form>
+            </div>
         </div>
       </div>
 
