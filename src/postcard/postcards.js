@@ -14,6 +14,8 @@ const postcards=(props)=>{
             session_id={sessions.ID}
             topics={sessions.TOPICS}
             files={sessions.FILES}
+            showPopup={props.showPopup}
+            toggle={props.toggle}
             > </Postcard>
           })
     )
