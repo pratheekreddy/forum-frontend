@@ -40,6 +40,14 @@ h4 {
     margin-block-end: 2em;
 }
 
+.session-heading {
+  display : inline-block;
+}
+
+.session-date {
+  display : inline-block;
+}
+
 h6 {
   color: #000000;
   background-color: #ffffff;
@@ -186,5 +194,5 @@ ul li {
 }
 
 .admin-notify{
-    display: none;
+    display: inline-block;
 }
