@@ -197,7 +197,7 @@ ul li {
     display: inline-block;
 }
 
-.file {
+/* .file::before {
   appearance: none;
   box-sizing: border-box;
   display: inline-flex;
@@ -220,8 +220,29 @@ ul li {
   height: 48px;
   font-size: 16px;
   margin-bottom: 5px;
+  border-color: #005691;
+  background-color: transparent;
+  color: #005691;
+  font-family: Bosch Sans;
+} */
+
+input[type='file'] {
+  display: none;
+}
+
+.custom-file-upload {
+  padding-right: 16px;
+  padding-left: 16px;
+  height: 48px;
+  font-size: 16px;
+  margin-bottom: 5px;
   border-color: transparent;
   background-color: transparent;
   color: #005691;
   font-family: Bosch Sans;
+  cursor : pointer;
+}
+
+.custom-file-upload:hover {
+  color : #7fc6e7
 }
