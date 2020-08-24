@@ -29,7 +29,7 @@ const PostCard = (props, state) => {
     <ul className="downloads">
       {resorc.map((down, i) => {
         const tempName = down[0].split('.');
-        return <li key={i}><a target="_blank" href={"https://0appkh5ipbo57270um-rbei-njs-forum.cfapps.eu10.hana.ondemand.com/file/download?filename=" + down[1]}><span>{tempName[1]}</span>{tempName[0]}</a></li>
+        return <li key={i}><a target="_blank" rel="noopener noreferrer" href={"https://0appkh5ipbo57270um-rbei-njs-forum.cfapps.eu10.hana.ondemand.com/file/download?filename=" + down[1]}><span>{tempName[1]}</span>{tempName[0]}</a></li>
       })}
     </ul>
   )
