@@ -1,0 +1,160 @@
+@import "./../reset.css";
+
+.card {
+  width: 980px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 15px;
+  margin-bottom: 15px;
+  transition: all 0.5s;
+  border: 1.5px solid #fff;
+  &:focus,
+  &:active,
+  &:hover {
+    border: 1.5px solid #eee;
+    box-shadow: 0 8px 6px -6px #aaa;
+    border-radius: 5px;
+    .head {
+      label {
+        color: #e9e9e9;
+        background: #005691;
+      }
+    }
+    strong,
+    i {
+      color: #005691 !important;
+    }
+  }
+  .head {
+    label {
+      display: inline-block;
+      width: 35px;
+      height: 35px;
+      text-align: center;
+      background: #e9e9e9;
+      border-radius: 50%;
+      line-height: 35px;
+      font-size: 14px;
+      transition: all 0.5s;
+    }
+    strong {
+      font-size: 24px;
+      vertical-align: sub;
+      margin: 0 10px;
+      width: calc(100% - 135px);
+      display: inline-block;
+    }
+    span {
+      font-size: 14px;
+    }
+  }
+  .desc {
+    margin-left: 45px;
+    color: #868686;
+    font-size: 14px;
+  }
+  .presenters {
+    margin-left: 45px;
+    font-size: 14px;
+    display: inline-block;
+    margin: 10px 0 10px 45px;
+    h5 {
+      font-size: 14px;
+    }
+    li {
+      color: #868686;
+      line-height: 20px;
+    }
+  }
+  .resources {
+    margin-right: 10px;
+    font-size: 14px;
+    float: right;
+    i {
+      width: 35px;
+      height: 35px;
+      font-size: 35px;
+      float: left;
+      cursor: pointer;
+    }
+  }
+
+  .downloads {
+    margin-left: 35px;
+    li {
+      display: inline-block;
+      padding: 5px;
+      a {
+        display: inline-block;
+        padding: 5px;
+        font-size: 14px;
+        color: #005691;
+        vertical-align: sub;
+        span {
+          background: #005691;
+          text-decoration: none;
+          color: #fff;
+          margin-right: 5px;
+          padding: 2px;
+          font-size: 10px;
+        }
+      }
+    }
+  }
+
+  .upload {
+    float: right;
+    form {
+      i {
+        width: 35px;
+        height: 35px;
+        font-size: 35px;
+        float: left;
+        cursor: pointer;
+      }
+      input {
+        opacity: 0;
+        width: 35px;
+        height: 35px;
+        float: left;
+        margin-left: -35px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .admin-notify {
+    float: right;
+  }
+
+  .rb-button {
+    appearance: none;
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity cubic-bezier(0.38, 0.04, 0.35, 0.96) 600ms;
+    border: 1px solid transparent;
+    border-radius: 0;
+    cursor: pointer;
+    padding-top: 0;
+    padding-bottom: 0;
+    text-decoration: none;
+    font-weight: 300;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding-right: 16px;
+    padding-left: 16px;
+    height: 48px;
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+
+  .rb-button--primary {
+    border-color: #005691;
+    background-color: #005691;
+    color: #fff;
+  }
+}
