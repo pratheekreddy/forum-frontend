@@ -1,0 +1,3203 @@
+@font-face {
+  font-family: 'Bosch-Icon';
+  src:  url('fonts/Bosch-Icon.eot?uamm6a');
+  src:  url('fonts/Bosch-Icon.eot?uamm6a#iefix') format('embedded-opentype'),
+    url('fonts/Bosch-Icon.ttf?uamm6a') format('truetype'),
+    url('fonts/Bosch-Icon.woff?uamm6a') format('woff'),
+    url('fonts/Bosch-Icon.svg?uamm6a#Bosch-Icon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="boschicon-"], [class*=" boschicon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'Bosch-Icon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.boschicon-bosch-ic-3d-print:before {
+  content: "\e085";
+}
+.boschicon-bosch-ic-a-to-b:before {
+  content: "\e086";
+}
+.boschicon-bosch-ic-add:before {
+  content: "\e087";
+}
+.boschicon-bosch-ic-address-consumer-data:before {
+  content: "\e088";
+}
+.boschicon-bosch-ic-adress-book:before {
+  content: "\e089";
+}
+.boschicon-bosch-ic-agility:before {
+  content: "\e08a";
+}
+.boschicon-bosch-ic-alarm-clock:before {
+  content: "\e08b";
+}
+.boschicon-bosch-ic-ambulance:before {
+  content: "\e08c";
+}
+.boschicon-bosch-ic-analysis:before {
+  content: "\e08d";
+}
+.boschicon-bosch-ic-anchor:before {
+  content: "\e08e";
+}
+.boschicon-bosch-ic-arrow-down:before {
+  content: "\e08f";
+}
+.boschicon-bosch-ic-arrow-left:before {
+  content: "\e090";
+}
+.boschicon-bosch-ic-arrow-left-down:before {
+  content: "\e091";
+}
+.boschicon-bosch-ic-arrow-left-up:before {
+  content: "\e092";
+}
+.boschicon-bosch-ic-arrow-right:before {
+  content: "\e093";
+}
+.boschicon-bosch-ic-arrow-right-down:before {
+  content: "\e094";
+}
+.boschicon-bosch-ic-arrow-right-up:before {
+  content: "\e095";
+}
+.boschicon-bosch-ic-arrow-turn-left:before {
+  content: "\e096";
+}
+.boschicon-bosch-ic-arrow-turn-right:before {
+  content: "\e097";
+}
+.boschicon-bosch-ic-arrow-up:before {
+  content: "\e098";
+}
+.boschicon-bosch-ic-arrows:before {
+  content: "\e099";
+}
+.boschicon-bosch-ic-arrows-x-y-z:before {
+  content: "\e09a";
+}
+.boschicon-bosch-ic-artificial-intelligence:before {
+  content: "\e09b";
+}
+.boschicon-bosch-ic-assembly-line:before {
+  content: "\e09c";
+}
+.boschicon-bosch-ic-atom:before {
+  content: "\e09d";
+}
+.boschicon-bosch-ic-augmented-reality:before {
+  content: "\e09e";
+}
+.boschicon-bosch-ic-autobod:before {
+  content: "\e09f";
+}
+.boschicon-bosch-ic-back-left:before {
+  content: "\e0a0";
+}
+.boschicon-bosch-ic-back-left-double:before {
+  content: "\e0a1";
+}
+.boschicon-bosch-ic-bar-chart:before {
+  content: "\e0a2";
+}
+.boschicon-bosch-ic-bar-chart-double:before {
+  content: "\e0a3";
+}
+.boschicon-bosch-ic-battery-0:before {
+  content: "\e0a4";
+}
+.boschicon-bosch-ic-battery-1:before {
+  content: "\e0a5";
+}
+.boschicon-bosch-ic-battery-2:before {
+  content: "\e0a6";
+}
+.boschicon-bosch-ic-battery-3:before {
+  content: "\e0a7";
+}
+.boschicon-bosch-ic-battery-4:before {
+  content: "\e0a8";
+}
+.boschicon-bosch-ic-battery-fail:before {
+  content: "\e0a9";
+}
+.boschicon-bosch-ic-battery-li-ion:before {
+  content: "\e0aa";
+}
+.boschicon-bosch-ic-battery-loading:before {
+  content: "\e0ab";
+}
+.boschicon-bosch-ic-bed:before {
+  content: "\e0ac";
+}
+.boschicon-bosch-ic-bicycle:before {
+  content: "\e0ad";
+}
+.boschicon-bosch-ic-bicycle-e:before {
+  content: "\e0ae";
+}
+.boschicon-bosch-ic-blog:before {
+  content: "\e0af";
+}
+.boschicon-bosch-ic-bluetooth:before {
+  content: "\e0b0";
+}
+.boschicon-bosch-ic-bluetooth-le:before {
+  content: "\e0b1";
+}
+.boschicon-bosch-ic-board-speaker:before {
+  content: "\e0b2";
+}
+.boschicon-bosch-ic-boiler-connected:before {
+  content: "\e0b3";
+}
+.boschicon-bosch-ic-book:before {
+  content: "\e0b4";
+}
+.boschicon-bosch-ic-bookmark:before {
+  content: "\e0b5";
+}
+.boschicon-bosch-ic-bookmark-add:before {
+  content: "\e0b6";
+}
+.boschicon-bosch-ic-bookmark-check:before {
+  content: "\e0b7";
+}
+.boschicon-bosch-ic-bookmark-delete:before {
+  content: "\e0b8";
+}
+.boschicon-bosch-ic-books:before {
+  content: "\e0b9";
+}
+.boschicon-bosch-ic-bookshelf:before {
+  content: "\e0ba";
+}
+.boschicon-bosch-ic-box:before {
+  content: "\e0bb";
+}
+.boschicon-bosch-ic-box-closed:before {
+  content: "\e0bc";
+}
+.boschicon-bosch-ic-box-delivery:before {
+  content: "\e0bd";
+}
+.boschicon-bosch-ic-box-delivery-connected:before {
+  content: "\e0be";
+}
+.boschicon-bosch-ic-brake-disk:before {
+  content: "\e0bf";
+}
+.boschicon-bosch-ic-briefcase:before {
+  content: "\e0c0";
+}
+.boschicon-bosch-ic-broom:before {
+  content: "\e0c1";
+}
+.boschicon-bosch-ic-broom-cloud-dirt:before {
+  content: "\e0c2";
+}
+.boschicon-bosch-ic-brush:before {
+  content: "\e0c3";
+}
+.boschicon-bosch-ic-bug:before {
+  content: "\e0c4";
+}
+.boschicon-bosch-ic-building:before {
+  content: "\e0c5";
+}
+.boschicon-bosch-ic-cactus:before {
+  content: "\e0c6";
+}
+.boschicon-bosch-ic-calculate:before {
+  content: "\e0c7";
+}
+.boschicon-bosch-ic-calendar:before {
+  content: "\e0c8";
+}
+.boschicon-bosch-ic-calendar-add:before {
+  content: "\e0c9";
+}
+.boschicon-bosch-ic-calendar-settings:before {
+  content: "\e0ca";
+}
+.boschicon-bosch-ic-call:before {
+  content: "\e0cb";
+}
+.boschicon-bosch-ic-call-add:before {
+  content: "\e0cc";
+}
+.boschicon-bosch-ic-call-remove:before {
+  content: "\e0cd";
+}
+.boschicon-bosch-ic-call-sos:before {
+  content: "\e0ce";
+}
+.boschicon-bosch-ic-call-team:before {
+  content: "\e0cf";
+}
+.boschicon-bosch-ic-call-wifi:before {
+  content: "\e0d0";
+}
+.boschicon-bosch-ic-camera:before {
+  content: "\e0d1";
+}
+.boschicon-bosch-ic-camera-switch:before {
+  content: "\e0d2";
+}
+.boschicon-bosch-ic-car:before {
+  content: "\e0d3";
+}
+.boschicon-bosch-ic-car-clock:before {
+  content: "\e0d4";
+}
+.boschicon-bosch-ic-car-connected:before {
+  content: "\e0d5";
+}
+.boschicon-bosch-ic-car-locator:before {
+  content: "\e0d6";
+}
+.boschicon-bosch-ic-car-mechanic:before {
+  content: "\e0d7";
+}
+.boschicon-bosch-ic-car-rental:before {
+  content: "\e0d8";
+}
+.boschicon-bosch-ic-car-seat-connected:before {
+  content: "\e0d9";
+}
+.boschicon-bosch-ic-car-side:before {
+  content: "\e0da";
+}
+.boschicon-bosch-ic-car-side-user:before {
+  content: "\e0db";
+}
+.boschicon-bosch-ic-cart:before {
+  content: "\e0dc";
+}
+.boschicon-bosch-ic-certificate:before {
+  content: "\e0dd";
+}
+.boschicon-bosch-ic-certificate-pki:before {
+  content: "\e0de";
+}
+.boschicon-bosch-ic-change:before {
+  content: "\e0df";
+}
+.boschicon-bosch-ic-chart-bar:before {
+  content: "\e0e0";
+}
+.boschicon-bosch-ic-chart-check:before {
+  content: "\e0e1";
+}
+.boschicon-bosch-ic-chart-dummy:before {
+  content: "\e0e2";
+}
+.boschicon-bosch-ic-chart-line:before {
+  content: "\e0e3";
+}
+.boschicon-bosch-ic-chat:before {
+  content: "\e0e4";
+}
+.boschicon-bosch-ic-chat-add:before {
+  content: "\e0e5";
+}
+.boschicon-bosch-ic-chat-question-answer:before {
+  content: "\e0e6";
+}
+.boschicon-bosch-ic-chat-remove:before {
+  content: "\e0e7";
+}
+.boschicon-bosch-ic-checklist:before {
+  content: "\e0e8";
+}
+.boschicon-bosch-ic-checkmark:before {
+  content: "\e0e9";
+}
+.boschicon-bosch-ic-chip:before {
+  content: "\e0ea";
+}
+.boschicon-bosch-ic-circle-segment:before {
+  content: "\e0eb";
+}
+.boschicon-bosch-ic-clear-all:before {
+  content: "\e0ec";
+}
+.boschicon-bosch-ic-clipboard:before {
+  content: "\e0ed";
+}
+.boschicon-bosch-ic-clipboard-list:before {
+  content: "\e0ee";
+}
+.boschicon-bosch-ic-clock:before {
+  content: "\e0ef";
+}
+.boschicon-bosch-ic-close:before {
+  content: "\e0f0";
+}
+.boschicon-bosch-ic-close-all:before {
+  content: "\e0f1";
+}
+.boschicon-bosch-ic-cloud:before {
+  content: "\e0f2";
+}
+.boschicon-bosch-ic-cloud-co2:before {
+  content: "\e0f3";
+}
+.boschicon-bosch-ic-cloud-download:before {
+  content: "\e0f4";
+}
+.boschicon-bosch-ic-cloud-nox:before {
+  content: "\e0f5";
+}
+.boschicon-bosch-ic-cloud-upload:before {
+  content: "\e0f6";
+}
+.boschicon-bosch-ic-club-arm-chair:before {
+  content: "\e0f7";
+}
+.boschicon-bosch-ic-coffee-break:before {
+  content: "\e0f8";
+}
+.boschicon-bosch-ic-coin-currency:before {
+  content: "\e0f9";
+}
+.boschicon-bosch-ic-coin-dollar:before {
+  content: "\e0fa";
+}
+.boschicon-bosch-ic-colorpicker:before {
+  content: "\e0fb";
+}
+.boschicon-bosch-ic-colors:before {
+  content: "\e0fc";
+}
+.boschicon-bosch-ic-command:before {
+  content: "\e0fd";
+}
+.boschicon-bosch-ic-communicator:before {
+  content: "\e0fe";
+}
+.boschicon-bosch-ic-compare:before {
+  content: "\e0ff";
+}
+.boschicon-bosch-ic-components:before {
+  content: "\e100";
+}
+.boschicon-bosch-ic-components-available:before {
+  content: "\e101";
+}
+.boschicon-bosch-ic-components-reservation:before {
+  content: "\e102";
+}
+.boschicon-bosch-ic-concierge-bell:before {
+  content: "\e103";
+}
+.boschicon-bosch-ic-configuration:before {
+  content: "\e104";
+}
+.boschicon-bosch-ic-confirmation:before {
+  content: "\e105";
+}
+.boschicon-bosch-ic-connection-off:before {
+  content: "\e106";
+}
+.boschicon-bosch-ic-connection-on:before {
+  content: "\e107";
+}
+.boschicon-bosch-ic-connectivity:before {
+  content: "\e108";
+}
+.boschicon-bosch-ic-construction:before {
+  content: "\e109";
+}
+.boschicon-bosch-ic-consumer-goods:before {
+  content: "\e10a";
+}
+.boschicon-bosch-ic-contract:before {
+  content: "\e10b";
+}
+.boschicon-bosch-ic-copy:before {
+  content: "\e10c";
+}
+.boschicon-bosch-ic-cube:before {
+  content: "\e10d";
+}
+.boschicon-bosch-ic-cube-arrows:before {
+  content: "\e10e";
+}
+.boschicon-bosch-ic-cube-filled:before {
+  content: "\e10f";
+}
+.boschicon-bosch-ic-cube-shock:before {
+  content: "\e110";
+}
+.boschicon-bosch-ic-cube-stacked:before {
+  content: "\e111";
+}
+.boschicon-bosch-ic-customerservice:before {
+  content: "\e112";
+}
+.boschicon-bosch-ic-cutlery:before {
+  content: "\e113";
+}
+.boschicon-bosch-ic-damper:before {
+  content: "\e114";
+}
+.boschicon-bosch-ic-danger-flash:before {
+  content: "\e115";
+}
+.boschicon-bosch-ic-data-loss:before {
+  content: "\e116";
+}
+.boschicon-bosch-ic-dealer-details:before {
+  content: "\e117";
+}
+.boschicon-bosch-ic-delete:before {
+  content: "\e118";
+}
+.boschicon-bosch-ic-delivery:before {
+  content: "\e119";
+}
+.boschicon-bosch-ic-denied:before {
+  content: "\e11a";
+}
+.boschicon-bosch-ic-desktop:before {
+  content: "\e11b";
+}
+.boschicon-bosch-ic-desktop-application-2d:before {
+  content: "\e11c";
+}
+.boschicon-bosch-ic-desktop-application-3d:before {
+  content: "\e11d";
+}
+.boschicon-bosch-ic-development:before {
+  content: "\e11e";
+}
+.boschicon-bosch-ic-devices:before {
+  content: "\e11f";
+}
+.boschicon-bosch-ic-devices-mobile:before {
+  content: "\e120";
+}
+.boschicon-bosch-ic-directory:before {
+  content: "\e121";
+}
+.boschicon-bosch-ic-dna:before {
+  content: "\e122";
+}
+.boschicon-bosch-ic-do-not-disturb:before {
+  content: "\e123";
+}
+.boschicon-bosch-ic-document:before {
+  content: "\e124";
+}
+.boschicon-bosch-ic-document-add:before {
+  content: "\e125";
+}
+.boschicon-bosch-ic-document-arrow-down:before {
+  content: "\e126";
+}
+.boschicon-bosch-ic-document-arrow-up:before {
+  content: "\e127";
+}
+.boschicon-bosch-ic-document-audio:before {
+  content: "\e128";
+}
+.boschicon-bosch-ic-document-check:before {
+  content: "\e129";
+}
+.boschicon-bosch-ic-document-cloud:before {
+  content: "\e12a";
+}
+.boschicon-bosch-ic-document-copy:before {
+  content: "\e12b";
+}
+.boschicon-bosch-ic-document-delete:before {
+  content: "\e12c";
+}
+.boschicon-bosch-ic-document-doc:before {
+  content: "\e12d";
+}
+.boschicon-bosch-ic-document-edit:before {
+  content: "\e12e";
+}
+.boschicon-bosch-ic-document-error:before {
+  content: "\e12f";
+}
+.boschicon-bosch-ic-document-locked:before {
+  content: "\e130";
+}
+.boschicon-bosch-ic-document-log:before {
+  content: "\e131";
+}
+.boschicon-bosch-ic-document-one:before {
+  content: "\e132";
+}
+.boschicon-bosch-ic-document-pdf:before {
+  content: "\e133";
+}
+.boschicon-bosch-ic-document-plain:before {
+  content: "\e134";
+}
+.boschicon-bosch-ic-document-plain-add:before {
+  content: "\e135";
+}
+.boschicon-bosch-ic-document-plain-delete:before {
+  content: "\e136";
+}
+.boschicon-bosch-ic-document-ppt:before {
+  content: "\e137";
+}
+.boschicon-bosch-ic-document-pub:before {
+  content: "\e138";
+}
+.boschicon-bosch-ic-document-rtf:before {
+  content: "\e139";
+}
+.boschicon-bosch-ic-document-save-to:before {
+  content: "\e13a";
+}
+.boschicon-bosch-ic-document-search:before {
+  content: "\e13b";
+}
+.boschicon-bosch-ic-document-settings:before {
+  content: "\e13c";
+}
+.boschicon-bosch-ic-document-test:before {
+  content: "\e13d";
+}
+.boschicon-bosch-ic-document-text:before {
+  content: "\e13e";
+}
+.boschicon-bosch-ic-document-txt:before {
+  content: "\e13f";
+}
+.boschicon-bosch-ic-document-vsd:before {
+  content: "\e140";
+}
+.boschicon-bosch-ic-document-xls:before {
+  content: "\e141";
+}
+.boschicon-bosch-ic-document-xml:before {
+  content: "\e142";
+}
+.boschicon-bosch-ic-document-zip:before {
+  content: "\e143";
+}
+.boschicon-bosch-ic-dome:before {
+  content: "\e144";
+}
+.boschicon-bosch-ic-door:before {
+  content: "\e145";
+}
+.boschicon-bosch-ic-door-sensor:before {
+  content: "\e146";
+}
+.boschicon-bosch-ic-down:before {
+  content: "\e147";
+}
+.boschicon-bosch-ic-down-double:before {
+  content: "\e148";
+}
+.boschicon-bosch-ic-download:before {
+  content: "\e149";
+}
+.boschicon-bosch-ic-drag-handle:before {
+  content: "\e14a";
+}
+.boschicon-bosch-ic-dragdrop:before {
+  content: "\e14b";
+}
+.boschicon-bosch-ic-drop:before {
+  content: "\e14c";
+}
+.boschicon-bosch-ic-e-charging:before {
+  content: "\e14d";
+}
+.boschicon-bosch-ic-e-mobility:before {
+  content: "\e14e";
+}
+.boschicon-bosch-ic-ear-off-disabled-light:before {
+  content: "\e14f";
+}
+.boschicon-bosch-ic-ear-on:before {
+  content: "\e150";
+}
+.boschicon-bosch-ic-eco-system:before {
+  content: "\e151";
+}
+.boschicon-bosch-ic-edit:before {
+  content: "\e152";
+}
+.boschicon-bosch-ic-education:before {
+  content: "\e153";
+}
+.boschicon-bosch-ic-efficiency:before {
+  content: "\e154";
+}
+.boschicon-bosch-ic-elevator:before {
+  content: "\e155";
+}
+.boschicon-bosch-ic-elevator-alarm:before {
+  content: "\e156";
+}
+.boschicon-bosch-ic-elevator-cloud:before {
+  content: "\e157";
+}
+.boschicon-bosch-ic-elevator-headset:before {
+  content: "\e158";
+}
+.boschicon-bosch-ic-elevator-service:before {
+  content: "\e159";
+}
+.boschicon-bosch-ic-emergency-exit:before {
+  content: "\e15a";
+}
+.boschicon-bosch-ic-emoji-happy:before {
+  content: "\e15b";
+}
+.boschicon-bosch-ic-emoji-neutral:before {
+  content: "\e15c";
+}
+.boschicon-bosch-ic-emoji-sad:before {
+  content: "\e15d";
+}
+.boschicon-bosch-ic-emoji-super-happy:before {
+  content: "\e15e";
+}
+.boschicon-bosch-ic-emoji-very-sad:before {
+  content: "\e15f";
+}
+.boschicon-bosch-ic-eu-energy-label:before {
+  content: "\e160";
+}
+.boschicon-bosch-ic-excavator:before {
+  content: "\e161";
+}
+.boschicon-no-icon:before {
+  content: "\e162";
+}
+.boschicon-bosch-ic-exit:before {
+  content: "\e163";
+}
+.boschicon-bosch-ic-expansion-arrows:before {
+  content: "\e164";
+}
+.boschicon-bosch-ic-explosion:before {
+  content: "\e165";
+}
+.boschicon-bosch-ic-export:before {
+  content: "\e166";
+}
+.boschicon-bosch-ic-externallink:before {
+  content: "\e167";
+}
+.boschicon-bosch-ic-fast-forward:before {
+  content: "\e168";
+}
+.boschicon-bosch-ic-faucet:before {
+  content: "\e169";
+}
+.boschicon-bosch-ic-favorites:before {
+  content: "\e16a";
+}
+.boschicon-bosch-ic-fax:before {
+  content: "\e16b";
+}
+.boschicon-bosch-ic-female:before {
+  content: "\e16c";
+}
+.boschicon-bosch-ic-film:before {
+  content: "\e16d";
+}
+.boschicon-bosch-ic-filter:before {
+  content: "\e16e";
+}
+.boschicon-bosch-ic-filter-success:before {
+  content: "\e16f";
+}
+.boschicon-bosch-ic-fingerprint:before {
+  content: "\e170";
+}
+.boschicon-bosch-ic-fire:before {
+  content: "\e171";
+}
+.boschicon-bosch-ic-fire-emergency:before {
+  content: "\e172";
+}
+.boschicon-bosch-ic-fireworks:before {
+  content: "\e173";
+}
+.boschicon-bosch-ic-first-aid:before {
+  content: "\e174";
+}
+.boschicon-bosch-ic-first-aid-cross:before {
+  content: "\e175";
+}
+.boschicon-bosch-ic-fit-to-sceen:before {
+  content: "\e176";
+}
+.boschicon-bosch-ic-flag:before {
+  content: "\e177";
+}
+.boschicon-bosch-ic-flash:before {
+  content: "\e178";
+}
+.boschicon-bosch-ic-flask:before {
+  content: "\e179";
+}
+.boschicon-bosch-ic-flexpress:before {
+  content: "\e17a";
+}
+.boschicon-bosch-ic-folder:before {
+  content: "\e17b";
+}
+.boschicon-bosch-ic-folder-download:before {
+  content: "\e17c";
+}
+.boschicon-bosch-ic-folder-open:before {
+  content: "\e17d";
+}
+.boschicon-bosch-ic-folder-upload:before {
+  content: "\e17e";
+}
+.boschicon-bosch-ic-fork-lift:before {
+  content: "\e17f";
+}
+.boschicon-bosch-ic-fork-lift-locator:before {
+  content: "\e180";
+}
+.boschicon-bosch-ic-forward-right:before {
+  content: "\e181";
+}
+.boschicon-bosch-ic-forward-right-double:before {
+  content: "\e182";
+}
+.boschicon-bosch-ic-full-empty:before {
+  content: "\e183";
+}
+.boschicon-bosch-ic-fullscreen:before {
+  content: "\e184";
+}
+.boschicon-bosch-ic-fullscreen-arrows:before {
+  content: "\e185";
+}
+.boschicon-bosch-ic-fullscreen-exit:before {
+  content: "\e186";
+}
+.boschicon-bosch-ic-g-arrow-down:before {
+  content: "\e187";
+}
+.boschicon-bosch-ic-g-arrow-up:before {
+  content: "\e188";
+}
+.boschicon-bosch-ic-generator:before {
+  content: "\e189";
+}
+.boschicon-bosch-ic-gift:before {
+  content: "\e18a";
+}
+.boschicon-bosch-ic-glance:before {
+  content: "\e18b";
+}
+.boschicon-bosch-ic-glas-plate:before {
+  content: "\e18c";
+}
+.boschicon-bosch-ic-globe:before {
+  content: "\e18d";
+}
+.boschicon-bosch-ic-globe-arrow:before {
+  content: "\e18e";
+}
+.boschicon-bosch-ic-glossary:before {
+  content: "\e18f";
+}
+.boschicon-bosch-ic-grid-view:before {
+  content: "\e190";
+}
+.boschicon-bosch-ic-hammer:before {
+  content: "\e191";
+}
+.boschicon-bosch-ic-hand:before {
+  content: "\e192";
+}
+.boschicon-bosch-ic-hand-motion:before {
+  content: "\e193";
+}
+.boschicon-bosch-ic-hand-motion-off-disabled-light:before {
+  content: "\e194";
+}
+.boschicon-bosch-ic-handlewithcare:before {
+  content: "\e195";
+}
+.boschicon-bosch-ic-handover-add:before {
+  content: "\e196";
+}
+.boschicon-bosch-ic-handover-check:before {
+  content: "\e197";
+}
+.boschicon-bosch-ic-handover-remove:before {
+  content: "\e198";
+}
+.boschicon-bosch-ic-hanger:before {
+  content: "\e199";
+}
+.boschicon-bosch-ic-health:before {
+  content: "\e19a";
+}
+.boschicon-bosch-ic-heart:before {
+  content: "\e19b";
+}
+.boschicon-bosch-ic-history:before {
+  content: "\e19c";
+}
+.boschicon-bosch-ic-home:before {
+  content: "\e19d";
+}
+.boschicon-bosch-ic-home-locator:before {
+  content: "\e19e";
+}
+.boschicon-bosch-ic-hourglass:before {
+  content: "\e19f";
+}
+.boschicon-bosch-ic-hydrant:before {
+  content: "\e1a0";
+}
+.boschicon-bosch-ic-ice:before {
+  content: "\e1a1";
+}
+.boschicon-bosch-ic-imagery:before {
+  content: "\e1a2";
+}
+.boschicon-bosch-ic-imagery-add:before {
+  content: "\e1a3";
+}
+.boschicon-bosch-ic-imagery-remove:before {
+  content: "\e1a4";
+}
+.boschicon-bosch-ic-import:before {
+  content: "\e1a5";
+}
+.boschicon-bosch-ic-imprint:before {
+  content: "\e1a6";
+}
+.boschicon-bosch-ic-impulse:before {
+  content: "\e1a7";
+}
+.boschicon-bosch-ic-industry:before {
+  content: "\e1a8";
+}
+.boschicon-bosch-ic-industry-clock:before {
+  content: "\e1a9";
+}
+.boschicon-bosch-ic-industry-connected:before {
+  content: "\e1aa";
+}
+.boschicon-bosch-ic-info:before {
+  content: "\e1ab";
+}
+.boschicon-bosch-ic-info-i:before {
+  content: "\e1ac";
+}
+.boschicon-bosch-ic-interval:before {
+  content: "\e1ad";
+}
+.boschicon-bosch-ic-it-device:before {
+  content: "\e1ae";
+}
+.boschicon-bosch-ic-jewel:before {
+  content: "\e1af";
+}
+.boschicon-bosch-ic-keyboard:before {
+  content: "\e1b0";
+}
+.boschicon-bosch-ic-label:before {
+  content: "\e1b1";
+}
+.boschicon-bosch-ic-laptop:before {
+  content: "\e1b2";
+}
+.boschicon-bosch-ic-laser:before {
+  content: "\e1b3";
+}
+.boschicon-bosch-ic-layout:before {
+  content: "\e1b4";
+}
+.boschicon-bosch-ic-leaf:before {
+  content: "\e1b5";
+}
+.boschicon-bosch-ic-led:before {
+  content: "\e1b6";
+}
+.boschicon-bosch-ic-brick:before {
+  content: "\e1b7";
+}
+.boschicon-bosch-ic-brick-slanting-1:before {
+  content: "\e1b8";
+}
+.boschicon-bosch-ic-brick-slanting-2:before {
+  content: "\e1b9";
+}
+.boschicon-bosch-ic-less-minimize:before {
+  content: "\e1ba";
+}
+.boschicon-bosch-ic-lightbulb:before {
+  content: "\e1bb";
+}
+.boschicon-bosch-ic-lightbulb-off:before {
+  content: "\e1bc";
+}
+.boschicon-bosch-ic-line-chart:before {
+  content: "\e1bd";
+}
+.boschicon-bosch-ic-link:before {
+  content: "\e1be";
+}
+.boschicon-bosch-ic-link-broken:before {
+  content: "\e1bf";
+}
+.boschicon-bosch-ic-list-view:before {
+  content: "\e1c0";
+}
+.boschicon-bosch-ic-list-view-mobile:before {
+  content: "\e1c1";
+}
+.boschicon-bosch-ic-livechat:before {
+  content: "\e1c2";
+}
+.boschicon-bosch-ic-locator:before {
+  content: "\e1c3";
+}
+.boschicon-bosch-ic-locator-ip-connected:before {
+  content: "\e1c4";
+}
+.boschicon-bosch-ic-locator-ip-disconnected:before {
+  content: "\e1c5";
+}
+.boschicon-bosch-ic-locator-spot:before {
+  content: "\e1c6";
+}
+.boschicon-bosch-ic-locator-spot-check:before {
+  content: "\e1c7";
+}
+.boschicon-bosch-ic-lock-closed:before {
+  content: "\e1c8";
+}
+.boschicon-bosch-ic-lock-open:before {
+  content: "\e1c9";
+}
+.boschicon-bosch-ic-login:before {
+  content: "\e1ca";
+}
+.boschicon-bosch-ic-logistics:before {
+  content: "\e1cb";
+}
+.boschicon-bosch-ic-logout:before {
+  content: "\e1cc";
+}
+.boschicon-bosch-ic-machine:before {
+  content: "\e1cd";
+}
+.boschicon-bosch-ic-magnet:before {
+  content: "\e1ce";
+}
+.boschicon-bosch-ic-mail:before {
+  content: "\e1cf";
+}
+.boschicon-bosch-ic-mail-forward:before {
+  content: "\e1d0";
+}
+.boschicon-bosch-ic-mail-open:before {
+  content: "\e1d1";
+}
+.boschicon-bosch-ic-mail-out:before {
+  content: "\e1d2";
+}
+.boschicon-bosch-ic-mail-reply:before {
+  content: "\e1d3";
+}
+.boschicon-bosch-ic-male:before {
+  content: "\e1d4";
+}
+.boschicon-bosch-ic-map:before {
+  content: "\e1d5";
+}
+.boschicon-bosch-ic-material-add:before {
+  content: "\e1d6";
+}
+.boschicon-bosch-ic-material-check:before {
+  content: "\e1d7";
+}
+.boschicon-bosch-ic-material-remove:before {
+  content: "\e1d8";
+}
+.boschicon-bosch-ic-maximize:before {
+  content: "\e1d9";
+}
+.boschicon-bosch-ic-mechanic:before {
+  content: "\e1da";
+}
+.boschicon-bosch-ic-megaphone:before {
+  content: "\e1db";
+}
+.boschicon-bosch-ic-message:before {
+  content: "\e1dc";
+}
+.boschicon-bosch-ic-mic:before {
+  content: "\e1dd";
+}
+.boschicon-bosch-ic-microphone:before {
+  content: "\e1de";
+}
+.boschicon-bosch-ic-microphone-classic:before {
+  content: "\e1df";
+}
+.boschicon-bosch-ic-minimize:before {
+  content: "\e1e0";
+}
+.boschicon-bosch-ic-money-currency:before {
+  content: "\e1e1";
+}
+.boschicon-bosch-ic-money-dollar:before {
+  content: "\e1e2";
+}
+.boschicon-bosch-ic-moneybag-currency:before {
+  content: "\e1e3";
+}
+.boschicon-bosch-ic-moneybag-dollar:before {
+  content: "\e1e4";
+}
+.boschicon-bosch-ic-monument:before {
+  content: "\e1e5";
+}
+.boschicon-bosch-ic-moon:before {
+  content: "\e1e6";
+}
+.boschicon-bosch-ic-motorcycle:before {
+  content: "\e1e7";
+}
+.boschicon-bosch-ic-motorcycle-side-car:before {
+  content: "\e1e8";
+}
+.boschicon-bosch-ic-motorcycle-side:before {
+  content: "\e1e9";
+}
+.boschicon-bosch-ic-mouse:before {
+  content: "\e1ea";
+}
+.boschicon-bosch-ic-mouse-left:before {
+  content: "\e1eb";
+}
+.boschicon-bosch-ic-mouse-right:before {
+  content: "\e1ec";
+}
+.boschicon-bosch-ic-mouth:before {
+  content: "\e1ed";
+}
+.boschicon-bosch-ic-my-product:before {
+  content: "\e1ee";
+}
+.boschicon-bosch-ic-new-way-work:before {
+  content: "\e1ef";
+}
+.boschicon-bosch-ic-newsletter:before {
+  content: "\e1f0";
+}
+.boschicon-bosch-ic-newspaper:before {
+  content: "\e1f1";
+}
+.boschicon-bosch-ic-nose:before {
+  content: "\e1f2";
+}
+.boschicon-bosch-ic-notepad:before {
+  content: "\e1f3";
+}
+.boschicon-bosch-ic-notepad-edit:before {
+  content: "\e1f4";
+}
+.boschicon-bosch-ic-notification:before {
+  content: "\e1f5";
+}
+.boschicon-bosch-ic-notification-active:before {
+  content: "\e1f6";
+}
+.boschicon-bosch-ic-notification-add:before {
+  content: "\e1f7";
+}
+.boschicon-bosch-ic-notification-remove:before {
+  content: "\e1f8";
+}
+.boschicon-bosch-ic-oil-car:before {
+  content: "\e1f9";
+}
+.boschicon-bosch-ic-omnichannel:before {
+  content: "\e1fa";
+}
+.boschicon-bosch-ic-options:before {
+  content: "\e1fb";
+}
+.boschicon-bosch-ic-origami-boat:before {
+  content: "\e1fc";
+}
+.boschicon-bosch-ic-pallete-car:before {
+  content: "\e1fd";
+}
+.boschicon-bosch-ic-pallete-car-connected:before {
+  content: "\e1fe";
+}
+.boschicon-bosch-ic-panel:before {
+  content: "\e1ff";
+}
+.boschicon-bosch-ic-paperclip:before {
+  content: "\e200";
+}
+.boschicon-bosch-ic-paperplane:before {
+  content: "\e201";
+}
+.boschicon-bosch-ic-parking:before {
+  content: "\e202";
+}
+.boschicon-bosch-ic-pause:before {
+  content: "\e203";
+}
+.boschicon-bosch-ic-payment:before {
+  content: "\e204";
+}
+.boschicon-bosch-ic-people:before {
+  content: "\e205";
+}
+.boschicon-bosch-ic-petrol-station:before {
+  content: "\e206";
+}
+.boschicon-bosch-ic-piggybank:before {
+  content: "\e207";
+}
+.boschicon-bosch-ic-pin-classic:before {
+  content: "\e208";
+}
+.boschicon-bosch-ic-pin-modern:before {
+  content: "\e209";
+}
+.boschicon-bosch-ic-plane-side:before {
+  content: "\e20a";
+}
+.boschicon-bosch-ic-play:before {
+  content: "\e20b";
+}
+.boschicon-bosch-ic-plug-12v:before {
+  content: "\e20c";
+}
+.boschicon-bosch-ic-podium-speaker:before {
+  content: "\e20d";
+}
+.boschicon-bosch-ic-police:before {
+  content: "\e20e";
+}
+.boschicon-bosch-ic-poop:before {
+  content: "\e20f";
+}
+.boschicon-bosch-ic-post-it:before {
+  content: "\e210";
+}
+.boschicon-bosch-ic-postal-code:before {
+  content: "\e211";
+}
+.boschicon-bosch-ic-power:before {
+  content: "\e212";
+}
+.boschicon-bosch-ic-print:before {
+  content: "\e213";
+}
+.boschicon-bosch-ic-prototyping:before {
+  content: "\e214";
+}
+.boschicon-bosch-ic-puzzle:before {
+  content: "\e215";
+}
+.boschicon-bosch-ic-quad:before {
+  content: "\e216";
+}
+.boschicon-bosch-ic-question:before {
+  content: "\e217";
+}
+.boschicon-bosch-ic-radar:before {
+  content: "\e218";
+}
+.boschicon-bosch-ic-radio:before {
+  content: "\e219";
+}
+.boschicon-bosch-ic-radiotower:before {
+  content: "\e21a";
+}
+.boschicon-bosch-ic-redirect:before {
+  content: "\e21b";
+}
+.boschicon-bosch-ic-redo:before {
+  content: "\e21c";
+}
+.boschicon-bosch-ic-reference:before {
+  content: "\e21d";
+}
+.boschicon-bosch-ic-refresh:before {
+  content: "\e21e";
+}
+.boschicon-bosch-ic-refresh-cloud:before {
+  content: "\e21f";
+}
+.boschicon-bosch-ic-registration:before {
+  content: "\e220";
+}
+.boschicon-bosch-ic-remote:before {
+  content: "\e221";
+}
+.boschicon-bosch-ic-reset:before {
+  content: "\e222";
+}
+.boschicon-bosch-ic-resolution:before {
+  content: "\e223";
+}
+.boschicon-bosch-ic-robot:before {
+  content: "\e224";
+}
+.boschicon-bosch-ic-robot-connected:before {
+  content: "\e225";
+}
+.boschicon-bosch-ic-robothead:before {
+  content: "\e226";
+}
+.boschicon-bosch-ic-rocket:before {
+  content: "\e227";
+}
+.boschicon-bosch-ic-rotation:before {
+  content: "\e228";
+}
+.boschicon-bosch-ic-rotation-360:before {
+  content: "\e229";
+}
+.boschicon-bosch-ic-rotation-x-left:before {
+  content: "\e22a";
+}
+.boschicon-bosch-ic-rotation-x-right:before {
+  content: "\e22b";
+}
+.boschicon-bosch-ic-rotation-y-down:before {
+  content: "\e22c";
+}
+.boschicon-bosch-ic-rotation-y-up:before {
+  content: "\e22d";
+}
+.boschicon-bosch-ic-route:before {
+  content: "\e22e";
+}
+.boschicon-bosch-ic-ruler:before {
+  content: "\e22f";
+}
+.boschicon-bosch-ic-ruler-pen:before {
+  content: "\e230";
+}
+.boschicon-bosch-ic-satellite:before {
+  content: "\e231";
+}
+.boschicon-bosch-ic-save:before {
+  content: "\e232";
+}
+.boschicon-bosch-ic-scale:before {
+  content: "\e233";
+}
+.boschicon-bosch-ic-scissors:before {
+  content: "\e234";
+}
+.boschicon-bosch-ic-search:before {
+  content: "\e235";
+}
+.boschicon-bosch-ic-security:before {
+  content: "\e236";
+}
+.boschicon-bosch-ic-security-check:before {
+  content: "\e237";
+}
+.boschicon-bosch-ic-security-user:before {
+  content: "\e238";
+}
+.boschicon-bosch-ic-sensor:before {
+  content: "\e239";
+}
+.boschicon-bosch-ic-server:before {
+  content: "\e23a";
+}
+.boschicon-bosch-ic-server-expansion:before {
+  content: "\e23b";
+}
+.boschicon-bosch-ic-server-rate:before {
+  content: "\e23c";
+}
+.boschicon-bosch-ic-service-agent:before {
+  content: "\e23d";
+}
+.boschicon-bosch-ic-service-time:before {
+  content: "\e23e";
+}
+.boschicon-bosch-ic-settings:before {
+  content: "\e23f";
+}
+.boschicon-bosch-ic-settings-arrows:before {
+  content: "\e240";
+}
+.boschicon-bosch-ic-settings-connected:before {
+  content: "\e241";
+}
+.boschicon-bosch-ic-share:before {
+  content: "\e242";
+}
+.boschicon-bosch-ic-shield-stop:before {
+  content: "\e243";
+}
+.boschicon-bosch-ic-ship:before {
+  content: "\e244";
+}
+.boschicon-bosch-ic-ship-side:before {
+  content: "\e245";
+}
+.boschicon-bosch-ic-shoppingcart:before {
+  content: "\e246";
+}
+.boschicon-bosch-ic-shoppingcart-add:before {
+  content: "\e247";
+}
+.boschicon-bosch-ic-shoppingcart-switch:before {
+  content: "\e248";
+}
+.boschicon-bosch-ic-signal-full:before {
+  content: "\e249";
+}
+.boschicon-bosch-ic-signal-half:before {
+  content: "\e24a";
+}
+.boschicon-bosch-ic-signal-lost:before {
+  content: "\e24b";
+}
+.boschicon-bosch-ic-signpost:before {
+  content: "\e24c";
+}
+.boschicon-bosch-ic-simcard:before {
+  content: "\e24d";
+}
+.boschicon-bosch-ic-skyscraper:before {
+  content: "\e24e";
+}
+.boschicon-bosch-ic-smartcity:before {
+  content: "\e24f";
+}
+.boschicon-bosch-ic-smarthome:before {
+  content: "\e250";
+}
+.boschicon-bosch-ic-smartphone:before {
+  content: "\e251";
+}
+.boschicon-bosch-ic-smartphone-acoustic:before {
+  content: "\e252";
+}
+.boschicon-bosch-ic-smartphone-arrow-right:before {
+  content: "\e253";
+}
+.boschicon-bosch-ic-smartphone-arrows-x-y-z:before {
+  content: "\e254";
+}
+.boschicon-bosch-ic-smartphone-clock:before {
+  content: "\e255";
+}
+.boschicon-bosch-ic-smartphone-cloud:before {
+  content: "\e256";
+}
+.boschicon-bosch-ic-smartphone-loading-wheel:before {
+  content: "\e257";
+}
+.boschicon-bosch-ic-smartphone-smashed:before {
+  content: "\e258";
+}
+.boschicon-bosch-ic-smartphone-vibration:before {
+  content: "\e259";
+}
+.boschicon-bosch-ic-smartphone-z:before {
+  content: "\e25a";
+}
+.boschicon-bosch-ic-smartwatch-connected:before {
+  content: "\e25b";
+}
+.boschicon-bosch-ic-spare-parts:before {
+  content: "\e25c";
+}
+.boschicon-bosch-ic-spark:before {
+  content: "\e25d";
+}
+.boschicon-bosch-ic-speaker-acoustic:before {
+  content: "\e25e";
+}
+.boschicon-bosch-ic-speedometer:before {
+  content: "\e25f";
+}
+.boschicon-bosch-ic-stadium:before {
+  content: "\e260";
+}
+.boschicon-bosch-ic-stairs:before {
+  content: "\e261";
+}
+.boschicon-bosch-ic-stamp:before {
+  content: "\e262";
+}
+.boschicon-bosch-ic-standby:before {
+  content: "\e263";
+}
+.boschicon-bosch-ic-steering-wheel:before {
+  content: "\e264";
+}
+.boschicon-bosch-ic-steering-wheel-connected:before {
+  content: "\e265";
+}
+.boschicon-bosch-ic-steering-wheel-hands:before {
+  content: "\e266";
+}
+.boschicon-bosch-ic-steps:before {
+  content: "\e267";
+}
+.boschicon-bosch-ic-stethoscope:before {
+  content: "\e268";
+}
+.boschicon-bosch-ic-stop:before {
+  content: "\e269";
+}
+.boschicon-bosch-ic-stopwatch:before {
+  content: "\e26a";
+}
+.boschicon-bosch-ic-storage-local:before {
+  content: "\e26b";
+}
+.boschicon-bosch-ic-structure:before {
+  content: "\e26c";
+}
+.boschicon-bosch-ic-subtitles:before {
+  content: "\e26d";
+}
+.boschicon-bosch-ic-subtitles-off-light:before {
+  content: "\e26e";
+}
+.boschicon-bosch-ic-summary:before {
+  content: "\e26f";
+}
+.boschicon-bosch-ic-sun:before {
+  content: "\e270";
+}
+.boschicon-bosch-ic-sun-half-filled:before {
+  content: "\e271";
+}
+.boschicon-bosch-ic-sunshade-table:before {
+  content: "\e272";
+}
+.boschicon-bosch-ic-surveillance:before {
+  content: "\e273";
+}
+.boschicon-bosch-ic-table-chairs:before {
+  content: "\e274";
+}
+.boschicon-bosch-ic-tablet:before {
+  content: "\e275";
+}
+.boschicon-bosch-ic-team:before {
+  content: "\e276";
+}
+.boschicon-bosch-ic-team-lightbulb:before {
+  content: "\e277";
+}
+.boschicon-bosch-ic-technical-service:before {
+  content: "\e278";
+}
+.boschicon-bosch-ic-temperature:before {
+  content: "\e279";
+}
+.boschicon-bosch-ic-temperature-high:before {
+  content: "\e27a";
+}
+.boschicon-bosch-ic-temperature-low:before {
+  content: "\e27b";
+}
+.boschicon-bosch-ic-theater:before {
+  content: "\e27c";
+}
+.boschicon-bosch-ic-thumb-down:before {
+  content: "\e27d";
+}
+.boschicon-bosch-ic-thumb-up:before {
+  content: "\e27e";
+}
+.boschicon-bosch-ic-ticket:before {
+  content: "\e27f";
+}
+.boschicon-bosch-ic-touch:before {
+  content: "\e280";
+}
+.boschicon-bosch-ic-touch-sos:before {
+  content: "\e281";
+}
+.boschicon-bosch-ic-towing-truck:before {
+  content: "\e282";
+}
+.boschicon-bosch-ic-train:before {
+  content: "\e283";
+}
+.boschicon-bosch-ic-train-side:before {
+  content: "\e284";
+}
+.boschicon-bosch-ic-transport-movements:before {
+  content: "\e285";
+}
+.boschicon-bosch-ic-transscript:before {
+  content: "\e286";
+}
+.boschicon-bosch-ic-transscript-off:before {
+  content: "\e287";
+}
+.boschicon-bosch-ic-transscript-on:before {
+  content: "\e288";
+}
+.boschicon-bosch-ic-tree:before {
+  content: "\e289";
+}
+.boschicon-bosch-ic-tricycle:before {
+  content: "\e28a";
+}
+.boschicon-bosch-ic-trolley-empty:before {
+  content: "\e28b";
+}
+.boschicon-bosch-ic-trolley-filled-box:before {
+  content: "\e28c";
+}
+.boschicon-bosch-ic-trolly-filled-files:before {
+  content: "\e28d";
+}
+.boschicon-bosch-ic-trophy:before {
+  content: "\e28e";
+}
+.boschicon-bosch-ic-truck:before {
+  content: "\e28f";
+}
+.boschicon-bosch-ic-tuktuk:before {
+  content: "\e290";
+}
+.boschicon-bosch-ic-tune:before {
+  content: "\e291";
+}
+.boschicon-bosch-ic-typography:before {
+  content: "\e292";
+}
+.boschicon-bosch-ic-ui:before {
+  content: "\e293";
+}
+.boschicon-bosch-ic-umbrella:before {
+  content: "\e294";
+}
+.boschicon-bosch-ic-undo:before {
+  content: "\e295";
+}
+.boschicon-bosch-ic-up:before {
+  content: "\e296";
+}
+.boschicon-bosch-ic-up-double:before {
+  content: "\e297";
+}
+.boschicon-bosch-ic-up-down:before {
+  content: "\e298";
+}
+.boschicon-bosch-ic-upload:before {
+  content: "\e299";
+}
+.boschicon-bosch-ic-usb:before {
+  content: "\e29a";
+}
+.boschicon-bosch-ic-user:before {
+  content: "\e29b";
+}
+.boschicon-bosch-ic-user-advanced:before {
+  content: "\e29c";
+}
+.boschicon-bosch-ic-user-beginner:before {
+  content: "\e29d";
+}
+.boschicon-bosch-ic-user-desktop:before {
+  content: "\e29e";
+}
+.boschicon-bosch-ic-user-down:before {
+  content: "\e29f";
+}
+.boschicon-bosch-ic-user-falling:before {
+  content: "\e2a0";
+}
+.boschicon-bosch-ic-user-hand:before {
+  content: "\e2a1";
+}
+.boschicon-bosch-ic-user-hand-stop:before {
+  content: "\e2a2";
+}
+.boschicon-bosch-ic-user-professional:before {
+  content: "\e2a3";
+}
+.boschicon-bosch-ic-user-run:before {
+  content: "\e2a4";
+}
+.boschicon-bosch-ic-user-share:before {
+  content: "\e2a5";
+}
+.boschicon-bosch-ic-user-voice:before {
+  content: "\e2a6";
+}
+.boschicon-bosch-ic-user-walk:before {
+  content: "\e2a7";
+}
+.boschicon-bosch-ic-video:before {
+  content: "\e2a8";
+}
+.boschicon-bosch-ic-video-disabled-light:before {
+  content: "\e2a9";
+}
+.boschicon-bosch-ic-video-record:before {
+  content: "\e2aa";
+}
+.boschicon-bosch-ic-virtual-reality:before {
+  content: "\e2ab";
+}
+.boschicon-bosch-ic-volume-disabled:before {
+  content: "\e2ac";
+}
+.boschicon-bosch-ic-volume-high:before {
+  content: "\e2ad";
+}
+.boschicon-bosch-ic-volume-low:before {
+  content: "\e2ae";
+}
+.boschicon-bosch-ic-volume-off-light:before {
+  content: "\e2af";
+}
+.boschicon-bosch-ic-wand:before {
+  content: "\e2b0";
+}
+.boschicon-bosch-ic-warranty:before {
+  content: "\e2b1";
+}
+.boschicon-bosch-ic-watch-off-disabled-light:before {
+  content: "\e2b2";
+}
+.boschicon-bosch-ic-watch-on:before {
+  content: "\e2b3";
+}
+.boschicon-bosch-ic-water-shower:before {
+  content: "\e2b4";
+}
+.boschicon-bosch-ic-welcome:before {
+  content: "\e2b5";
+}
+.boschicon-bosch-ic-wellness:before {
+  content: "\e2b6";
+}
+.boschicon-bosch-ic-wheelchair:before {
+  content: "\e2b7";
+}
+.boschicon-bosch-ic-whistle:before {
+  content: "\e2b8";
+}
+.boschicon-bosch-ic-wide-angled-arrow:before {
+  content: "\e2b9";
+}
+.boschicon-bosch-ic-wifi:before {
+  content: "\e2ba";
+}
+.boschicon-bosch-ic-window-analysis:before {
+  content: "\e2bb";
+}
+.boschicon-bosch-ic-window-browser:before {
+  content: "\e2bc";
+}
+.boschicon-bosch-ic-window-console:before {
+  content: "\e2bd";
+}
+.boschicon-bosch-ic-window-gaussian-view:before {
+  content: "\e2be";
+}
+.boschicon-bosch-ic-window-info:before {
+  content: "\e2bf";
+}
+.boschicon-bosch-ic-window-new:before {
+  content: "\e2c0";
+}
+.boschicon-bosch-ic-window-resize:before {
+  content: "\e2c1";
+}
+.boschicon-bosch-ic-window-scaling-view:before {
+  content: "\e2c2";
+}
+.boschicon-bosch-ic-window-shuffle:before {
+  content: "\e2c3";
+}
+.boschicon-bosch-ic-window-statistic:before {
+  content: "\e2c4";
+}
+.boschicon-bosch-ic-wishlist:before {
+  content: "\e2c5";
+}
+.boschicon-bosch-ic-work-order:before {
+  content: "\e2c6";
+}
+.boschicon-bosch-ic-worldwideweb:before {
+  content: "\e2c7";
+}
+.boschicon-bosch-ic-wrench:before {
+  content: "\e2c8";
+}
+.boschicon-bosch-ic-zoom-in:before {
+  content: "\e2c9";
+}
+.boschicon-bosch-ic-zoom-out:before {
+  content: "\e2ca";
+}
+.boschicon-bosch-ic-scooter:before {
+  content: "\e2cb";
+}
+.boschicon-bosch-ic-cars-traffic:before {
+  content: "\e2cc";
+}
+.boschicon-bosch-ic-arm-chair:before {
+  content: "\e2cd";
+}
+.boschicon-bosch-ic-car-phone:before {
+  content: "\e2ce";
+}
+.boschicon-bosch-ic-box-lightbulb:before {
+  content: "\e2cf";
+}
+.boschicon-bosch-ic-chair-officedesk:before {
+  content: "\e2d0";
+}
+.boschicon-bosch-ic-calendar-clock:before {
+  content: "\e2d1";
+}
+.boschicon-bosch-ic-document-cv:before {
+  content: "\e2d2";
+}
+.boschicon-bosch-ic-user-run-bag:before {
+  content: "\e2d3";
+}
+.boschicon-bosch-ic-brake-disk-spray:before {
+  content: "\e2d4";
+}
+.boschicon-bosch-ic-circle-abs:before {
+  content: "\e2d5";
+}
+.boschicon-bosch-ic-bright-down:before {
+  content: "\e2d6";
+}
+.boschicon-bosch-ic-bright-up:before {
+  content: "\e2d7";
+}
+.boschicon-bosch-ic-fan:before {
+  content: "\e2d8";
+}
+.boschicon-bosch-ic-sun-moon:before {
+  content: "\e2d9";
+}
+.boschicon-bosch-ic-lightbulb-attention:before {
+  content: "\e2da";
+}
+.boschicon-bosch-ic-settings-attention:before {
+  content: "\e2db";
+}
+.boschicon-bosch-ic-danger-hazards:before {
+  content: "\e2dc";
+}
+.boschicon-bosch-ic-windshield-spray:before {
+  content: "\e2dd";
+}
+.boschicon-bosch-ic-windshield-heat:before {
+  content: "\e2de";
+}
+.boschicon-bosch-ic-light-drop:before {
+  content: "\e2df";
+}
+.boschicon-bosch-ic-starter:before {
+  content: "\e2e0";
+}
+.boschicon-bosch-ic-turbo:before {
+  content: "\e2e1";
+}
+.boschicon-bosch-ic-settings-lock:before {
+  content: "\e2e2";
+}
+.boschicon-bosch-ic-settings-n:before {
+  content: "\e2e3";
+}
+.boschicon-bosch-ic-light-beam-high:before {
+  content: "\e2e4";
+}
+.boschicon-bosch-ic-light-beam-low:before {
+  content: "\e2e5";
+}
+.boschicon-bosch-ic-glas:before {
+  content: "\e2e6";
+}
+.boschicon-bosch-ic-shirt-ice:before {
+  content: "\e2e7";
+}
+.boschicon-bosch-ic-helmet-fan:before {
+  content: "\e2e8";
+}
+.boschicon-bosch-ic-notification-arrow:before {
+  content: "\e2e9";
+}
+.boschicon-bosch-ic-steering-wheel-arrow:before {
+  content: "\e2ea";
+}
+.boschicon-bosch-ic-circle-arrow:before {
+  content: "\e2eb";
+}
+.boschicon-bosch-ic-tempomat-pit:before {
+  content: "\e2ec";
+}
+.boschicon-bosch-ic-radiator-fan-spray:before {
+  content: "\e2ed";
+}
+.boschicon-bosch-ic-boost-down:before {
+  content: "\e2ee";
+}
+.boschicon-bosch-ic-boost-up:before {
+  content: "\e2ef";
+}
+.boschicon-bosch-ic-circle-lock:before {
+  content: "\e2f0";
+}
+.boschicon-bosch-ic-mp-down:before {
+  content: "\e2f1";
+}
+.boschicon-bosch-ic-mp-up:before {
+  content: "\e2f2";
+}
+.boschicon-bosch-ic-tc-down:before {
+  content: "\e2f3";
+}
+.boschicon-bosch-ic-tc-up:before {
+  content: "\e2f4";
+}
+.boschicon-bosch-ic-danger-arrow-attention:before {
+  content: "\e2f5";
+}
+.boschicon-bosch-ic-user-remove:before {
+  content: "\e2f6";
+}
+.boschicon-bosch-ic-user-add:before {
+  content: "\e2f7";
+}
+.boschicon-bosch-ic-post-it-collection:before {
+  content: "\e2f8";
+}
+.boschicon-bosch-ic-horn:before {
+  content: "\e2f9";
+}
+.boschicon-bosch-ic-desktop-notification:before {
+  content: "\e2fa";
+}
+.boschicon-bosch-ic-router:before {
+  content: "\e2fb";
+}
+.boschicon-bosch-ic-berry:before {
+  content: "\e2fc";
+}
+.boschicon-bosch-ic-chat-language:before {
+  content: "\e2fd";
+}
+.boschicon-bosch-ic-game-controller:before {
+  content: "\e2fe";
+}
+.boschicon-bosch-ic-user-brain:before {
+  content: "\e2ff";
+}
+.boschicon-bosch-ic-mouth-finger:before {
+  content: "\e300";
+}
+.boschicon-bosch-ic-excavator-shovel:before {
+  content: "\e301";
+}
+.boschicon-bosch-ic-ear-in:before {
+  content: "\e302";
+}
+.boschicon-bosch-ic-ear-out:before {
+  content: "\e303";
+}
+.boschicon-bosch-ic-lion:before {
+  content: "\e304";
+}
+.boschicon-bosch-ic-car-convertible:before {
+  content: "\e305";
+}
+.boschicon-bosch-ic-car-sports:before {
+  content: "\e306";
+}
+.boschicon-bosch-ic-bear:before {
+  content: "\e307";
+}
+.boschicon-bosch-ic-pot:before {
+  content: "\e308";
+}
+.boschicon-bosch-ic-bed-double:before {
+  content: "\e309";
+}
+.boschicon-bosch-ic-air-hot:before {
+  content: "\e30a";
+}
+.boschicon-bosch-ic-air-ice:before {
+  content: "\e30b";
+}
+.boschicon-bosch-ic-air-leaf:before {
+  content: "\e30c";
+}
+.boschicon-bosch-ic-air-purifier-0:before {
+  content: "\e30d";
+}
+.boschicon-bosch-ic-air-purifier-1:before {
+  content: "\e30e";
+}
+.boschicon-bosch-ic-air-purifier-2:before {
+  content: "\e30f";
+}
+.boschicon-bosch-ic-air-purifier-3:before {
+  content: "\e310";
+}
+.boschicon-bosch-ic-air:before {
+  content: "\e311";
+}
+.boschicon-bosch-ic-fan-off-disabled-bold:before {
+  content: "\e312";
+}
+.boschicon-bosch-ic-ice-off-disabled-bold:before {
+  content: "\e313";
+}
+.boschicon-bosch-ic-faucet-boost:before {
+  content: "\e314";
+}
+.boschicon-bosch-ic-faucet-mode:before {
+  content: "\e315";
+}
+.boschicon-bosch-ic-faucet-off-disabled-bold:before {
+  content: "\e316";
+}
+.boschicon-bosch-ic-faucet-schedule:before {
+  content: "\e317";
+}
+.boschicon-bosch-ic-fuel-cell:before {
+  content: "\e318";
+}
+.boschicon-bosch-ic-heating-floor-off-disabled-bold:before {
+  content: "\e319";
+}
+.boschicon-bosch-ic-heating-floor:before {
+  content: "\e31a";
+}
+.boschicon-bosch-ic-heating-radiator-boost:before {
+  content: "\e31b";
+}
+.boschicon-bosch-ic-heating-radiator-mode:before {
+  content: "\e31c";
+}
+.boschicon-bosch-ic-heating-radiator-off-disabled-bold:before {
+  content: "\e31d";
+}
+.boschicon-bosch-ic-heating-radiator-schedule:before {
+  content: "\e31e";
+}
+.boschicon-bosch-ic-leaf-simple:before {
+  content: "\e31f";
+}
+.boschicon-bosch-ic-oil-barrel:before {
+  content: "\e320";
+}
+.boschicon-bosch-ic-water-bathtub:before {
+  content: "\e321";
+}
+.boschicon-bosch-ic-water-dishwash:before {
+  content: "\e322";
+}
+.boschicon-bosch-ic-water-handwash:before {
+  content: "\e323";
+}
+.boschicon-bosch-ic-water-hot:before {
+  content: "\e324";
+}
+.boschicon-bosch-ic-water-ice:before {
+  content: "\e325";
+}
+.boschicon-bosch-ic-water-leaf:before {
+  content: "\e326";
+}
+.boschicon-bosch-ic-water-ladder:before {
+  content: "\e327";
+}
+.boschicon-bosch-ic-water-purifier-0:before {
+  content: "\e328";
+}
+.boschicon-bosch-ic-water-purifier-1:before {
+  content: "\e329";
+}
+.boschicon-bosch-ic-water-purifier-2:before {
+  content: "\e32a";
+}
+.boschicon-bosch-ic-water-purifier-3:before {
+  content: "\e32b";
+}
+.boschicon-bosch-ic-water-shower-boost:before {
+  content: "\e32c";
+}
+.boschicon-bosch-ic-water-shower-mode:before {
+  content: "\e32d";
+}
+.boschicon-bosch-ic-water-shower-off-disabled-bold:before {
+  content: "\e32e";
+}
+.boschicon-bosch-ic-water-shower-schedule:before {
+  content: "\e32f";
+}
+.boschicon-bosch-ic-water:before {
+  content: "\e330";
+}
+.boschicon-bosch-ic-chart-bar-drop:before {
+  content: "\e331";
+}
+.boschicon-bosch-ic-chart-bar-fire:before {
+  content: "\e332";
+}
+.boschicon-bosch-ic-chart-bar-flash:before {
+  content: "\e333";
+}
+.boschicon-bosch-ic-chart-bar-oil:before {
+  content: "\e334";
+}
+.boschicon-bosch-ic-drop-minus:before {
+  content: "\e335";
+}
+.boschicon-bosch-ic-drop-plus:before {
+  content: "\e336";
+}
+.boschicon-bosch-ic-fan-minus:before {
+  content: "\e337";
+}
+.boschicon-bosch-ic-fan-plus:before {
+  content: "\e338";
+}
+.boschicon-bosch-ic-home-drops-0:before {
+  content: "\e339";
+}
+.boschicon-bosch-ic-home-drops-1:before {
+  content: "\e33a";
+}
+.boschicon-bosch-ic-home-drops-2:before {
+  content: "\e33b";
+}
+.boschicon-bosch-ic-home-drops-3:before {
+  content: "\e33c";
+}
+.boschicon-bosch-ic-home-temperature-in:before {
+  content: "\e33d";
+}
+.boschicon-bosch-ic-home-temperature-out:before {
+  content: "\e33e";
+}
+.boschicon-bosch-ic-home-user-in:before {
+  content: "\e33f";
+}
+.boschicon-bosch-ic-ice-minus:before {
+  content: "\e340";
+}
+.boschicon-bosch-ic-ice-plus:before {
+  content: "\e341";
+}
+.boschicon-bosch-ic-chimney-sweeper:before {
+  content: "\e342";
+}
+.boschicon-bosch-ic-menu-up:before {
+  content: "\e343";
+}
+.boschicon-bosch-ic-security-ice:before {
+  content: "\e344";
+}
+.boschicon-bosch-ic-security-legionella:before {
+  content: "\e345";
+}
+.boschicon-bosch-ic-trolley-case:before {
+  content: "\e346";
+}
+.boschicon-bosch-ic-sun-minus:before {
+  content: "\e347";
+}
+.boschicon-bosch-ic-sun-plug:before {
+  content: "\e348";
+}
+.boschicon-bosch-ic-sun-plus:before {
+  content: "\e349";
+}
+.boschicon-bosch-ic-touch-pit:before {
+  content: "\e34a";
+}
+.boschicon-bosch-ic-temperature-current:before {
+  content: "\e34b";
+}
+.boschicon-bosch-ic-temperature-set:before {
+  content: "\e34c";
+}
+.boschicon-bosch-ic-teddy-bear:before {
+  content: "\e34d";
+}
+.boschicon-bosch-ic-document-svg:before {
+  content: "\e34e";
+}
+.boschicon-bosch-ic-back-menu:before {
+  content: "\e34f";
+}
+.boschicon-bosch-ic-car-arrows:before {
+  content: "\e350";
+}
+.boschicon-bosch-ic-wrench-cloud:before {
+  content: "\e351";
+}
+.boschicon-bosch-ic-weather-cloud-sun:before {
+  content: "\e352";
+}
+.boschicon-bosch-ic-weather-cloudy:before {
+  content: "\e353";
+}
+.boschicon-bosch-ic-weather-gale:before {
+  content: "\e354";
+}
+.boschicon-bosch-ic-weather-mist:before {
+  content: "\e355";
+}
+.boschicon-bosch-ic-weather-moon-cloud:before {
+  content: "\e356";
+}
+.boschicon-bosch-ic-weather-rain-snow:before {
+  content: "\e357";
+}
+.boschicon-bosch-ic-weather-rain-thunder:before {
+  content: "\e358";
+}
+.boschicon-bosch-ic-weather-rain:before {
+  content: "\e359";
+}
+.boschicon-bosch-ic-weather-snow:before {
+  content: "\e35a";
+}
+.boschicon-bosch-ic-weather-thunder:before {
+  content: "\e35b";
+}
+.boschicon-bosch-ic-weather-wind:before {
+  content: "\e35c";
+}
+.boschicon-bosch-ic-plane-start:before {
+  content: "\e35d";
+}
+.boschicon-bosch-ic-plane-land:before {
+  content: "\e35e";
+}
+.boschicon-bosch-ic-graph-power:before {
+  content: "\e35f";
+}
+.boschicon-bosch-ic-floorplan:before {
+  content: "\e360";
+}
+.boschicon-bosch-ic-clock-pause:before {
+  content: "\e361";
+}
+.boschicon-bosch-ic-clock-start:before {
+  content: "\e362";
+}
+.boschicon-bosch-ic-clock-stop:before {
+  content: "\e363";
+}
+.boschicon-bosch-ic-computer-retro:before {
+  content: "\e364";
+}
+.boschicon-bosch-ic-smartphone-retro:before {
+  content: "\e365";
+}
+.boschicon-bosch-ic-wood:before {
+  content: "\e366";
+}
+.boschicon-bosch-ic-solid-fuel:before {
+  content: "\e367";
+}
+.boschicon-bosch-ic-appliance-fan:before {
+  content: "\e368";
+}
+.boschicon-bosch-ic-appliance-flame:before {
+  content: "\e369";
+}
+.boschicon-bosch-ic-appliance-ice:before {
+  content: "\e36a";
+}
+.boschicon-bosch-ic-appliance-oil:before {
+  content: "\e36b";
+}
+.boschicon-bosch-ic-appliance-solid-fuel:before {
+  content: "\e36c";
+}
+.boschicon-bosch-ic-appliance-sun-ice:before {
+  content: "\e36d";
+}
+.boschicon-bosch-ic-appliance-sun:before {
+  content: "\e36e";
+}
+.boschicon-bosch-ic-appliance-wood:before {
+  content: "\e36f";
+}
+.boschicon-bosch-ic-appliance-air-leaf:before {
+  content: "\e370";
+}
+.boschicon-bosch-ic-appliance-water-air:before {
+  content: "\e371";
+}
+.boschicon-bosch-ic-appliance-water-leaf:before {
+  content: "\e372";
+}
+.boschicon-bosch-ic-appliance-water-oil:before {
+  content: "\e373";
+}
+.boschicon-bosch-ic-appliance-water:before {
+  content: "\e374";
+}
+.boschicon-bosch-ic-appliance-heat-pump-air:before {
+  content: "\e375";
+}
+.boschicon-bosch-ic-appliance-heat-pump-ground:before {
+  content: "\e376";
+}
+.boschicon-bosch-ic-appliance-heat-pump-water:before {
+  content: "\e377";
+}
+.boschicon-bosch-ic-appliance-plug-air:before {
+  content: "\e378";
+}
+.boschicon-bosch-ic-appliance-plug-fuel-cell:before {
+  content: "\e379";
+}
+.boschicon-bosch-ic-appliance-plug-leaf:before {
+  content: "\e37a";
+}
+.boschicon-bosch-ic-appliance-plug-water-air:before {
+  content: "\e37b";
+}
+.boschicon-bosch-ic-thermostat-connected-c:before {
+  content: "\e37c";
+}
+.boschicon-bosch-ic-thermostat-connected-f:before {
+  content: "\e37d";
+}
+.boschicon-bosch-ic-image-gallery:before {
+  content: "\e37e";
+}
+.boschicon-bosch-ic-arrows-caution:before {
+  content: "\e37f";
+}
+.boschicon-bosch-ic-arrows-diagonal-disabled-bold:before {
+  content: "\e380";
+}
+.boschicon-bosch-ic-back-left-end:before {
+  content: "\e381";
+}
+.boschicon-bosch-ic-back-right-end:before {
+  content: "\e382";
+}
+.boschicon-bosch-ic-bar-chart-search:before {
+  content: "\e383";
+}
+.boschicon-bosch-ic-batch:before {
+  content: "\e384";
+}
+.boschicon-bosch-ic-calendar-remove:before {
+  content: "\e385";
+}
+.boschicon-bosch-ic-call-bluetooth:before {
+  content: "\e386";
+}
+.boschicon-bosch-ic-call-deny:before {
+  content: "\e387";
+}
+.boschicon-bosch-ic-call-settings:before {
+  content: "\e388";
+}
+.boschicon-bosch-ic-caution-sign-clock:before {
+  content: "\e389";
+}
+.boschicon-bosch-ic-caution-sign-list:before {
+  content: "\e38a";
+}
+.boschicon-bosch-ic-core-data:before {
+  content: "\e38b";
+}
+.boschicon-bosch-ic-cursor-connected:before {
+  content: "\e38c";
+}
+.boschicon-bosch-ic-cursor:before {
+  content: "\e38d";
+}
+.boschicon-bosch-ic-dmc-code:before {
+  content: "\e38e";
+}
+.boschicon-bosch-ic-find-id:before {
+  content: "\e38f";
+}
+.boschicon-bosch-ic-globe-search:before {
+  content: "\e390";
+}
+.boschicon-bosch-ic-interface:before {
+  content: "\e391";
+}
+.boschicon-bosch-ic-material-add-manually:before {
+  content: "\e392";
+}
+.boschicon-bosch-ic-material-list:before {
+  content: "\e393";
+}
+.boschicon-bosch-ic-material-remove-manually:before {
+  content: "\e394";
+}
+.boschicon-bosch-ic-material:before {
+  content: "\e395";
+}
+.boschicon-bosch-ic-menu-checkmark:before {
+  content: "\e396";
+}
+.boschicon-bosch-ic-qr-code:before {
+  content: "\e397";
+}
+.boschicon-bosch-ic-sort-alphabetically:before {
+  content: "\e398";
+}
+.boschicon-bosch-ic-unpin-classic-disabled-bold:before {
+  content: "\e399";
+}
+.boschicon-bosch-ic-unpin-modern-disabled-bold:before {
+  content: "\e39a";
+}
+.boschicon-bosch-ic-window-search:before {
+  content: "\e39b";
+}
+.boschicon-bosch-ic-cloud-clock:before {
+  content: "\e39c";
+}
+.boschicon-bosch-ic-concierge:before {
+  content: "\e39d";
+}
+.boschicon-bosch-ic-heating-radiator:before {
+  content: "\e39e";
+}
+.boschicon-bosch-ic-home-user-out:before {
+  content: "\e39f";
+}
+.boschicon-bosch-ic-hot:before {
+  content: "\e3a0";
+}
+.boschicon-bosch-ic-screen-service:before {
+  content: "\e3a1";
+}
+.boschicon-bosch-ic-sun-ice:before {
+  content: "\e3a2";
+}
+.boschicon-bosch-ic-sun-off-disabled-bold:before {
+  content: "\e3a3";
+}
+.boschicon-bosch-ic-tractor:before {
+  content: "\e3a4";
+}
+.boschicon-bosch-ic-video-recorder-digital:before {
+  content: "\e3a5";
+}
+.boschicon-bosch-ic-windshield-wiper:before {
+  content: "\e3a6";
+}
+.boschicon-bosch-ic-weather-snow-thunder:before {
+  content: "\e3a7";
+}
+.boschicon-bosch-ic-electricity-pylon:before {
+  content: "\e3a8";
+}
+.boschicon-bosch-ic-box-questionmark:before {
+  content: "\e3a9";
+}
+.boschicon-bosch-ic-rainbow:before {
+  content: "\e3aa";
+}
+.boschicon-bosch-ic-medal:before {
+  content: "\e3ab";
+}
+.boschicon-bosch-ic-wheel:before {
+  content: "\e3ac";
+}
+.boschicon-bosch-ic-borescope-connected:before {
+  content: "\e3ad";
+}
+.boschicon-bosch-ic-filter-delete:before {
+  content: "\e3ae";
+}
+.boschicon-bosch-ic-filter-add:before {
+  content: "\e3af";
+}
+.boschicon-bosch-ic-man:before {
+  content: "\e3b0";
+}
+.boschicon-bosch-ic-woman:before {
+  content: "\e3b1";
+}
+.boschicon-bosch-ic-fridge:before {
+  content: "\e3b2";
+}
+.boschicon-bosch-ic-battery-car:before {
+  content: "\e3b3";
+}
+.boschicon-bosch-ic-bag-escalator:before {
+  content: "\e3b4";
+}
+.boschicon-bosch-ic-shopping-bags:before {
+  content: "\e3b5";
+}
+.boschicon-bosch-ic-car-steering-left:before {
+  content: "\e3b6";
+}
+.boschicon-bosch-ic-car-steering-right:before {
+  content: "\e3b7";
+}
+.boschicon-bosch-ic-thumb-up-down:before {
+  content: "\e3b8";
+}
+.boschicon-bosch-ic-user-run-detection:before {
+  content: "\e3b9";
+}
+.boschicon-bosch-ic-bank:before {
+  content: "\e3ba";
+}
+.boschicon-bosch-ic-transportation:before {
+  content: "\e3bb";
+}
+.boschicon-bosch-ic-government:before {
+  content: "\e3bc";
+}
+.boschicon-bosch-ic-user-music:before {
+  content: "\e3bd";
+}
+.boschicon-bosch-ic-bus:before {
+  content: "\e3be";
+}
+.boschicon-bosch-ic-car-euro:before {
+  content: "\e3bf";
+}
+.boschicon-bosch-ic-bag:before {
+  content: "\e3c0";
+}
+.boschicon-bosch-ic-plate-tetrapack:before {
+  content: "\e3c1";
+}
+.boschicon-bosch-ic-hospital:before {
+  content: "\e3c2";
+}
+.boschicon-bosch-ic-desktop-structure:before {
+  content: "\e3c3";
+}
+.boschicon-bosch-ic-frog-head:before {
+  content: "\e3c4";
+}
+.boschicon-bosch-ic-sportboat:before {
+  content: "\e3c5";
+}
+.boschicon-bosch-ic-yacht:before {
+  content: "\e3c6";
+}
+.boschicon-bosch-ic-leaf-tilia:before {
+  content: "\e3c7";
+}
+.boschicon-bosch-ic-music:before {
+  content: "\e3c8";
+}
+.boschicon-bosch-ic-oil-lamp:before {
+  content: "\e3c9";
+}
+.boschicon-bosch-ic-windshield-wiper-rear:before {
+  content: "\e3ca";
+}
+.boschicon-bosch-ic-dongle-connected:before {
+  content: "\e3cb";
+}
+.boschicon-bosch-ic-slate:before {
+  content: "\e3cc";
+}
+.boschicon-bosch-ic-appliance-heat-pump-exhaust:before {
+  content: "\e3cd";
+}
+.boschicon-bosch-ic-alert-list:before {
+  content: "\e3ce";
+}
+.boschicon-bosch-ic-arrow-left-end-frame:before {
+  content: "\e3cf";
+}
+.boschicon-bosch-ic-arrow-right-end-frame:before {
+  content: "\e3d0";
+}
+.boschicon-bosch-ic-shape-ellipse:before {
+  content: "\e3d1";
+}
+.boschicon-bosch-ic-shape-rectangle:before {
+  content: "\e3d2";
+}
+.boschicon-bosch-ic-wishlist-add:before {
+  content: "\e3d3";
+}
+.boschicon-bosch-ic-smartphone-disabled-light:before {
+  content: "\e3d4";
+}
+.boschicon-bosch-ic-airbag:before {
+  content: "\e3d5";
+}
+.boschicon-bosch-ic-compass:before {
+  content: "\e3d6";
+}
+.boschicon-bosch-ic-turbine-wind:before {
+  content: "\e3d7";
+}
+.boschicon-bosch-ic-arrows-diagonal-disabled-light:before {
+  content: "\e3d8";
+}
+.boschicon-bosch-ic-ear-off-disabled-bold:before {
+  content: "\e3d9";
+}
+.boschicon-bosch-ic-fan-off-disabled-light:before {
+  content: "\e3da";
+}
+.boschicon-bosch-ic-faucet-off-disabled-light:before {
+  content: "\e3db";
+}
+.boschicon-bosch-ic-hand-motion-off-disabled-bold:before {
+  content: "\e3dc";
+}
+.boschicon-bosch-ic-heating-floor-off-disabled-light:before {
+  content: "\e3dd";
+}
+.boschicon-bosch-ic-heating-radiator-off-disabled-light:before {
+  content: "\e3de";
+}
+.boschicon-bosch-ic-ice-off-disabled-light:before {
+  content: "\e3df";
+}
+.boschicon-bosch-ic-smartphone-disabled-bold:before {
+  content: "\e3e0";
+}
+.boschicon-bosch-ic-subtitles-off-bold:before {
+  content: "\e3e1";
+}
+.boschicon-bosch-ic-sun-off-disabled-light:before {
+  content: "\e3e2";
+}
+.boschicon-bosch-ic-video-disabled-bold:before {
+  content: "\e3e3";
+}
+.boschicon-bosch-ic-volume-off-bold:before {
+  content: "\e3e4";
+}
+.boschicon-bosch-ic-watch-off-disabled-bold:before {
+  content: "\e3e5";
+}
+.boschicon-bosch-ic-water-shower-off-disabled-light:before {
+  content: "\e3e6";
+}
+.boschicon-bosch-ic-3d-frame-play:before {
+  content: "\e3e7";
+}
+.boschicon-bosch-ic-alert-error-checkmark:before {
+  content: "\e3e8";
+}
+.boschicon-bosch-ic-arrow-up-frame-check:before {
+  content: "\e3e9";
+}
+.boschicon-bosch-ic-arrow-up-frame-error:before {
+  content: "\e3ea";
+}
+.boschicon-bosch-ic-arrows-checkmark:before {
+  content: "\e3eb";
+}
+.boschicon-bosch-ic-assembly-line-settings:before {
+  content: "\e3ec";
+}
+.boschicon-bosch-ic-augmented-reality-player:before {
+  content: "\e3ed";
+}
+.boschicon-bosch-ic-badge-checkmark:before {
+  content: "\e3ee";
+}
+.boschicon-bosch-ic-bar-chart-kappa:before {
+  content: "\e3ef";
+}
+.boschicon-bosch-ic-bar-chart-search-detail:before {
+  content: "\e3f0";
+}
+.boschicon-bosch-ic-barcode-checkmark:before {
+  content: "\e3f1";
+}
+.boschicon-bosch-ic-barcode-scan-bulb:before {
+  content: "\e3f2";
+}
+.boschicon-bosch-ic-barcode:before {
+  content: "\e3f3";
+}
+.boschicon-bosch-ic-binary:before {
+  content: "\e3f4";
+}
+.boschicon-bosch-ic-book-lightbulb:before {
+  content: "\e3f5";
+}
+.boschicon-bosch-ic-box-arrow-down:before {
+  content: "\e3f6";
+}
+.boschicon-bosch-ic-box-delivery-checkmark:before {
+  content: "\e3f7";
+}
+.boschicon-bosch-ic-globe-checkmark:before {
+  content: "\e3f8";
+}
+.boschicon-bosch-ic-calendar-boxes:before {
+  content: "\e3f9";
+}
+.boschicon-bosch-ic-calendar-service:before {
+  content: "\e3fa";
+}
+.boschicon-bosch-ic-camera-processor:before {
+  content: "\e3fb";
+}
+.boschicon-bosch-ic-camera-settings:before {
+  content: "\e3fc";
+}
+.boschicon-bosch-ic-chart-line-checkmark:before {
+  content: "\e3fd";
+}
+.boschicon-bosch-ic-checklist-stack:before {
+  content: "\e3fe";
+}
+.boschicon-bosch-ic-checkmark-frame-minimum:before {
+  content: "\e3ff";
+}
+.boschicon-bosch-ic-checkmark-frame-tripple:before {
+  content: "\e400";
+}
+.boschicon-bosch-ic-clipboard-checkmark:before {
+  content: "\e401";
+}
+.boschicon-bosch-ic-clipboard-list-parts:before {
+  content: "\e402";
+}
+.boschicon-bosch-ic-clipboard-settings:before {
+  content: "\e403";
+}
+.boschicon-bosch-ic-computer-tower-box:before {
+  content: "\e404";
+}
+.boschicon-bosch-ic-connectivity-lock:before {
+  content: "\e405";
+}
+.boschicon-bosch-ic-counter-current:before {
+  content: "\e406";
+}
+.boschicon-bosch-ic-counter-target:before {
+  content: "\e407";
+}
+.boschicon-bosch-ic-cube-checkmark:before {
+  content: "\e408";
+}
+.boschicon-bosch-ic-cube-play:before {
+  content: "\e409";
+}
+.boschicon-bosch-ic-time-line-settings:before {
+  content: "\e40a";
+}
+.boschicon-bosch-ic-time-line-view:before {
+  content: "\e40b";
+}
+.boschicon-bosch-ic-time-line:before {
+  content: "\e40c";
+}
+.boschicon-bosch-ic-delivery-checkmark:before {
+  content: "\e40d";
+}
+.boschicon-bosch-ic-desktop-application-3d-play:before {
+  content: "\e40e";
+}
+.boschicon-bosch-ic-desktop-apps-download:before {
+  content: "\e40f";
+}
+.boschicon-bosch-ic-desktop-dashboard:before {
+  content: "\e410";
+}
+.boschicon-bosch-ic-desktop-graph-checkmark:before {
+  content: "\e411";
+}
+.boschicon-bosch-ic-desktop-graph-search:before {
+  content: "\e412";
+}
+.boschicon-bosch-ic-desktop-graph:before {
+  content: "\e413";
+}
+.boschicon-bosch-ic-development-kit:before {
+  content: "\e414";
+}
+.boschicon-bosch-ic-directory-cloud-settings:before {
+  content: "\e415";
+}
+.boschicon-bosch-ic-directory-cloud:before {
+  content: "\e416";
+}
+.boschicon-bosch-ic-directory-settings:before {
+  content: "\e417";
+}
+.boschicon-bosch-ic-document-clock-cycle:before {
+  content: "\e418";
+}
+.boschicon-bosch-ic-document-code-stack:before {
+  content: "\e419";
+}
+.boschicon-bosch-ic-document-dat-edit:before {
+  content: "\e41a";
+}
+.boschicon-bosch-ic-document-ohd-arrow-down:before {
+  content: "\e41b";
+}
+.boschicon-bosch-ic-dolphin:before {
+  content: "\e41c";
+}
+.boschicon-bosch-ic-energy-management:before {
+  content: "\e41d";
+}
+.boschicon-bosch-ic-eraser:before {
+  content: "\e41e";
+}
+.boschicon-bosch-ic-folder-broom:before {
+  content: "\e41f";
+}
+.boschicon-bosch-ic-folder-check-broom:before {
+  content: "\e420";
+}
+.boschicon-bosch-ic-folder-checkmark:before {
+  content: "\e421";
+}
+.boschicon-bosch-ic-folder-oes-check:before {
+  content: "\e422";
+}
+.boschicon-bosch-ic-folder-open-service:before {
+  content: "\e423";
+}
+.boschicon-bosch-ic-folder-reload:before {
+  content: "\e424";
+}
+.boschicon-bosch-ic-hand-command:before {
+  content: "\e425";
+}
+.boschicon-bosch-ic-heating-start:before {
+  content: "\e426";
+}
+.boschicon-bosch-ic-hierarchy-refresh:before {
+  content: "\e427";
+}
+.boschicon-bosch-ic-hierarchy-search:before {
+  content: "\e428";
+}
+.boschicon-bosch-ic-hierarchy-settings:before {
+  content: "\e429";
+}
+.boschicon-bosch-ic-hierarchy:before {
+  content: "\e42a";
+}
+.boschicon-bosch-ic-hmi-desktop-settings:before {
+  content: "\e42b";
+}
+.boschicon-bosch-ic-human-machine-interface:before {
+  content: "\e42c";
+}
+.boschicon-bosch-ic-keys-user-access:before {
+  content: "\e42d";
+}
+.boschicon-bosch-ic-keys:before {
+  content: "\e42e";
+}
+.boschicon-bosch-ic-label-edit:before {
+  content: "\e42f";
+}
+.boschicon-bosch-ic-line-arrow-checkmark:before {
+  content: "\e430";
+}
+.boschicon-bosch-ic-link-checkmark:before {
+  content: "\e431";
+}
+.boschicon-bosch-ic-lock-closed-checkmark:before {
+  content: "\e432";
+}
+.boschicon-bosch-ic-lock-open-checkmark:before {
+  content: "\e433";
+}
+.boschicon-bosch-ic-material-search:before {
+  content: "\e434";
+}
+.boschicon-bosch-ic-objects-search:before {
+  content: "\e435";
+}
+.boschicon-bosch-ic-objects:before {
+  content: "\e436";
+}
+.boschicon-bosch-ic-plan-a-to-b:before {
+  content: "\e437";
+}
+.boschicon-bosch-ic-plan-chart:before {
+  content: "\e438";
+}
+.boschicon-bosch-ic-print-send:before {
+  content: "\e439";
+}
+.boschicon-bosch-ic-refresh-analysis:before {
+  content: "\e43a";
+}
+.boschicon-bosch-ic-remote-desktop-add:before {
+  content: "\e43b";
+}
+.boschicon-bosch-ic-rfid-checkmark:before {
+  content: "\e43c";
+}
+.boschicon-bosch-ic-rfid-tag:before {
+  content: "\e43d";
+}
+.boschicon-bosch-ic-sequence-checkmark:before {
+  content: "\e43e";
+}
+.boschicon-bosch-ic-server-arrow-up:before {
+  content: "\e43f";
+}
+.boschicon-bosch-ic-server-arrows:before {
+  content: "\e440";
+}
+.boschicon-bosch-ic-server-settings:before {
+  content: "\e441";
+}
+.boschicon-bosch-ic-server-share:before {
+  content: "\e442";
+}
+.boschicon-bosch-ic-settings-editor:before {
+  content: "\e443";
+}
+.boschicon-bosch-ic-survey-checkmark:before {
+  content: "\e444";
+}
+.boschicon-bosch-ic-target-dart:before {
+  content: "\e445";
+}
+.boschicon-bosch-ic-target-view:before {
+  content: "\e446";
+}
+.boschicon-bosch-ic-target:before {
+  content: "\e447";
+}
+.boschicon-bosch-ic-thickness-selection:before {
+  content: "\e448";
+}
+.boschicon-bosch-ic-toolbox-checkmark:before {
+  content: "\e449";
+}
+.boschicon-bosch-ic-toolbox:before {
+  content: "\e44a";
+}
+.boschicon-bosch-ic-translate:before {
+  content: "\e44b";
+}
+.boschicon-bosch-ic-tune-vertical-checkmark:before {
+  content: "\e44c";
+}
+.boschicon-bosch-ic-wand-user-add:before {
+  content: "\e44d";
+}
+.boschicon-bosch-ic-wand-user-settings:before {
+  content: "\e44e";
+}
+.boschicon-bosch-ic-wand-user:before {
+  content: "\e44f";
+}
+.boschicon-bosch-ic-window-globe:before {
+  content: "\e450";
+}
+.boschicon-bosch-ic-wrench-change:before {
+  content: "\e451";
+}
+.boschicon-bosch-ic-clock-24-7:before {
+  content: "\e452";
+}
+.boschicon-bosch-ic-eagle:before {
+  content: "\e453";
+}
+.boschicon-bosch-ic-fluorescent-light:before {
+  content: "\e454";
+}
+.boschicon-bosch-ic-home-cloud-0:before {
+  content: "\e455";
+}
+.boschicon-bosch-ic-home-cloud-1:before {
+  content: "\e456";
+}
+.boschicon-bosch-ic-home-cloud-2:before {
+  content: "\e457";
+}
+.boschicon-bosch-ic-home-cloud-3:before {
+  content: "\e458";
+}
+.boschicon-bosch-ic-home-shadow:before {
+  content: "\e459";
+}
+.boschicon-bosch-ic-motorcycle-sport:before {
+  content: "\e45a";
+}
+.boschicon-bosch-ic-smartphone-connected:before {
+  content: "\e45b";
+}
+.boschicon-bosch-ic-usb-stick:before {
+  content: "\e45c";
+}
+.boschicon-bosch-ic-user--setting:before {
+  content: "\e45d";
+}
+.boschicon-bosch-ic-time-line-clock:before {
+  content: "\e45e";
+}
+.boschicon-bosch-ic-alarm-fire:before {
+  content: "\e45f";
+}
+.boschicon-bosch-ic-emergency-front:before {
+  content: "\e460";
+}
+.boschicon-bosch-ic-transporter-front:before {
+  content: "\e461";
+}
+.boschicon-bosch-ic-truck-front:before {
+  content: "\e462";
+}
+.boschicon-bosch-ic-unpin-classic-disabled-light:before {
+  content: "\e463";
+}
+.boschicon-bosch-ic-unpin-modern-disabled-light:before {
+  content: "\e464";
+}
+.boschicon-bosch-ic-smartphone-ban:before {
+  content: "\e465";
+}
+.boschicon-bosch-ic-helmet:before {
+  content: "\e466";
+}
+.boschicon-bosch-ic-gate-closed:before {
+  content: "\e467";
+}
+.boschicon-bosch-ic-fence:before {
+  content: "\e468";
+}
+.boschicon-bosch-ic-desktop-apps:before {
+  content: "\e469";
+}
+.boschicon-bosch-ic-candle:before {
+  content: "\e46a";
+}
+.boschicon-bosch-ic-abort-frame:before {
+  content: "\e886";
+}
+.boschicon-bosch-ic-arrow-down-frame:before {
+  content: "\e887";
+}
+.boschicon-bosch-ic-arrow-left-down-frame:before {
+  content: "\e888";
+}
+.boschicon-bosch-ic-arrow-left-frame:before {
+  content: "\e889";
+}
+.boschicon-bosch-ic-arrow-left-up-frame:before {
+  content: "\e88a";
+}
+.boschicon-bosch-ic-arrow-right-down-frame:before {
+  content: "\e88b";
+}
+.boschicon-bosch-ic-arrow-right-frame:before {
+  content: "\e88c";
+}
+.boschicon-bosch-ic-arrow-right-up-frame:before {
+  content: "\e88d";
+}
+.boschicon-bosch-ic-arrow-up-frame:before {
+  content: "\e88e";
+}
+.boschicon-bosch-ic-asiapacific-frame:before {
+  content: "\e88f";
+}
+.boschicon-bosch-ic-cash-frame:before {
+  content: "\e890";
+}
+.boschicon-bosch-ic-checkmark-frame:before {
+  content: "\e891";
+}
+.boschicon-bosch-ic-copyright-frame:before {
+  content: "\e892";
+}
+.boschicon-bosch-ic-download-frame:before {
+  content: "\e893";
+}
+.boschicon-bosch-ic-europe-frame:before {
+  content: "\e894";
+}
+.boschicon-bosch-ic-lock-closed-frame:before {
+  content: "\e895";
+}
+.boschicon-bosch-ic-lock-open-frame:before {
+  content: "\e896";
+}
+.boschicon-bosch-ic-my-brand-frame:before {
+  content: "\e897";
+}
+.boschicon-bosch-ic-northamerica-frame:before {
+  content: "\e898";
+}
+.boschicon-bosch-ic-problem-frame:before {
+  content: "\e899";
+}
+.boschicon-bosch-ic-promotion-frame:before {
+  content: "\e89a";
+}
+.boschicon-bosch-ic-question-frame:before {
+  content: "\e89b";
+}
+.boschicon-bosch-ic-share-frame:before {
+  content: "\e89c";
+}
+.boschicon-bosch-ic-southamerica-frame:before {
+  content: "\e89d";
+}
+.boschicon-bosch-ic-start-play-frame:before {
+  content: "\e89e";
+}
+.boschicon-bosch-ic-upload-frame:before {
+  content: "\e89f";
+}
+.boschicon-bosch-ic-world-frame:before {
+  content: "\e8a0";
+}
+.boschicon-bosch-ic-add-frame:before {
+  content: "\e8a1";
+}
+.boschicon-bosch-ic-call-deny-frame:before {
+  content: "\e8a2";
+}
+.boschicon-bosch-ic-call-frame:before {
+  content: "\e8a3";
+}
+.boschicon-bosch-ic-fast-backward-frame:before {
+  content: "\e8a4";
+}
+.boschicon-bosch-ic-fast-forward-frame:before {
+  content: "\e8a5";
+}
+.boschicon-bosch-ic-skip-backward-frame:before {
+  content: "\e8a6";
+}
+.boschicon-bosch-ic-skip-fast-backward-frame:before {
+  content: "\e8a7";
+}
+.boschicon-bosch-ic-skip-fast-forward-frame:before {
+  content: "\e8a8";
+}
+.boschicon-bosch-ic-skip-forward-frame:before {
+  content: "\e8a9";
+}
+.boschicon-bosch-ic-subtract-frame:before {
+  content: "\e8aa";
+}
+.boschicon-bosch-ic-facebook-frame:before {
+  content: "\ea87";
+}
+.boschicon-bosch-ic-googleplus-frame:before {
+  content: "\ea88";
+}
+.boschicon-bosch-ic-instagram-frame:before {
+  content: "\ea89";
+}
+.boschicon-bosch-ic-lineapp-frame:before {
+  content: "\ea8a";
+}
+.boschicon-bosch-ic-linkedin-frame:before {
+  content: "\ea8b";
+}
+.boschicon-bosch-ic-pinterest-frame:before {
+  content: "\ea8c";
+}
+.boschicon-bosch-ic-snapchat-frame:before {
+  content: "\ea8d";
+}
+.boschicon-bosch-ic-tumblr-frame:before {
+  content: "\ea8e";
+}
+.boschicon-bosch-ic-twitter-frame:before {
+  content: "\ea8f";
+}
+.boschicon-bosch-ic-vimeo-frame:before {
+  content: "\ea90";
+}
+.boschicon-bosch-ic-wechat-frame:before {
+  content: "\ea91";
+}
+.boschicon-bosch-ic-weibo-frame:before {
+  content: "\ea92";
+}
+.boschicon-bosch-ic-whatsapp-frame:before {
+  content: "\ea93";
+}
+.boschicon-bosch-ic-xing-frame:before {
+  content: "\ea94";
+}
+.boschicon-bosch-ic-youku-frame:before {
+  content: "\ea95";
+}
+.boschicon-bosch-ic-youtube-frame:before {
+  content: "\ea96";
+}
+.boschicon-bosch-ic-vk-frame:before {
+  content: "\ea97";
+}
+.boschicon-bosch-ic-skype-frame:before {
+  content: "\ea98";
+}
+.boschicon-bosch-ic-alert-error-filled:before {
+  content: "\eb08";
+}
+.boschicon-bosch-ic-alert-error:before {
+  content: "\eb09";
+}
+.boschicon-bosch-ic-alert-success-filled:before {
+  content: "\eb0a";
+}
+.boschicon-bosch-ic-alert-success:before {
+  content: "\eb0b";
+}
+.boschicon-bosch-ic-alert-warning-filled:before {
+  content: "\eb0c";
+}
+.boschicon-bosch-ic-alert-warning:before {
+  content: "\eb0d";
+}

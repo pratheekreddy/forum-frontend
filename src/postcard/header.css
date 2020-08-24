@@ -1,20 +1,34 @@
-.class {
-    position: absolute;
-    left: 0;
-    top: 0px;
+header {
+    width: 100%;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #bfc0c2;
+    background: #fff;
+    padding: 10px 0;
+}
+
+header::before {
     width: 100%;
     height: 16px;
     content: '';
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    background-image: url("./bosch.jpg");
+    background-image: url("bosch.jpg");
+    position: absolute;
+    top: 0;
 }
 
-.img {
-    padding: 17px;
-    margin-top: 6px;
-    display: block;
-    width: 160px;
-    height: auto;
+img {
+    width: 130px;
+    display: inline-block;
+    margin: 18px 0 0 10px;
+}
+
+h1 {
+    display: inline-block;
+    width: calc(100% - 320px);
+    text-align: center;
+    font-size: 28px;
+    vertical-align: top;
+    padding: 18px 0 0 !important;
 }

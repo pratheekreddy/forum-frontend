@@ -9,30 +9,30 @@ class App extends Component {
 
   constructor() {
     super();
-    this.state={
-      session:[],
-      showPopup:false
-  }
-  }
-
- reset=()=>{
-  const post=axios.get('https://cors-anywhere.herokuapp.com/https://0ze03xvnwoa4ncstcap-njs-forum-srv.cfapps.eu10.hana.ondemand.com/agenda/sessions?$expand=TOPICS,FILES');
-  post.then((result)=>{
-
-    this.setState({session:result.data.value})
-  }).catch((e)=>{
-    this.setState({session:[]})
-  })
+    this.state = {
+      session: [],
+      showPopup: false
+    }
   }
 
-  componentDidMount(){
+  reset = () => {
+    const post = axios.get('https://cors-anywhere.herokuapp.com/https://0ze03xvnwoa4ncstcap-njs-forum-srv.cfapps.eu10.hana.ondemand.com/agenda/sessions?$expand=TOPICS,FILES');
+    post.then((result) => {
+
+      this.setState({ session: result.data.value })
+    }).catch((e) => {
+      this.setState({ session: [] })
+    })
+  }
+
+  componentDidMount() {
     this.reset()
   }
 
-// state={
-//       session:[],
-//       showPopup:false
-//   }
+  // state={
+  //       session:[],
+  //       showPopup:false
+  //   }
   togglePopup() {
     this.setState({
       // showPopup: !this.state.showPopup
@@ -42,12 +42,12 @@ class App extends Component {
   render() {
     return (
       <div >
-      <Headers/>
-      <Postcards 
-      session={this.state.session} 
-      showPopup={this.state.showPopup}
-      toggle={this.togglePopup.bind(this)}
-      />
+        <Headers />
+        <Postcards
+          session={this.state.session}
+          showPopup={this.state.showPopup}
+          toggle={this.togglePopup.bind(this)}
+        />
       </div>
     );
   }
