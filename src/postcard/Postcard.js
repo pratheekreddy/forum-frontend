@@ -53,6 +53,7 @@ const postCard = (props) => {
       }
       
       let onChange=(e)=>{
+        console.log(e.target.files)
         file=e.target.files[0]
       }
 
