@@ -16,6 +16,7 @@ const PostCard = (props, state) => {
     resorc.push([t[t.length-1], props.files[j].FILE_NAME])
   }
   let presentors = [...new Set(presento)]
+  topics=[...new Set(topics)]
   let str = topics.toString()
 
   let list = (
