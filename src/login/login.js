@@ -37,6 +37,7 @@ const login=(props)=>{
             alert(result.data.status)
             if(result.data.status==='valid otp'){
                 header=result.data.token
+                
             }
             console.log(header)
         }).catch((e) => {
@@ -47,10 +48,10 @@ const login=(props)=>{
     return (
             <div className = 'form'>
                 <label >E-mail:</label>
-                <input  type="text"  name="user_email" onChange={event=>updateEmail(event.target.value)}/>
+                <input  type="text"  onChange={event=>updateEmail(event.target.value)}/>
                 <button onClick={getOtp}>Get OTP</button><br/>
                 <label >OTP:</label>
-                <input type='text' placeholder="Enter your OTP" id="otp" name="otp" onChange={event=>updateOtp(event.target.value)}/><br/>
+                <input type='text' placeholder="Enter your OTP"  onChange={event=>updateOtp(event.target.value)}/><br/>
                 <button onClick={validateOtp}>Login</button>
             </div>
     )
