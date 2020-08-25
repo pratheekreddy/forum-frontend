@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import './postcard/styles.css'
 import Headers from './header'
 import Postcards from './postcard/postcards'
+import  Login from './login/login'
 
 class App extends Component {
 
@@ -33,22 +35,24 @@ class App extends Component {
   //       session:[],
   //       showPopup:false
   //   }
-  togglePopup() {
-    this.setState({
-      // showPopup: !this.state.showPopup
-    });
-  }
-
-  render() {
-    return (
-      <div >
-        <Headers />
+  postc=()=>{
+      return(
         <Postcards
           session={this.state.session}
           showPopup={this.state.showPopup}
-          toggle={this.togglePopup.bind(this)}
         />
-      </div>
+      )
+  }
+
+  render() {
+    return (<Router>
+      <div >
+        <Headers />
+        <Switch>
+            <Route exact path='/' component={Login}/>
+            <Route exact path='/landing' component={this.postc} />
+        </Switch>
+      </div></Router>
     );
   }
 }
