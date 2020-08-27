@@ -6,3 +6,9 @@ div.sticky {
     position: sticky;
     top: 0;
   }
+
+  div.footer {
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0;
+  }
