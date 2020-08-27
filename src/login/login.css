@@ -1,0 +1,11 @@
+.form {
+    width: 980px;
+    margin: 0 auto;
+
+    padding: 15px;
+    margin-bottom: 15px;
+    transition: all 0.5s;
+
+    color: black;
+    font-family: 'Bosch Sans'
+  }

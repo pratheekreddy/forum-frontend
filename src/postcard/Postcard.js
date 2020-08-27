@@ -12,9 +12,11 @@ const PostCard = (props, state) => {
     presento.push(props.topics[i].USER_EMAIL)
   }
   for (let j = 0; j < props.files.length; j++) {
-    resorc.push([props.files[j].FILE_NAME.split('-')[1], props.files[j].FILE_NAME])
+    let t=props.files[j].FILE_NAME.split('-')
+    resorc.push([t[t.length-1], props.files[j].FILE_NAME])
   }
   let presentors = [...new Set(presento)]
+  topics=[...new Set(topics)]
   let str = topics.toString()
 
   let list = (
@@ -28,6 +30,7 @@ const PostCard = (props, state) => {
   let download = (
     <ul className="downloads">
       {resorc.map((down, i) => {
+        console.log(down)
         const tempName = down[0].split('.');
         return <li key={i}><a target="_blank" rel="noopener noreferrer" href={"https://0appkh5ipbo57270um-rbei-njs-forum.cfapps.eu10.hana.ondemand.com/file/download?filename=" + down[1]}><span>{tempName[1]}</span>{tempName[0]}</a></li>
       })}
@@ -46,13 +49,16 @@ const PostCard = (props, state) => {
     };
     axios.post("https://0appkh5ipbo57270um-rbei-njs-forum.cfapps.eu10.hana.ondemand.com/file/upload", formData, config)
       .then((response) => {
-        alert("The file is successfully uploaded");
+        console.log(response)
+        if(response.status===200){
+        alert(response.data.status);}
       }).catch((error) => {
       });
   }
 
   let onChange = (e) => {
     file = e.target.files[0];
+    formSubmit(e)
   }
 
   return (
@@ -73,7 +79,7 @@ const PostCard = (props, state) => {
       <div className='upload'>
         <form onSubmit={formSubmit}>
           <i className="boschicon-bosch-ic-cloud-upload"></i>
-          <input multiple type="file" name="files" onChange={onChange} />
+          <input type="file" name="files" onChange={onChange} />
           <div className="clear"></div>
         </form>
       </div>
