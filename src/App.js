@@ -16,7 +16,7 @@ class App extends Component {
       showPopup: false
     }
   }
-
+ user='pratheek'
   reset = () => {
     const post = axios.get('https://cors-anywhere.herokuapp.com/https://0ze03xvnwoa4ncstcap-njs-forum-srv.cfapps.eu10.hana.ondemand.com/agenda/sessions?$expand=TOPICS,FILES&$orderby=DATE%20desc');
     post.then((result) => {
@@ -48,7 +48,7 @@ class App extends Component {
     return (<Router>
       <div >
       <div className="sticky">
-        <Headers/>
+        <Headers user={this.user}/>
         </div>
         <Switch>
             <Route exact path='/' component={Login}/>
