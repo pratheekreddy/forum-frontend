@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from 'axios'
+import ReactTooltip from "react-tooltip";
 
 import "./postcard.scss";
 const PostCard = (props, state) => {
@@ -22,13 +23,16 @@ const PostCard = (props, state) => {
   let list = (
     <div>
       {presentors.map((presontor, i) => {
-        return <li key={i}>{presontor}</li>
+        let ref="mailto:"+presontor
+        return <li key={i}><a style={{color:"#868686"}} href={ref}>{presontor}</a></li>
       })}
     </div>
   )
 
   let download = (
     <ul className="downloads">
+    {/*TODO: add heading*/}
+      <h5>Attachments</h5>
       {resorc.map((down, i) => {
         console.log(down)
         const tempName = down[0].split('.');
@@ -66,7 +70,7 @@ const PostCard = (props, state) => {
       <div className="head">
         <label>{props.index + 1}</label>
         <strong>{str}</strong>
-        <span>{props.date}</span>
+        <span><b>{props.date}</b></span>
       </div>
       <div className="desc">
         {props.description}
@@ -78,25 +82,32 @@ const PostCard = (props, state) => {
 
       <div className='upload'>
         <form onSubmit={formSubmit}>
-          <i className="boschicon-bosch-ic-cloud-upload"></i>
-          <input type="file" name="files" onChange={onChange} />
+          <i  className="boschicon-bosch-ic-cloud-upload"></i>
+          <ReactTooltip id="uploadTip" place="top" effect="solid">
+                Upload Attachments
+          </ReactTooltip>
+          <input data-tip data-for="uploadTip" type="file" name="files" onChange={onChange} />
           <div className="clear"></div>
         </form>
       </div>
       {resorc && resorc.length ?
         <div className="resources">
-          <i className="boschicon-bosch-ic-book" onClick={() => {
+          <i data-tip data-for="attachmentsTip" className="boschicon-bosch-ic-book" onClick={() => {
             let newVal = showResources ? false : true;
             setShowResources(newVal);
           }}></i>
+          <ReactTooltip id="attachmentsTip" place="top" effect="solid">
+                View Attachments
+          </ReactTooltip>
         </div> : null}
-      <div>{showResources ? download : null}</div>
+      <div >{showResources ? download : null}</div>
 
 
       <div className="admin-notify">
-        <button className="rb-button rb-button--secondary">
-          Notify Agenda
-        </button>
+        <i data-tip data-for="emailTip" className="boschicon-bosch-ic-mail"></i>
+          <ReactTooltip id="emailTip" place="top" effect="solid">
+                Email Subscribers
+          </ReactTooltip>
       </div>
       <div className="clear"></div>
     </div>

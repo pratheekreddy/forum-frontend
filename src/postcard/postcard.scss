@@ -125,6 +125,13 @@
 
   .admin-notify {
     float: right;
+    i {
+      width: 35px;
+      height: 35px;
+      font-size: 35px;
+      float: left;
+      cursor: pointer;
+    }
   }
 
   .rb-button {
