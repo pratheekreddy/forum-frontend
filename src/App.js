@@ -18,7 +18,7 @@ class App extends Component {
   }
 
   reset = () => {
-    const post = axios.get('https://cors-anywhere.herokuapp.com/https://0ze03xvnwoa4ncstcap-njs-forum-srv.cfapps.eu10.hana.ondemand.com/agenda/sessions?$expand=TOPICS,FILES');
+    const post = axios.get('https://cors-anywhere.herokuapp.com/https://0ze03xvnwoa4ncstcap-njs-forum-srv.cfapps.eu10.hana.ondemand.com/agenda/sessions?$expand=TOPICS,FILES&$orderby=DATE%20desc');
     post.then((result) => {
 
       this.setState({ session: result.data.value })
@@ -47,7 +47,9 @@ class App extends Component {
   render() {
     return (<Router>
       <div >
-        <Headers />
+      <div className="sticky">
+        <Headers/>
+        </div>
         <Switch>
             <Route exact path='/' component={Login}/>
             <Route exact path='/landing' component={this.postc} />
