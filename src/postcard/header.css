@@ -21,13 +21,13 @@ header::before {
 img {
     width: 130px;
     display: inline-block;
-    margin: 18px 0 0 10px;
+    margin: 18px 100px 0 10px;
 }
 
 h1 {
     display: inline-block;
-    /* width: calc(100% - 340px); */
-    margin-left: 550px;
+    width: calc(100% - 520px);
+    /* margin-left: 550px; */
     text-align: center;
     font-size: 28px;
     vertical-align: top;
