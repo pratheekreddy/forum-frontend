@@ -5,7 +5,7 @@ import './postcard/header.css'
 const headers = (props) => {
 
     return (
-        <header className="header">
+        <header >
             <img src={logo} alt="Bosch Logo"></img>
 
             <h1>Forum Feed</h1>
