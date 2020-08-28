@@ -14,7 +14,7 @@ footer::before {
     background-size: cover;
     background-position: center center;
     background-image: url("bosch.jpg");
-    position: absolute;
+    position: fixed;
     bottom: 0;
 }
 
