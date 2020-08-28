@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import axios from "axios";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import React, { Component } from 'react';
+import axios from 'axios';
+import { BrowserRouter as Router, Switch, Route} from "react-router-dom";//, Link 
 
 import "./postcard/styles.css";
 import Headers from "./header";
@@ -16,7 +16,7 @@ class App extends Component {
       showPopup: false,
     };
   }
-
+ user='pratheek'
   reset = () => {
     const post = axios.get(
       "https://cors-anywhere.herokuapp.com/https://0ze03xvnwoa4ncstcap-njs-forum-srv.cfapps.eu10.hana.ondemand.com/agenda/sessions?$expand=TOPICS,FILES&$orderby=DATE%20desc"
@@ -52,7 +52,7 @@ class App extends Component {
       <Router>
         <div>
           <div className="sticky">
-            <Headers />
+            <Headers user={this.user}/>
           </div>
           <Switch>
             <Route exact path="/" component={Login} />

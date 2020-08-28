@@ -32,7 +32,7 @@ const PostCard = (props, state) => {
   let download = (
     <ul className="downloads">
     {/*TODO: add heading*/}
-      <h5>Attachments</h5>
+      <h5 style={{"margin-left": "10px"}}>Attachments</h5>
       {resorc.map((down, i) => {
         console.log(down)
         const tempName = down[0].split('.');
@@ -64,6 +64,15 @@ const PostCard = (props, state) => {
     file = e.target.files[0];
     formSubmit(e)
   }
+
+  let emailicon=(
+    <div className="admin-notify">
+        <i data-tip data-for="emailTip" className="boschicon-bosch-ic-mail"></i>
+          <ReactTooltip id="emailTip" place="top" effect="solid">
+                Email Subscribers
+          </ReactTooltip>
+      </div>
+  )
 
   return (
     <div className="card">
@@ -103,12 +112,7 @@ const PostCard = (props, state) => {
       <div >{showResources ? download : null}</div>
 
 
-      <div className="admin-notify">
-        <i data-tip data-for="emailTip" className="boschicon-bosch-ic-mail"></i>
-          <ReactTooltip id="emailTip" place="top" effect="solid">
-                Email Subscribers
-          </ReactTooltip>
-      </div>
+      <div>{(new Date(props.date) > new Date() ) ? emailicon: null}</div>
       <div className="clear"></div>
     </div>
   );
