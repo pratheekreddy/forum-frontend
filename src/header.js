@@ -1,6 +1,6 @@
 import React from 'react'
 import logo from './postcard/bosch_logo.jpg'
-import './postcard/header.css'
+import './postcard/header.scss'
 
 const headers = (props) => {
 

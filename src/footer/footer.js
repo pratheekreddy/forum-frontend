@@ -1,6 +1,6 @@
 import React from 'react'
 // import logo from './postcard/bosch_logo.jpg'
-import '../postcard/footer.css'
+import '../postcard/footer.scss'
 
 const footers = () => {
 
