@@ -1,0 +1,27 @@
+.login {
+  max-width: 450px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 15px;
+  background: #fff;
+  > div {
+    margin-bottom: 10px;
+  }
+  label {
+    width: 100px;
+    font-size: 16px;
+    display: inline-block;
+  }
+  input {
+    width: calc(100% - 120px);
+    display: inline-block;
+    padding: 8px;
+    border-radius: 0;
+    font-size: 16px;
+    border: 1px solid #ccc;
+  }
+  button {
+    float: right;
+    margin-top: 10px;
+  }
+}
