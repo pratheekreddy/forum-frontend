@@ -7,6 +7,7 @@ import Headers from "./header";
 import Footers from "./footer/footer";
 import Postcards from "./postcard/postcards";
 import Login from "./login/login";
+import Signup from "./login/signup"
 
 class App extends Component {
   constructor() {
@@ -18,6 +19,8 @@ class App extends Component {
   }
  user='chathia chandran'
   reset = () => {
+    let token=localStorage.getItem('token')
+    axios.defaults.headers.common['Authorization'] = token;
     const post = axios.get(
       "https://cors-anywhere.herokuapp.com/https://0ze03xvnwoa4ncstcap-njs-forum-srv.cfapps.eu10.hana.ondemand.com/agenda/sessions?$expand=TOPICS,FILES&$orderby=DATE%20desc"
     );
@@ -48,6 +51,7 @@ class App extends Component {
   };
 
   render() {
+    // console.log(props)
     return (
       <Router>
         <div>
@@ -57,6 +61,7 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={Login} />
             <Route exact path="/landing" component={this.postc} />
+            <Route exact path="/signup" component={Signup}/>
           </Switch>
           <div className="footer">
             <Footers />
