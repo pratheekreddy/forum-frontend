@@ -17,7 +17,9 @@ p {
 * {
   font-family: Bosch Sans;
 }
-
+:focus {
+  outline: none;
+}
 body {
   background: #f3f3f3;
 }

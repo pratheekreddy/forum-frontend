@@ -34,7 +34,7 @@ const PostCard = (props, state) => {
     {/*TODO: add heading*/}
       <h5 style={{"margin-left": "10px"}}>Attachments</h5>
       {resorc.map((down, i) => {
-        console.log(down)
+        
         const tempName = down[0].split('.');
         return <li key={i}><a target="_blank" rel="noopener noreferrer" href={"https://0appkh5ipbo57270um-rbei-njs-forum.cfapps.eu10.hana.ondemand.com/file/download?filename=" + down[1]}><span>{tempName[1]}</span>{tempName[0]}</a></li>
       })}
@@ -53,7 +53,7 @@ const PostCard = (props, state) => {
     };
     axios.post("https://0appkh5ipbo57270um-rbei-njs-forum.cfapps.eu10.hana.ondemand.com/file/upload", formData, config)
       .then((response) => {
-        console.log(response)
+        // console.log(response)
         if(response.status===200){
         alert(response.data.status);}
       }).catch((error) => {
