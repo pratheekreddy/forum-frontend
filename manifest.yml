@@ -1,5 +1,5 @@
 applications:
-- name: Reactppliaction
+- name: ForumApp
 path: build/
 buildpack: https://github.com/cloudfoundry/staticfile-buildpack
 memory: 128M

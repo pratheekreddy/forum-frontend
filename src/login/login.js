@@ -3,7 +3,7 @@ import axios from 'axios'
 
 import './login.scss'
 const Login = (props) => {
-    console.log(props)
+    // console.log(props)
     const [showOTP, setshowOTP] = useState(false);
     let email = ''
     let otp = ''
@@ -14,7 +14,7 @@ const Login = (props) => {
         email=document.getElementById('email').value
         const post = axios.get('https://0appkh5ipbo57270um-rbei-njs-forum.cfapps.eu10.hana.ondemand.com/user/auth/otp?user='+email);
         post.then((result) => {
-            console.log(result);
+            // console.log(result);
             // email = '';
             // otp = '';
             setshowOTP(true);
@@ -42,7 +42,7 @@ const Login = (props) => {
             else{
                 alert(result.data.msg)
             }
-            console.log(header)
+            // console.log(header)
         }).catch((e) => {
             console.log(e)
         })
