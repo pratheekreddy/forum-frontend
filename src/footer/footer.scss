@@ -8,17 +8,16 @@ footer {
     /* padding: 0 0 0 10px; */
 }
 
-footer::before {
-    width: 100%;
-    height: 12px;
-    content: '';
-    background-repeat: repeat;
-    background-size: cover;
-    background-position: center center;
-    background-image: url("bosch.jpg");
-    position: fixed;
-    bottom: 0;
-}
+// footer::before {
+//     width: 100%;
+//     height: 12px;
+//     content: '';
+//     background-repeat: repeat;
+//     background-size: cover;
+//     background-position: center center;
+//     position: fixed;
+//     bottom: 0;
+// }
 
 
 p {
@@ -27,5 +26,5 @@ p {
     text-align: left;
     font-size: 14px;
     vertical-align: center;
-    padding: 5px 0 15px 10px !important;
+    // padding: 5px 0 15px 10px !important;
 }

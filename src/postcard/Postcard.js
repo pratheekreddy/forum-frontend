@@ -1,29 +1,37 @@
 import React, { useState } from "react";
 import axios from 'axios'
 import ReactTooltip from "react-tooltip";
+// import fileDownload from 'js-file-download';
 
+import DownloadFile from './downloadFile';
 import "./postcard.scss";
+
+
 const PostCard = (props, state) => {
+    let t = localStorage.getItem('token');
+    let email_local = localStorage.getItem('email');
+    let token='requester='+email_local+';rbei_access_token='+t;
+    axios.defaults.headers.common['Authorization'] = token;  
   const [showResources, setShowResources] = useState(false);
   let topics = [];
   let presento = [];
   let resorc = [];
   for (let i = 0; i < props.topics.length; i++) {
-    topics.push(props.topics[i].SUB_TOPIC)
-    presento.push(props.topics[i].USER_EMAIL)
+    topics.push(props.topics[i].SUB_TOPIC);
+    presento.push(props.topics[i].USER_EMAIL);
   }
   for (let j = 0; j < props.files.length; j++) {
-    let t=props.files[j].FILE_NAME.split('-')
-    resorc.push([t[t.length-1], props.files[j].FILE_NAME])
+    let t=props.files[j].FILE_NAME.split('-');
+    resorc.push([t[t.length-1], props.files[j].FILE_NAME]);
   }
-  let presentors = [...new Set(presento)]
-  topics=[...new Set(topics)]
-  let str = topics.toString()
+  let presentors = [...new Set(presento)];
+  topics=[...new Set(topics)];
+  let str = topics.toString();
 
   let list = (
     <div>
       {presentors.map((presontor, i) => {
-        let ref="mailto:"+presontor
+        let ref="mailto:"+presontor;
         return <li key={i}><a style={{color:"#868686"}} href={ref}>{presontor}</a></li>
       })}
     </div>
@@ -31,43 +39,49 @@ const PostCard = (props, state) => {
 
   let download = (
     <ul className="downloads">
-    {/*TODO: add heading*/}
       <h5 style={{"margin-left": "10px"}}>Attachments</h5>
+      
       {resorc.map((down, i) => {
         
-        const tempName = down[0].split('.');
-        return <li key={i}><a target="_blank" rel="noopener noreferrer" href={"https://0appkh5ipbo57270um-rbei-njs-forum.cfapps.eu10.hana.ondemand.com/file/download?filename=" + down[1]}><span>{tempName[1]}</span>{tempName[0]}</a></li>
+        return <DownloadFile key={i} down={down}/>
       })}
     </ul>
   )
-  let file
+  let file;
   let formSubmit = (e) => {
     e.preventDefault();
     const formData = new FormData();
     formData.append('files', file);
-    formData.append('session_id', props.session_id)
+    formData.append('session_id', props.session_id);
+    formData.append('uploaded_by',localStorage.getItem('name'));
     const config = {
       headers: {
         'content-type': 'multipart/form-data'
       }
     };
-    axios.post("https://0appkh5ipbo57270um-rbei-njs-forum.cfapps.eu10.hana.ondemand.com/file/upload", formData, config)
+    axios.post("https://rbei-cloud-foundry-dev-rbei-njs-forum.cfapps.eu10.hana.ondemand.com/file/upload", formData, config)
       .then((response) => {
         // console.log(response)
         if(response.status===200){
-        alert(response.data.status);}
-      }).catch((error) => {
+        alert(response.data.status);
+        }
+      }).catch((e) => {
+          alert(e.response.data.msg);
       });
   }
 
   let onChange = (e) => {
     file = e.target.files[0];
-    formSubmit(e)
+    formSubmit(e);
+  }
+
+  let sendEmail=()=>{
+      axios.get('https://rbei-cloud-foundry-dev-rbei-njs-forum.cfapps.eu10.hana.ondemand.com/publishagenda?session_id='+props.session_id);
   }
 
   let emailicon=(
     <div className="admin-notify">
-        <i data-tip data-for="emailTip" className="boschicon-bosch-ic-mail"></i>
+        <i data-tip data-for="emailTip" className="boschicon-bosch-ic-mail" onClick={sendEmail}></i>
           <ReactTooltip id="emailTip" place="top" effect="solid">
                 Email Subscribers
           </ReactTooltip>
@@ -112,7 +126,7 @@ const PostCard = (props, state) => {
       <div >{showResources ? download : null}</div>
 
 
-      <div>{(new Date(props.date) > new Date() ) ? emailicon: null}</div>
+      <div>{(new Date(props.date) > new Date() ) &&localStorage.getItem('type')==='A' ? emailicon: null}</div>
       <div className="clear"></div>
     </div>
   );

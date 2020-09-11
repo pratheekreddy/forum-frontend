@@ -1,8 +1,10 @@
 import React, { useState } from "react";
-import axios from 'axios'
+import axios from 'axios';
 
 import './login.scss'
 const Login = (props) => {
+    // let token = localStorage.getItem('token')
+    // axios.defaults.headers.common['Authorization'] = token;
     // console.log(props)
     const [showOTP, setshowOTP] = useState(false);
     let email = ''
@@ -12,45 +14,60 @@ const Login = (props) => {
     let getOtp = () => {
         // console.log('getotp')
         email=document.getElementById('email').value
-        const post = axios.get('https://0appkh5ipbo57270um-rbei-njs-forum.cfapps.eu10.hana.ondemand.com/user/auth/otp?user='+email);
+        if(!email){
+            return alert('please enter a valid username or email')
+        }
+        const post = axios.get('https://rbei-cloud-foundry-dev-rbei-njs-forum.cfapps.eu10.hana.ondemand.com/user/auth/otp?user=' + email);
         post.then((result) => {
-            // console.log(result);
-            // email = '';
-            // otp = '';
             setshowOTP(true);
             alert(result.data.msg)
         }).catch((e) => {
-            console.log(e)
+            alert(e.response.data.msg)
+            console.log(e.response.data.msg)
         })
     }
 
     let validateOtp = () => {
         let user=document.getElementById('email').value
         otp=document.getElementById('otp').value
+        if(!otp){
+            return alert('please enter a valid otp')
+        }
         // console.log(user)
         // console.log('validate otp')
-        const post = axios.post('https://0appkh5ipbo57270um-rbei-njs-forum.cfapps.eu10.hana.ondemand.com/user/auth/login', {
+        const post = axios.post('https://rbei-cloud-foundry-dev-rbei-njs-forum.cfapps.eu10.hana.ondemand.com/user/auth/login', {
             user, otp
         });
         post.then((result) => {
             // console.log(result)
             if (result.status === 200) {
-                header = result.data.token
-                props.history.push({pathname:'/landing'})
-                localStorage.setItem('token',header)
+                header = result.data.token;
+                let name=result.data.name
+                localStorage.setItem('token',header);
+                localStorage.setItem('type',result.data.type);
+                localStorage.setItem('name',name.split(' ')[0]);
+                localStorage.setItem('email',result.data.email);
+                if(localStorage.getItem('token')){
+                props.history.push({pathname:'/'});
+                }
+                else{
+                    props.history.push({pathname:'/login'});
+                }
             }
             else{
-                alert(result.data.msg)
+                alert(result.data.msg);
+                props.history.push({pathname:'/login'});
             }
             // console.log(header)
         }).catch((e) => {
-            console.log(e)
+            console.log(e);
+            alert(e.response.data.msg);
         })
     }
     let emailContainer = (
         <div>
             <div>
-                <label >E-mail:</label>
+                <label >E-mail/Username </label>
                 <input disabled={showOTP} id="email" type="text" />
                 {!showOTP ? (<button className="rb-button rb-button--primary" onClick={getOtp}>Get OTP</button>) : null}
             </div>
@@ -76,4 +93,4 @@ const Login = (props) => {
     )
 }
 
-export default Login
+export default Login;

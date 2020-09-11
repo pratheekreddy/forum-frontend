@@ -1,4 +1,4 @@
-.login {
+.updateprofile {
     max-width: 500px;
     width: 100%;
     margin: 0 auto;
@@ -13,16 +13,24 @@
       display: inline-block;
     }
     input {
-      width: calc(100% - 170px);
+      width: calc(96% - 180px);
       display: inline-block;
       padding: 8px;
       border-radius: 0;
       font-size: 16px;
       border: 1px solid #ccc;
     }
+    i {
+    width: 35px;
+    height: 35px;
+    font-size: 35px;
+    float: right;
+    cursor: pointer;
+    }
     button {
       float: right;
       margin-top: 10px;
     }
+    
   }
   
