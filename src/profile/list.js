@@ -12,18 +12,27 @@ const List = (props) => {
         localStorage.clear();
         // console.log(props)
         props.history.push({ pathname: '/login' });
+        setDisplay(false)
     }
 
     let profile = () => {
         props.history.push({ pathname: '/profile' });
+        setDisplay(false)
     }
 
     let approve = () => {
-
+        props.history.push({ pathname: '/aprove' });
+        setDisplay(false)
     }
 
     let postAgenda = () => {
+        props.history.push({ pathname: '/postagenda' });
+        setDisplay(false)
+    }
 
+    let home=()=>{
+        props.history.push({ pathname: '/' });
+        setDisplay(false)
     }
 
     let admin = (<div>
@@ -33,6 +42,7 @@ const List = (props) => {
     )
 
     let list = (<div className="dropdown-content">
+        <p onClick={home}>Home</p>
         <p onClick={profile}>Your Profile</p>
         {type === 'A' ? admin : null}
         <p onClick={signout}>Sign out</p>

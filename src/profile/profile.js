@@ -1,64 +1,50 @@
-import React, { useState } from "react";
+import React, { Component} from "react";
 import axios from 'axios';
 import './profile.scss';
 import { withRouter } from 'react-router-dom';
+import ProfileInfo from './profileInfo'
 
-const Profile = (props) => {
-    const [profileinfo,setprofileinfo]=useState([])
+class Profile extends Component {
 
-    let update = () => {
-       let name = document.getElementById('name').value;
-       let dept = document.getElementById('dept').value;
-       let username = document.getElementById('username').value;
-        axios.patch("https://rbei-cloud-foundry-dev-forum-app-srv.cfapps.eu10.hana.ondemand.com/profile/updateprofile('"+email+"')",{
-            "DEPT": dept,
-            "USERNAME": username,
-            "NAME":name
-        })
+
+    constructor() {
+        super();
+        this.state = {
+            profileinfomation: [],
+            response:false
+        };
     }
 
-    let enableElement = (id) => {
-        document.getElementById(id).disabled = false;
-    }
-    
-    let profileDisplay=(
-        <div>
-            <div className='updateprofile'>
-                <label>E-mail </label>
-                <input type='text' placeholder="krishnan.gautam@in.bosch.com" value={profileinfo.EMAIL} id="email" disabled></input>
-                <label>Id number </label>
-                <input type='text' placeholder="33378755" id="idno" value={profileinfo.IDNO} disabled></input>
-                <label>Full Name </label>
-                <input type='text' placeholder="Gautam Krishnan" value={profileinfo.NAME} id="name" disabled></input>
-                <i className="boschicon-bosch-ic-edit" onClick={(() => enableElement("name"))}></i>
-                <label>NT-ID </label>
-                <input type='text' placeholder="TKG1KOR" value={profileinfo.NTID} id="ntid" disabled></input>
-                <label>Department </label>
-                <input type='text' placeholder="RBEI/BLS5" value={profileinfo.DEPT} id="dept" disabled></input>
-                <i className="boschicon-bosch-ic-edit" onClick={(() => enableElement("dept"))}></i>
-                <label>Username </label>
-                <input type='text' placeholder="Gomzi" value={profileinfo.USERNAME} id="username" disabled></input>
-                <i className="boschicon-bosch-ic-edit" onClick={(() => enableElement("username"))}></i>
-                <button className="rb-button rb-button--primary" onClick={update}>Update</button>
-            </div>
-        </div>
-    )
+    getProfileInfo=()=>{
+    let t = localStorage.getItem('token')
     let email=localStorage.getItem('email')
+    let email_local = localStorage.getItem('email')
+    let token='requester='+email_local+';rbei_access_token='+t
+    axios.defaults.headers.common['Authorization'] = token;
 
-    axios.get("/srv_api/profile/readprofile(email='"+email+"')/Set").then((result)=>{
-        console.log(result);
-        setprofileinfo(result);
+    axios.get("https://cors-anywhere.herokuapp.com/https://rbei-cloud-foundry-dev-forum-app-srv.cfapps.eu10.hana.ondemand.com/profile/readprofile(email='"+email+"')/Set").then((result)=>{
+        // console.log(result);
+        this.setState({profileinfomation : result.data.value[0],
+        response:true});
+        console.log(this.state)
+        console.log(this.state.profileinfomation.EMAIL_ID)
     })
     .catch((e)=>{
-        
+        console.log(e)
         })
+    }
+    
+    componentDidMount() {
+        this.getProfileInfo()
+      };
 
+      render() {
     return (
-    {profileDisplay}
+
+        this.state.response ?<ProfileInfo EMAIL={this.state.profileinfomation.EMAIL_ID} IDNO={this.state.profileinfomation.IDNO} NAME={this.state.profileinfomation.NAME} NTID={this.state.profileinfomation.NTID} DEPT={this.state.profileinfomation.DEPT} USERNAME={this.state.profileinfomation.USERNAME}/> :null
     );
+      }
     
 }
-
-
 
 export default withRouter(Profile);

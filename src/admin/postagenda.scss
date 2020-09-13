@@ -1,0 +1,48 @@
+.agenda{
+    z-index: -1;
+    .desc{
+        width: calc(78.5%);
+    }
+
+    label{
+        width: 150px;
+        font-size: 16px;
+        display: inline-block;
+    }
+
+    .desclabel{
+        float: left;
+        // margin-right: 5px;
+    }
+
+    input{
+        width: calc(33%);
+        display: inline-block;
+        padding: 8px;
+        border-radius: 0;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        
+    }
+
+    i{
+        font-size: 35px;
+        float: right;
+        cursor: pointer;
+        margin-left: 10px;
+        border: solid;
+        margin-right: 50px;
+        margin-top: 90px;
+    }
+
+    button{
+        margin-top: 1px;
+        font-size: 23px;
+        margin-left: 3px;
+    }
+    .submit{
+        float: right;
+        margin-top: 10px;
+        margin-right: 145px;
+    }
+}
