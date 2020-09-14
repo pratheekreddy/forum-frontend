@@ -30,7 +30,7 @@ const List = (props) => {
         setDisplay(false)
     }
 
-    let home=()=>{
+    let home = () => {
         props.history.push({ pathname: '/' });
         setDisplay(false)
     }
@@ -42,17 +42,17 @@ const List = (props) => {
     )
 
     let list = (<div className="dropdown-content">
-        <p onClick={home}>Home</p>
-        <p onClick={profile}>Your Profile</p>
+        <li onClick={home}>Home</li>
+        <li onClick={profile}>Your Profile</li>
         {type === 'A' ? admin : null}
-        <p onClick={signout}>Sign out</p>
+        <li onClick={signout}>Sign out</li>
     </div>)
 
     let toggle = () => {
         setDisplay(!display)
     }
     return (
-        <div className="dropdown">
+        <div className="dropdown" onBlur={() => setDisplay(false)} tabIndex="-1">
             <i className="boschicon-bosch-ic-user" onClick={toggle}></i>
             {display ? list : null}
         </div>
