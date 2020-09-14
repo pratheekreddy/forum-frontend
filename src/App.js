@@ -1,57 +1,20 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";//, Link 
 
 import "./postcard/styles.css";
-import Headers from "./header";
+import Headers from "./header/header";
 import Footers from "./footer/footer";
-import Postcards from "./postcard/postcards";
 import Login from "./login/login";
-import Signup from "./login/signup"
+import Signup from "./login/signup";
+import Profile from "./profile/profile";
+import PostcardContainer from './postcard/PostcardContainer'
+import PostAgenda from './admin/postagenda'
+import Aprove from './admin/userAprove'
 
 class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      session: [],
-      showPopup: false,
-    };
-  }
- user='chathia chandran'
-  reset = () => {
-    let token=localStorage.getItem('token')
-    axios.defaults.headers.common['Authorization'] = token;
-    const post = axios.get(
-      "https://cors-anywhere.herokuapp.com/https://0ze03xvnwoa4ncstcap-njs-forum-srv.cfapps.eu10.hana.ondemand.com/agenda/sessions?$expand=TOPICS,FILES&$orderby=DATE%20desc"
-    );
-    post
-      .then((result) => {
-        this.setState({ session: result.data.value });
-      })
-      .catch((e) => {
-        this.setState({ session: [] });
-      });
-  };
 
-  componentDidMount() {
-    this.reset();
-  }
-
-  // state={
-  //       session:[],
-  //       showPopup:false
-  //   }
-  postc = () => {
-    return (
-      <Postcards
-        session={this.state.session}
-        showPopup={this.state.showPopup}
-      />
-    );
-  };
 
   render() {
-    // console.log(props)
     return (
       <Router>
         <div>
@@ -59,9 +22,13 @@ class App extends Component {
             <Headers user={this.user}/>
           </div>
           <Switch>
-            <Route exact path="/" component={Login} />
-            <Route exact path="/landing" component={this.postc} />
+            <Route exact path="/" component={PostcardContainer} />
+            <Route exact path="/index.html" component={PostcardContainer} />
+            <Route exact path="/login" component={Login} />
             <Route exact path="/signup" component={Signup}/>
+            <Route exact path="/profile" component={Profile}/>
+            <Route exact path="/postagenda" component={PostAgenda}/>
+            <Route exact path="/aprove" component={Aprove}/>
           </Switch>
           <div className="footer">
             <Footers />

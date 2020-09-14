@@ -84,11 +84,12 @@
     li {
       display: inline-block;
       padding: 5px;
-      a {
+      p {
         display: inline-block;
         padding: 5px;
         font-size: 14px;
         color: #005691;
+        cursor: pointer;
         vertical-align: sub;
         span {
           background: #005691;
@@ -104,6 +105,7 @@
 
   .upload {
     float: right;
+    cursor: pointer;
     form {
       i {
         width: 35px;
