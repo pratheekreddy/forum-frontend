@@ -9,16 +9,28 @@
     }
     label {
       width: 140px;
-      font-size: 16px;
+      font-size: 14px;
       display: inline-block;
+      color: #4a4a4a;
+      &.required {
+        &::after {
+          content: '*';
+          color: red;
+          font-size: 14px;
+          display: inline-block;
+          margin-left: 2px;
+        }
+      }
     }
     input {
-      width: calc(100% - 170px);
+      width: calc(100% - 158px);
       display: inline-block;
       padding: 8px;
       border-radius: 0;
-      font-size: 16px;
+      font-size: 14px;
       border: 1px solid #ccc;
+      margin-bottom: 5px;
+      color: #4a4a4a;
     }
     button {
       float: right;
