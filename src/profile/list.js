@@ -36,8 +36,8 @@ const List = (props) => {
     }
 
     let admin = (<div>
-        <p onClick={approve}>Approve users</p>
-        <p onClick={postAgenda}>Post Agenda</p>
+        <li onClick={approve}>Approve users</li>
+        <li onClick={postAgenda}>Post Agenda</li>
     </div>
     )
 
