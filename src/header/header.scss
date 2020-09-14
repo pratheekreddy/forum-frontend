@@ -1,90 +1,108 @@
 header {
-    width: 100%;
-    margin-bottom: 15px;
-    border-bottom: 1px solid #bfc0c2;
-    background: #fff;
-    padding: 10px 0 0;
+  width: 100%;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #bfc0c2;
+  background: #fff;
+  padding: 10px 0 0;
 }
 
 header::before {
-    width: 100%;
-    height: 16px;
-    content: '';
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    background-image: url("bosch.jpg");
-    position: absolute;
-    top: 0;
+  width: 100%;
+  height: 16px;
+  content: "";
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-image: url("bosch.jpg");
+  position: absolute;
+  top: 0;
 }
 
 img {
-    width: 130px;
-    display: inline-block;
-    margin: 18px 100px 0 10px;
+  width: 130px;
+  display: inline-block;
+  margin: 18px 100px 0 10px;
 }
 
 h1 {
+  display: inline-block;
+  width: calc(100% - 520px);
+  /* margin-left: 550px; */
+  text-align: center;
+  font-size: 28px;
+  vertical-align: top;
+  /* padding: 18px 0 0 !important; */
+}
+.signup {
+  float: right;
+  margin-top: 20px;
+  margin-right: 15px;
+  a {
     display: inline-block;
-    width: calc(100% - 520px);
-    /* margin-left: 550px; */
-    text-align: center;
-    font-size: 28px;
-    vertical-align: top;
-    /* padding: 18px 0 0 !important; */
+    font-size: 14px;
+    margin: 10px;
+    color: #005691;
+  }
 }
-.signup{
-    float: right;
-    margin-top: 20px;
-    margin-right: 15px;
-    a {
-        display: inline-block;
-        font-size: 14px;
-        margin: 10px;
-        color: #005691;
+.dropdown {
+  float: right;
+  margin-top: 20px;
+  margin-right: 15px;
+  font-size: 18px;
+  i {
+    margin-top: 5px;
+    width: 35px;
+    height: 35px;
+    font-size: 35px;
+    float: inherit;
+    cursor: pointer;
+  }
+  .dropdown-content {
+    min-width: 120px;
+    margin-top: 45px;
+    background: #fff;
+    position: absolute;
+    right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;    
+    box-shadow: 0 8px 6px -6px #aaa;
+    &:before {
+      width: 0;
+      height: 0;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-bottom: 8px solid black;
+      content: "";
+      top: -8px;
+      right: 12px;
+      position: absolute;
     }
-}
-.dropdown{
-    float: right;
-    margin-top: 20px;
-    margin-right: 15px;
-    font-size: 18px;
-    i {
-        margin-top: 5px;
-        width: 35px;
-        height: 35px;
-        font-size: 35px;
-        float: inherit;
-        cursor: pointer;
-        margin-right: 55px;
+  }
+  .dropdown-content li {
+    padding: 8px;
+    font-size: 12px;
+    display: block;
+    cursor: pointer;
+    text-align: right;
+    &:not(last-child) {
+      border-bottom: 1px solid #ccc;
     }
-    .dropdown-content {
-        min-width: 160px;
-        margin-top: 55px;
-        }
-        .dropdown-content p {
-            color: black;
-            min-width: 100px;
-            padding: 3px 25px 0px 40px;
-            text-decoration: none;
-            text-align: center;
-            display: block;
-            cursor: pointer;
-            border-style: groove;
-            }
-            .dropdown-content p:hover {background-color: #ddd;}
+  }
+  .dropdown-content p:hover {
+    background-color: #ddd;
+  }
 }
 
-h3{
-    float: right;
-    margin-top: 40px;
-    margin-right: 5px;  
-    font-size: 18px;  
+h3 {
+  float: right;
+  margin-top: 40px;
+  margin-right: 5px;
+  font-size: 18px;
 }
-.h3{
-    float: right;
-    margin-top: 20px;
-    margin-right: 15px;
-    font-size: 18px;
-    z-index: 1;
+.h3 {
+  float: right;
+  margin-top: 20px;
+  margin-right: 15px;
+  font-size: 18px;
+  z-index: 1;
 }
