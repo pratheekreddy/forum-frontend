@@ -28,7 +28,7 @@ class PostcardContainer extends Component {
                 alert('Please login again')
                 console.log('error')
                 // console.log(this.props.history)
-                // this.props.history.push({pathname:'/login'})
+                this.props.history.push({pathname:'/login'})
                 // this.setState({ session: [] });
             });
     };

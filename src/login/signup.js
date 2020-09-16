@@ -31,6 +31,11 @@ const signup = (props) => {
             console.log(e.response.data.msg);
         })
     }
+
+    let checkUsername=()=>{
+        
+    }
+
     return(
         <div className='login'>
         <div>
@@ -45,7 +50,7 @@ const signup = (props) => {
             <label className="required">Department</label>
             <input type='text' placeholder="Enter your Department" id="dept"></input>
             <label>Username </label>
-            <input type='text' placeholder="Enter your Username" id="username"></input>
+            <input type='text' onBlur={checkUsername} placeholder="Enter your Username" id="username"></input>
             <button className="rb-button rb-button--primary" onClick={register}>Signup</button>
         </div>
         <div className="clear"></div>
