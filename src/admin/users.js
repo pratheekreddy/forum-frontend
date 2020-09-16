@@ -19,11 +19,11 @@ const User = (props) => {
             <th>Action</th>
         </tr>
         </thead>
-        <tbody>
+        
         {props.data.map((user,index)=>{
           return <Table key={index} user={user}></Table>
         })}
-        </tbody>
+        
         </table>
       )
 

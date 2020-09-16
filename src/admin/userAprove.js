@@ -22,7 +22,7 @@ class Aprove extends Component {
         axios.defaults.headers.common['Authorization'] = token;
         axios.get('https://cors-anywhere.herokuapp.com/https://rbei-cloud-foundry-dev-forum-app-srv.cfapps.eu10.hana.ondemand.com/admin/users')
         .then((result)=>{
-            console.log(result.data)
+            // console.log(result.data)
             this.setState({users:result.data.value})
         }).catch((e)=>{
             console.log(e)

@@ -8,7 +8,7 @@ import './postagenda.scss'
 const PostAgenda = (props) => {
     let t = localStorage.getItem('token')
         if(!t){
-            // return this.props.history.push({pathname:'/login'});
+            // return props.history.push({pathname:'/login'});
         }
     let email_local = localStorage.getItem('email')
     let token='requester='+email_local+';rbei_access_token='+t
