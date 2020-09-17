@@ -2,11 +2,14 @@ import React, { useState } from "react";
 import axios from 'axios';
 
 import './login.scss'
+import Loading from '../loading/loading'
+
 const Login = (props) => {
     // let token = localStorage.getItem('token')
     // axios.defaults.headers.common['Authorization'] = token;
     // console.log(props)
     const [showOTP, setshowOTP] = useState(false);
+    const [loading,setLoading]=useState(false)
     let email = ''
     let otp = ''
     let header = ''
@@ -17,10 +20,12 @@ const Login = (props) => {
         if(!email){
             return alert('please enter a valid username or email')
         }
+        setLoading(true)
         const post = axios.get('https://rbei-cloud-foundry-dev-rbei-njs-forum.cfapps.eu10.hana.ondemand.com/user/auth/otp?user=' + email);
         post.then((result) => {
             setshowOTP(true);
             alert(result.data.msg)
+            setLoading(false)
         }).catch((e) => {
             alert(e.response.data.msg)
             console.log(e.response.data.msg)
@@ -35,11 +40,13 @@ const Login = (props) => {
         }
         // console.log(user)
         // console.log('validate otp')
+        setLoading(true)
         const post = axios.post('https://rbei-cloud-foundry-dev-rbei-njs-forum.cfapps.eu10.hana.ondemand.com/user/auth/login', {
             user, otp
         });
         post.then((result) => {
             // console.log(result)
+            setLoading(false)
             if (result.status === 200) {
                 header = result.data.token;
                 let name=result.data.name
@@ -74,6 +81,9 @@ const Login = (props) => {
             <div className="clear"></div>
         </div>
     )
+    let load=(
+        <Loading/>
+    )
     let otpContainer = (
         <div>
             <div>
@@ -89,6 +99,7 @@ const Login = (props) => {
         <div className='login'>
             {emailContainer}
             {showOTP ? otpContainer : null}
+            {loading ? load :null}
         </div>
     )
 }

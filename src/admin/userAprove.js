@@ -38,7 +38,7 @@ class Aprove extends Component {
 
 render(){
     return(
-        this.state.loading? <div style={{zIndex:-1}}>
+        this.state.loading? <div >
             <User data={this.state.users}/>
         </div> :<Loading/>
     )

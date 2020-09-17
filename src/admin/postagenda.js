@@ -4,6 +4,7 @@ import { withRouter } from 'react-router-dom'
 
 // import Post from './post'
 import './postagenda.scss'
+import Loading from '../loading/loading'
 
 const PostAgenda = (props) => {
     let t = localStorage.getItem('token')
@@ -15,7 +16,7 @@ const PostAgenda = (props) => {
     axios.defaults.headers.common['Authorization'] = token;
 
     const [fields, setFields] = useState([{ USER_EMAIL: null , SUB_TOPIC:null }]);
-
+    const [loading,setLoading]=useState(false)
     let handleChangeEmail=(i, event)=> {
         const values = [...fields];
         values[i].USER_EMAIL = event.target.value;
@@ -40,11 +41,15 @@ const PostAgenda = (props) => {
         setFields(values);
       }
     
+    let load=(<Loading/>)
+
     let post=()=>{
         let title=document.getElementById('title').value
         let date=document.getElementById('date').value
         let desc=document.getElementById('description').value
         console.log(title,date,desc,fields)
+        setLoading(true)
+        // setFields([{ USER_EMAIL: null , SUB_TOPIC:null }])
         axios.post('https://cors-anywhere.herokuapp.com/https://rbei-cloud-foundry-dev-forum-app-srv.cfapps.eu10.hana.ondemand.com/agenda/sessions',{
             DATE:date,
             TITLE:title,
@@ -52,6 +57,7 @@ const PostAgenda = (props) => {
             TOPICS:fields
         })
         .then((result)=>{
+          setLoading(false)
             alert('session uploaded sucessfully')
         })
         .catch(e=>{
@@ -84,6 +90,7 @@ const PostAgenda = (props) => {
       <div className='submit'>
       <button type='button' className="rb-button rb-button--primary" onClick={post}>Submit</button>
       </div>
+      {loading? load:null}
     </div>)
 }
 
