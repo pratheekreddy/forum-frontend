@@ -31,6 +31,29 @@
       border: 1px solid #ccc;
       margin-bottom: 5px;
       color: #4a4a4a;
+      
+    }
+    .valid{
+      background-image: url('../fonts/success.png');
+      border-color: seagreen;
+      background-position: right;
+      background-repeat: no-repeat;
+      background-size: 20px;
+      // background-size: contain;
+    }
+    .invalid{
+      border-color: #cb2431;
+      background-image: url('../fonts/error.png');
+      background-position: right;
+      background-repeat: no-repeat;
+      background-size: 20px;
+      // background-size: contain;
+    }
+    .loading{
+      background-image: url('../fonts/inbox-spinner.gif');
+      background-position: right;
+      background-repeat: no-repeat;
+      background-size: 20px;
     }
     button {
       float: right;

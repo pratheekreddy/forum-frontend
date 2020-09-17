@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Postcards from './postcards'
+import Loading from '../loading/loading'
 
 class PostcardContainer extends Component {
     constructor() {
         super();
         this.state = {
-            session: []
+            session: [],
+            loading:false
         };
     }
     reset = () => {
@@ -17,12 +19,13 @@ class PostcardContainer extends Component {
         let email_local = localStorage.getItem('email')
         let token='requester='+email_local+';rbei_access_token='+t
         axios.defaults.headers.common['Authorization'] = token;
+        this.setState({loading:false})
         const post = axios.get(
             "https://cors-anywhere.herokuapp.com/https://rbei-cloud-foundry-dev-forum-app-srv.cfapps.eu10.hana.ondemand.com/agenda/sessions?$expand=TOPICS,FILES&$orderby=DATE%20desc"
         );
         post
             .then((result) => {
-                this.setState({ session: result.data.value });
+                this.setState({ session: result.data.value ,loading:true});
             })
             .catch((e) => {
                 alert('Please login again')
@@ -40,7 +43,7 @@ class PostcardContainer extends Component {
         // console.log(Object.keys(process.env))
         // console.log(props)
         return (
-            <Postcards session={this.state.session} />
+            this.state.loading?<Postcards session={this.state.session} /> : <Loading/>
         )
     }
 }

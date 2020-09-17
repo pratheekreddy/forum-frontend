@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import axios from 'axios';
 import './signup.scss'
 
-const signup = (props) => {
+const Signup = (props) => {
+    const [vuserName, setUsername] = useState();
     let email,idno,name,ntid,dept,username ;
+    // const [loading,setloading]=useState()
+    
     // console.log(props)
     let register=()=>{
         
@@ -33,7 +36,24 @@ const signup = (props) => {
     }
 
     let checkUsername=()=>{
-        
+        setUsername('loading')
+        username=document.getElementById('username').value
+        axios.get('https://rbei-cloud-foundry-dev-rbei-njs-forum.cfapps.eu10.hana.ondemand.com/user/valid?username='+username)
+        .then((result)=>{
+            console.log(result.data.valid)
+            if(result.data.valid===true){
+                // alert('valid username');
+                setUsername('valid')
+            }
+            else{
+                // alert('username already exist');
+                setUsername('invalid')
+            }
+        })
+        .catch(e=>{
+            alert(e)
+            setUsername('invalid')
+        })
     }
 
     return(
@@ -50,7 +70,7 @@ const signup = (props) => {
             <label className="required">Department</label>
             <input type='text' placeholder="Enter your Department" id="dept"></input>
             <label>Username </label>
-            <input type='text' onBlur={checkUsername} placeholder="Enter your Username" id="username"></input>
+            <input className={vuserName} type='text' onBlur={checkUsername} placeholder="Enter your Username" id="username"></input>
             <button className="rb-button rb-button--primary" onClick={register}>Signup</button>
         </div>
         <div className="clear"></div>
@@ -58,4 +78,4 @@ const signup = (props) => {
     )
 }
 
-export default signup;
+export default Signup;
