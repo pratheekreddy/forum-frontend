@@ -58,10 +58,13 @@ const Signup = (props) => {
 
     return(
         <div className='login'>
+        <p >Sign up (only Bosch employees)</p>
         <div>
             <label className="required">E-mail</label>
             <input type='text' placeholder="Enter your Email" id="email"></input>
-            <label className="required">Id number</label>
+            <label>Username </label>
+            <input className={vuserName} type='text' onBlur={checkUsername} placeholder="Enter your Username" id="username"></input>
+            <label className="required">Employee Id</label>
             <input type='text' placeholder="Enter your Employee Id" id="idno"></input>
             <label className="required">Full Name</label>
             <input type='text' placeholder="Enter your Full Name" id="name"></input>
@@ -69,8 +72,6 @@ const Signup = (props) => {
             <input type='text' placeholder="Enter your NT ID" id="ntid"></input>
             <label className="required">Department</label>
             <input type='text' placeholder="Enter your Department" id="dept"></input>
-            <label>Username </label>
-            <input className={vuserName} type='text' onBlur={checkUsername} placeholder="Enter your Username" id="username"></input>
             <button className="rb-button rb-button--primary" onClick={register}>Signup</button>
         </div>
         <div className="clear"></div>

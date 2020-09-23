@@ -4,6 +4,7 @@ import Postcards from './postcards'
 import Loading from '../loading/loading'
 
 class PostcardContainer extends Component {
+    intervalID;
     constructor() {
         super();
         this.state = {
@@ -14,7 +15,7 @@ class PostcardContainer extends Component {
     reset = () => {
         let t = localStorage.getItem('token')
         if(!t){
-            // return this.props.history.push({pathname:'/login'});
+            return this.props.history.push({pathname:'/login'});
         }
         let email_local = localStorage.getItem('email')
         let token='requester='+email_local+';rbei_access_token='+t
@@ -26,22 +27,24 @@ class PostcardContainer extends Component {
         post
             .then((result) => {
                 this.setState({ session: result.data.value ,loading:true});
+                // this.intervalID = setTimeout(this.reset.bind(this), 5000);
             })
             .catch((e) => {
                 alert('Please login again')
-                console.log('error')
-                // console.log(this.props.history)
+                console.log(e)
                 this.props.history.push({pathname:'/login'})
-                // this.setState({ session: [] });
             });
     };
 
     componentDidMount() {
         this.reset();
     }
+
+    // componentWillUnmount() {
+    //     clearTimeout(this.intervalID);
+    // }
+
     render() {
-        // console.log(Object.keys(process.env))
-        // console.log(props)
         return (
             this.state.loading?<Postcards session={this.state.session} /> : <Loading/>
         )

@@ -27,7 +27,7 @@ const header=(props)=> {
         <header >
             <img src={logo} alt="Bosch Logo"></img>
 
-            <h1>Forum Feed</h1>
+            <h1>RBEI - SbS Forum</h1>
 
             {signup? nav : welcome }
         </header>

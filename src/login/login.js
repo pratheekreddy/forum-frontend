@@ -74,6 +74,7 @@ const Login = (props) => {
     let emailContainer = (
         <div>
             <div>
+
                 <label >E-mail/Username </label>
                 <input disabled={showOTP} id="email" type="text" />
                 {!showOTP ? (<button className="rb-button rb-button--primary" onClick={getOtp}>Get OTP</button>) : null}
@@ -97,6 +98,7 @@ const Login = (props) => {
 
     return (
         <div className='login'>
+            <p>Sign in (only Bosch employees)</p>
             {emailContainer}
             {showOTP ? otpContainer : null}
             {loading ? load :null}
