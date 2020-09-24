@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import axios from 'axios';
+
+import Loading from '../loading/loading'
 import './signup.scss'
 
 const Signup = (props) => {
     const [vuserName, setUsername] = useState();
     let email,idno,name,ntid,dept,username ;
-    // const [loading,setloading]=useState()
+    const [loading,setloading]=useState(false)
     
     // console.log(props)
     let register=()=>{
@@ -19,11 +21,13 @@ const Signup = (props) => {
         if(!email|| !idno || !name || !ntid || !dept){
             return alert('please enter credientials')
         }
+        setloading(true)
         const post = axios.post('https://rbei-cloud-foundry-dev-rbei-njs-forum.cfapps.eu10.hana.ondemand.com/user/signup', {
             email, idno,name,ntid,dept,username
         });
         post.then((result) => {
             console.log(result);
+            setloading(false)
             alert(result.data.msg);
             if (result.status === 201) {
                 props.history.push({pathname:'/login'});
@@ -56,6 +60,8 @@ const Signup = (props) => {
         })
     }
 
+    let load=(<Loading/>)
+
     return(
         <div className='login'>
         <p >Sign up (only Bosch employees)</p>
@@ -74,6 +80,7 @@ const Signup = (props) => {
             <input type='text' placeholder="Enter your Department" id="dept"></input>
             <button className="rb-button rb-button--primary" onClick={register}>Signup</button>
         </div>
+        {loading? load:null}
         <div className="clear"></div>
         </div>
     )
