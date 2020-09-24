@@ -1,11 +1,13 @@
 import React from 'react'
 import './userAprove.scss'
+import Table from './table'
 
 const User = (props) => {
-    console.log(props)
+    // console.log(props)
 
     let sub=(
         <table>
+        <thead>
         <tr>
             <th>Email</th>
             <th>Name</th>
@@ -16,18 +18,12 @@ const User = (props) => {
             <th>Registered on</th>
             <th>Action</th>
         </tr>
-        {props.data.map(user=>{
-          return <tr>
-            <td>{user.EMAIL_ID}</td>
-            <td>{user.NAME}</td>
-            <td>{user.DEPT}</td>
-            <td>{user.IDNO}</td>
-            <td>{user.NTID}</td>
-            <td>{user.USERNAME}</td>
-            <td>{user.REGD_ON}</td>
-            <td><button className='aprove' >Approve</button><button className='reject'>reject</button></td>
-        </tr>
+        </thead>
+        
+        {props.data.map((user,index)=>{
+          return <Table key={index} user={user}></Table>
         })}
+        
         </table>
       )
 
@@ -39,5 +35,7 @@ const User = (props) => {
     )
 
 }
+
+
 
 export default User;

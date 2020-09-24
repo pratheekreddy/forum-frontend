@@ -22,9 +22,10 @@ footer {
 
 p {
     display: inline-block;
-    width: calc(100% - 320px);
+    width: calc(100%);
     text-align: left;
     font-size: 14px;
+    margin-right: 5px;
     vertical-align: center;
     // padding: 5px 0 15px 10px !important;
 }

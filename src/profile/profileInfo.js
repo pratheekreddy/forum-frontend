@@ -50,19 +50,21 @@ class ProfileInfo extends Component {
         <div className='updateprofile'>
             <label>E-mail </label>
             <input type='text' placeholder="krishnan.gautam@in.bosch.com" value={this.props.EMAIL} id="email" disabled></input>
-            <label>Id number </label>
+            <label>Username </label>
+            <input type='text' placeholder="Gomzi" onChange={this.onChange}  value={this.state.username} id="username" disabled></input>
+            {/* <i className="boschicon-bosch-ic-edit" onClick={(() => this.enableElement("username"))}></i> */}
+            <label>Employee ID </label>
             <input type='text' placeholder="33378755" id="idno" value={this.props.IDNO} disabled></input>
+            <label>NT-ID </label>
+            <input type='text' placeholder="TKG1KOR" value={this.props.NTID} id="ntid" disabled></input>
             <label>Full Name </label>
             <input type='text' placeholder="Gautam Krishnan" onChange={this.onChange} value={this.state.name} id="name" disabled></input>
             <i className="boschicon-bosch-ic-edit" onClick={(() => this.enableElement("name"))}></i>
-            <label>NT-ID </label>
-            <input type='text' placeholder="TKG1KOR" value={this.props.NTID} id="ntid" disabled></input>
+            
             <label>Department </label>
             <input type='text' placeholder="RBEI/BLS5" onChange={this.onChange}  value={this.state.dept} id="dept" disabled></input>
             <i className="boschicon-bosch-ic-edit" onClick={(() => this.enableElement("dept"))}></i>
-            <label>Username </label>
-            <input type='text' placeholder="Gomzi" onChange={this.onChange}  value={this.state.username} id="username" disabled></input>
-            <i className="boschicon-bosch-ic-edit" onClick={(() => this.enableElement("username"))}></i>
+            
             <button className="rb-button rb-button--primary" onClick={this.update}>Update</button>
         </div>
     </div>
