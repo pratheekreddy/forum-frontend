@@ -2,15 +2,19 @@ import React,{useState} from 'react'
 import axios from 'axios';
 
 import './userAprove.scss'
+import Loading from '../loading/loading'
 
 const Table = (props) => {
     const [show,setShow]=useState(true)
+    const [loading,setLoading]=useState(false)
     let approve=()=>{
+        setLoading(true)
         axios.post('https://rbei-cloud-foundry-dev-rbei-njs-forum.cfapps.eu10.hana.ondemand.com/admin/approve',{
             email:props.user.EMAIL_ID,
             status:'A'
         }).then(result=>{
             setShow(false)
+            setLoading(false)
         })
         // let style={display:none}
         .catch(e=>{
@@ -18,12 +22,15 @@ const Table = (props) => {
         })
     }
 
+    let load=(<Loading/>)
     let reject=()=>{
+        setLoading(false)
         axios.post('https://rbei-cloud-foundry-dev-rbei-njs-forum.cfapps.eu10.hana.ondemand.com/admin/approve',{
             email:props.user.EMAIL_ID,
             status:'R'
         }).then(result=>{
             setShow(false)
+            setLoading(true)
         })
         // let style={display:none}
         .catch(e=>{
@@ -43,6 +50,7 @@ const Table = (props) => {
     </tr>)
     return(<tbody>
         {show ? content : null}
+        {loading? load : null}
         </tbody>
     )
 }
