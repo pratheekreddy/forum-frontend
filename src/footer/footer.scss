@@ -5,20 +5,7 @@ footer {
     background: #fff;
     position: fixed;
     bottom: 0;
-    /* padding: 0 0 0 10px; */
 }
-
-// footer::before {
-//     width: 100%;
-//     height: 12px;
-//     content: '';
-//     background-repeat: repeat;
-//     background-size: cover;
-//     background-position: center center;
-//     position: fixed;
-//     bottom: 0;
-// }
-
 
 p {
     display: inline-block;
@@ -27,5 +14,6 @@ p {
     font-size: 14px;
     margin-right: 5px;
     vertical-align: center;
+    margin-top: 5px;
     // padding: 5px 0 15px 10px !important;
 }

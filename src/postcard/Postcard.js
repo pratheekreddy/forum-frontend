@@ -1,12 +1,10 @@
 import React, { useState } from "react";
 import axios from 'axios'
 import ReactTooltip from "react-tooltip";
-// import fileDownload from 'js-file-download';
 
 import DownloadFile from './downloadFile';
 import "./postcard.scss";
 import Loading from '../loading/loading'
-
 
 const PostCard = (props, state) => {
     let t = localStorage.getItem('token');
@@ -15,21 +13,29 @@ const PostCard = (props, state) => {
     axios.defaults.headers.common['Authorization'] = token;  
   const [showResources, setShowResources] = useState(false);
   const [loading,setLoading]=useState(false)
+  let showemail
+
 
   let topics = [];
   let presento = [];
   let resorc = [];
   for (let i = 0; i < props.topics.length; i++) {
     topics.push(props.topics[i].SUB_TOPIC);
-    presento.push(props.topics[i].USER_EMAIL);
+    presento.push(props.topics[i].USER_EMAIL.toLowerCase());
   }
   for (let j = 0; j < props.files.length; j++) {
     let t=props.files[j].FILE_NAME.split('-');
     resorc.push([t[t.length-1], props.files[j].FILE_NAME]);
   }
+
   let presentors = [...new Set(presento)];
   topics=[...new Set(topics)];
   let str = topics.toString();
+
+  showemail=presentors.includes(email_local.toLowerCase())
+  if(localStorage.getItem('type')==='A'){
+    showemail=true
+  }
 
   let list = (
     <div>
@@ -50,6 +56,7 @@ const PostCard = (props, state) => {
       })}
     </ul>
   )
+
   let file;
   let formSubmit = (e) => {
     e.preventDefault();
@@ -106,15 +113,17 @@ const PostCard = (props, state) => {
         <strong>{str}</strong>
         <span><b>{props.date}</b></span>
       </div>
+
       <div className="desc">
         {props.description}
       </div>
+
       <div className="presenters">
         <h5>Presented by</h5>
         {list}
       </div>
 
-      <div className='upload'>
+      {showemail?<div className='upload'>
         <form onSubmit={formSubmit}>
           <i  className="boschicon-bosch-ic-cloud-upload"></i>
           <ReactTooltip id="uploadTip" place="top" effect="solid">
@@ -123,7 +132,8 @@ const PostCard = (props, state) => {
           <input data-tip data-for="uploadTip" type="file" name="files" onChange={onChange} />
           <div className="clear"></div>
         </form>
-      </div>
+      </div>:null}
+
       {resorc && resorc.length ?
         <div className="resources">
           <i data-tip data-for="attachmentsTip" className="boschicon-bosch-ic-book" onClick={() => {
@@ -134,10 +144,10 @@ const PostCard = (props, state) => {
                 View Attachments
           </ReactTooltip>
         </div> : null}
+
       <div >{showResources ? download : null}</div>
 
-
-      <div>{(new Date(props.date) > new Date() ) &&localStorage.getItem('type')==='A' ? emailicon: null}</div>
+      <div>{(new Date(props.date) > new Date() ) && localStorage.getItem('type')==='A' ? emailicon: null}</div>
       <div className="clear"></div>
       {loading? load : null}
     </div>

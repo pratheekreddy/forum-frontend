@@ -1,4 +1,4 @@
-/*
+
     let timeout =  0;
     //search 
 let search=(value)=>{
@@ -23,4 +23,3 @@ else {console.log('else')
 this.reset()
 }
 }
-*/

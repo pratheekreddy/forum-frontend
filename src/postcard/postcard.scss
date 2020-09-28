@@ -1,8 +1,23 @@
 @import "./../reset.css";
 
+
+.search{
+  position: fixed;
+  z-index: 1;
+  width: 200px;
+  margin: 8px 8px 0 15px;
+  padding: 4px 4px;
+  font-size: 16px;
+}
+
+.postcords_div {
+  margin-left: 250px;
+}
+
 .card {
-  width: 980px;
-  margin: 0 auto;
+  // width: 980px;
+  // margin: 0 auto;
+  margin-right: 25px;
   background: #fff;
   padding: 15px;
   margin-bottom: 15px;

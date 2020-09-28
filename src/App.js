@@ -19,7 +19,7 @@ class App extends Component {
       <Router>
         <div>
           <div className="sticky">
-            <Headers user={this.user}/>
+            <Headers/>
           </div>
           <Switch>
             <Route exact path="/" component={PostcardContainer} />

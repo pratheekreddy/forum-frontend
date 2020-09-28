@@ -9,6 +9,7 @@ class PostcardContainer extends Component {
         super();
         this.state = {
             session: [],
+            searchlist:[],
             loading:false
         };
     }
@@ -40,13 +41,24 @@ class PostcardContainer extends Component {
         this.reset();
     }
 
-    // componentWillUnmount() {
-    //     clearTimeout(this.intervalID);
-    // }
+    timeout=0
+    searchRequest(value){
+        
+        if(this.timeout) clearTimeout(this.timeout);
+        this.timeout = setTimeout(() => {
+  
+            console.log(value)
+          }, 600);
+    }
 
     render() {
         return (
-            this.state.loading?<Postcards session={this.state.session} /> : <Loading/>
+            <div>
+            <input className="search" placeholder="Search" onChange={e=>this.searchRequest(e.target.value)}></input>
+            <div className="postcords_div">
+            {this.state.loading?<Postcards session={this.state.session} /> : <Loading/>}
+            </div>
+            </div>
         )
     }
 }
