@@ -5,6 +5,7 @@ import ReactTooltip from "react-tooltip";
 
 import DownloadFile from './downloadFile';
 import "./postcard.scss";
+import Loading from '../loading/loading'
 
 
 const PostCard = (props, state) => {
@@ -13,6 +14,8 @@ const PostCard = (props, state) => {
     let token='requester='+email_local+';rbei_access_token='+t;
     axios.defaults.headers.common['Authorization'] = token;  
   const [showResources, setShowResources] = useState(false);
+  const [loading,setLoading]=useState(false)
+
   let topics = [];
   let presento = [];
   let resorc = [];
@@ -59,9 +62,11 @@ const PostCard = (props, state) => {
         'content-type': 'multipart/form-data'
       }
     };
+    setLoading(true)
     axios.post("https://rbei-cloud-foundry-dev-rbei-njs-forum.cfapps.eu10.hana.ondemand.com/file/upload", formData, config)
       .then((response) => {
         // console.log(response)
+        setLoading(false)
         if(response.status===200){
         alert(response.data.status);
         }
@@ -76,7 +81,11 @@ const PostCard = (props, state) => {
   }
 
   let sendEmail=()=>{
-      axios.get('https://rbei-cloud-foundry-dev-rbei-njs-forum.cfapps.eu10.hana.ondemand.com/publishagenda?session_id='+props.session_id);
+      setLoading(true)
+      axios.get('https://rbei-cloud-foundry-dev-rbei-njs-forum.cfapps.eu10.hana.ondemand.com/admin/publishagenda?session_id='+props.session_id)
+      .then(result=>{
+        setLoading(false)
+      })
   }
 
   let emailicon=(
@@ -87,6 +96,8 @@ const PostCard = (props, state) => {
           </ReactTooltip>
       </div>
   )
+
+  let load=(<Loading/>)
 
   return (
     <div className="card">
@@ -128,6 +139,7 @@ const PostCard = (props, state) => {
 
       <div>{(new Date(props.date) > new Date() ) &&localStorage.getItem('type')==='A' ? emailicon: null}</div>
       <div className="clear"></div>
+      {loading? load : null}
     </div>
   );
 };

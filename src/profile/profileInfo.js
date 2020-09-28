@@ -1,6 +1,8 @@
 import React,{Component} from "react";
 import axios from 'axios'
 
+import Loader from '../loading/loading'
+
 class ProfileInfo extends Component {
 
     constructor(props) {
@@ -9,7 +11,8 @@ class ProfileInfo extends Component {
           props: props,
           name:props.NAME,
           dept:props.DEPT,
-          username:props.USERNAME
+          username:props.USERNAME,
+          loading:false
         });
       }
     // console.log(props)
@@ -18,6 +21,7 @@ class ProfileInfo extends Component {
      email_local = localStorage.getItem('email')
      token='requester='+this.email_local+';rbei_access_token='+this.t
     
+     load=(<Loader/>)
 
      enableElement = (id) => {
         document.getElementById(id).disabled = false;
@@ -33,12 +37,14 @@ class ProfileInfo extends Component {
         let dept = document.getElementById('dept').value;
         let username = document.getElementById('username').value;
         axios.defaults.headers.common['Authorization'] = this.token;
+        this.setState({loading:true})
          axios({url:"https://cors-anywhere.herokuapp.com/https://rbei-cloud-foundry-dev-forum-app-srv.cfapps.eu10.hana.ondemand.com/profile/updateprofile('"+this.email+"')",data:{
              "DEPT": dept,
              "USERNAME": username,
              "NAME":name
          },method:'PATCH'})
          .then((result)=>{
+             this.setState({loading:false})
              alert('Profile updated sucessfully')
              localStorage.setItem('name',name)
          })
@@ -67,6 +73,7 @@ class ProfileInfo extends Component {
             
             <button className="rb-button rb-button--primary" onClick={this.update}>Update</button>
         </div>
+        {this.state.loading? this.load:null}
     </div>
     )
      }

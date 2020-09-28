@@ -28,18 +28,28 @@
     100% { -webkit-transform: rotate(360deg); }
   } */
 
-  
+  .loader {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    background: rgba(255,255,255, 0.5);
+  }
   .spinner {
-    margin: 100px auto 0; 
-     width: 70px;
+    width: 70px;
     text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
   
   .spinner > div {
     width: 18px;
     height: 18px;
     background-color: rgb(8, 44, 122);
-  
     border-radius: 100%;
     display: inline-block;
     -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
