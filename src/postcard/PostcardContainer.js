@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+
 import Postcards from './postcards'
 import Loading from '../loading/loading'
+import List from './searchlist'
 
 class PostcardContainer extends Component {
     intervalID;
@@ -46,15 +48,25 @@ class PostcardContainer extends Component {
         
         if(this.timeout) clearTimeout(this.timeout);
         this.timeout = setTimeout(() => {
-  
-            console.log(value)
-          }, 600);
+            axios.get('https://rbei-cloud-foundry-dev-rbei-njs-forum.cfapps.eu10.hana.ondemand.com/user/search?search='+value)
+            .then(result=>{
+                // console.log(result.data)
+                this.setState({searchlist:result.data})
+                // console.log(this.state)
+            })
+            .catch(e=>{
+                console.log(e)
+            })
+          }, 300);
     }
 
     render() {
         return (
             <div>
-            <input className="search" placeholder="Search" onChange={e=>this.searchRequest(e.target.value)}></input>
+            <div className="search-content">
+            <input className="search"  placeholder="Search" onChange={e=>this.searchRequest(e.target.value)}></input>
+            <List list={this.state.searchlist}></List>
+            </div>
             <div className="postcords_div">
             {this.state.loading?<Postcards session={this.state.session} /> : <Loading/>}
             </div>
