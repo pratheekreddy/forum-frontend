@@ -31,6 +31,7 @@ class PostcardContainer extends Component {
             .then((result) => {
                 this.setState({ session: result.data.value ,loading:true});
                 // this.intervalID = setTimeout(this.reset.bind(this), 5000);
+                document.getElementById('search').value = ''
             })
             .catch((e) => {
                 alert('Please login again')
@@ -50,9 +51,7 @@ class PostcardContainer extends Component {
         this.timeout = setTimeout(() => {
             axios.get('https://rbei-cloud-foundry-dev-rbei-njs-forum.cfapps.eu10.hana.ondemand.com/user/search?search='+value)
             .then(result=>{
-                // console.log(result.data)
                 this.setState({searchlist:result.data})
-                // console.log(this.state)
             })
             .catch(e=>{
                 console.log(e)
@@ -60,12 +59,27 @@ class PostcardContainer extends Component {
           }, 300);
     }
 
+    getSearch=(id)=>{
+
+        // console.log('search')
+        this.setState({loading:false})
+        axios.get("https://cors-anywhere.herokuapp.com/https://rbei-cloud-foundry-dev-forum-app-srv.cfapps.eu10.hana.ondemand.com/agenda/sessions?$expand=TOPICS,FILES&$orderby=DATE%20desc&$filter=ID eq '"+id+"'")
+        .then(result1=>{
+            this.setState({ session: result1.data.value ,loading:true,searchlist:[]});
+            console.log(this.state.session)
+        })
+        .catch(e=>{
+            console.log(e)
+        })
+    }
+
     render() {
         return (
             <div>
             <div className="search-content">
-            <input className="search"  placeholder="Search" onChange={e=>this.searchRequest(e.target.value)}></input>
-            <List list={this.state.searchlist}></List>
+            <input id='search' className="search" type="search"  placeholder="Search" onChange={e=>this.searchRequest(e.target.value)}></input>
+            <i style={{width:'25px',height:'25px'}} onClick={this.reset} className="boschicon-bosch-ic-abort-frame"> </i>
+            <List list={this.state.searchlist} search={this.getSearch}></List>
             </div>
             <div className="postcords_div">
             {this.state.loading?<Postcards session={this.state.session} /> : <Loading/>}

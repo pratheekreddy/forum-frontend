@@ -6,26 +6,14 @@
 .search-content {
   position: fixed;
   background-color: #f6f6f6;
-  min-width: 230px;
-  overflow: auto;
+  min-width: 245px;
+  // overflow: auto;
   border: 1px solid #ddd;
-//for tooltip
-  // .tooltiptext {
-  //   visibility: hidden;
-  //   width: 120px;
-  //   background-color: black;
-  //   color: #fff;
-  //   text-align: center;
-  //   border-radius: 6px;
-  //   padding: 5px 0;
-  //   position: absolute;
-  //   z-index: 5;
-  // }
-  // .tooltip:hover .tooltiptext {
-  //   visibility: visible;
-  // }
-//for tooltip
 
+  i{
+    width: 20px;
+    cursor: pointer;
+  }
   .search{
     box-sizing: border-box;
     background-position: 14px 12px;
@@ -33,7 +21,7 @@
     padding: 8px 8px;
     border: none;
     border-bottom: 1px solid #ddd;
-    width: 245px;
+    width: 205px;
     font-size: 16px;
   }
 }
@@ -47,6 +35,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  cursor: pointer;
 }
 
 li:hover {background-color: #ddd;}
