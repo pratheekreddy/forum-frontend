@@ -29,7 +29,7 @@ class PostcardContainer extends Component {
         );
         post
             .then((result) => {
-                this.setState({ session: result.data.value ,loading:true});
+                this.setState({ session: result.data.value ,loading:true,searchlist:[]});
                 // this.intervalID = setTimeout(this.reset.bind(this), 5000);
                 document.getElementById('search').value = ''
             })
@@ -62,7 +62,7 @@ class PostcardContainer extends Component {
     getSearch=(id)=>{
 
         // console.log('search')
-        this.setState({loading:false})
+        this.setState({loading:false,searchlist:[]})
         axios.get("https://cors-anywhere.herokuapp.com/https://rbei-cloud-foundry-dev-forum-app-srv.cfapps.eu10.hana.ondemand.com/agenda/sessions?$expand=TOPICS,FILES&$orderby=DATE%20desc&$filter=ID eq '"+id+"'")
         .then(result1=>{
             this.setState({ session: result1.data.value ,loading:true,searchlist:[]});
@@ -77,7 +77,7 @@ class PostcardContainer extends Component {
         return (
             <div>
             <div className="search-content">
-            <input id='search' className="search" type="search"  placeholder="Search" onChange={e=>this.searchRequest(e.target.value)}></input>
+            <input id='search' className="search"  placeholder="Search" onChange={e=>this.searchRequest(e.target.value)}></input>
             <i style={{width:'25px',height:'25px'}} onClick={this.reset} className="boschicon-bosch-ic-abort-frame"> </i>
             <List list={this.state.searchlist} search={this.getSearch}></List>
             </div>
