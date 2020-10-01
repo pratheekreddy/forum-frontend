@@ -22,8 +22,8 @@ class PostcardContainer extends Component {
         }
         let email_local = localStorage.getItem('email')
         let token='requester='+email_local+';rbei_access_token='+t
-        // console.log(token)
         axios.defaults.headers.common['Authorization'] = token;
+
         this.setState({loading:false})
         const post = axios.get(
             "https://cors-anywhere.herokuapp.com/https://rbei-cloud-foundry-dev-forum-app-srv.cfapps.eu10.hana.ondemand.com/agenda/sessions?$expand=TOPICS,FILES&$orderby=DATE%20desc"
@@ -62,12 +62,10 @@ class PostcardContainer extends Component {
 
     getSearch=(id)=>{
 
-        // console.log('search')
         this.setState({loading:false,searchlist:[]})
         axios.get("https://cors-anywhere.herokuapp.com/https://rbei-cloud-foundry-dev-forum-app-srv.cfapps.eu10.hana.ondemand.com/agenda/sessions?$expand=TOPICS,FILES&$orderby=DATE%20desc&$filter=ID eq '"+id+"'")
         .then(result1=>{
             this.setState({ session: result1.data.value ,loading:true,searchlist:[]});
-            console.log(this.state.session)
         })
         .catch(e=>{
             console.log(e)

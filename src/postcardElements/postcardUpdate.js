@@ -4,12 +4,28 @@ import './postcardUpdate.scss'
 
 const Popup=(props)=>{
 
-    // console.log(props)
     const [title,setTitle]=useState(props.session.title)
     const [date,setDate]=useState(props.session.date)
     const [description,setDesc]=useState(props.session.description)
-    const [topics,setTopics]=useState(props.session.topics)
-    console.log(topics)
+    let a=[]
+
+    for(let i=0;i<props.session.topics.length;i++){
+        a.push({ USER_EMAIL: props.session.topics[i].USER_EMAIL , SUB_TOPIC:props.session.topics[i].SUB_TOPIC })
+    }
+    
+    const [fields, setFields] = useState([...a]);
+    
+    let handleChangeEmail=(i, event)=> {
+        const values = [...fields];
+        values[i].USER_EMAIL = event.target.value;
+        setFields(values);
+      }
+
+    let handleChangeTopic=(i, event)=> {
+        const values = [...fields];
+        values[i].SUB_TOPIC = event.target.value;
+        setFields(values);
+      }
 
     return(
         <div className='update-popup'>
@@ -21,13 +37,13 @@ const Popup=(props)=>{
             <label style={{float:'left'}}>Description  </label>
             <textarea id='description' rows = "3" cols = "50" value={description} onChange={(e)=>{setDesc(e.target.value)}}></textarea><br></br>
             {
-                topics.map((sub,i)=>{
+                fields.map((sub,idx)=>{
                     return(
-                        <div key={sub.SUB_TOPIC_ID}>
+                        <div key={idx}>
                             <label> presentor</label>
-                            <input value={sub.USER_EMAIL} onChange={(e)=>{}}></input>
+                            <input value={sub.USER_EMAIL} onChange={e => handleChangeEmail(idx, e)}></input>
                             <label>topic</label>
-                            <input value={sub.SUB_TOPIC}></input><br></br>
+                            <input value={sub.SUB_TOPIC} onChange={e => handleChangeTopic(idx, e)}></input><br></br>
                         </div>
                     )
                 })

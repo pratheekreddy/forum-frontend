@@ -1,31 +1,29 @@
 import React, { useState } from "react";
-import axios from 'axios'
 import ReactTooltip from "react-tooltip";
 
-import DownloadFile from './downloadFile';
+import DownloadFile from '../postcardElements/downloadFile';
 import "./postcard.scss";
-import Loading from '../loading/loading'
-import PostcardUpdate from './postcardUpdate'
+import PostcardUpdate from '../postcardElements/postcardUpdate'
+import Upload from '../postcardElements/file'
+import Email from '../postcardElements/email'
 
 const PostCard = (props, state) => {
-    let t = localStorage.getItem('token');
-    let email_local = localStorage.getItem('email');
-    let token='requester='+email_local+';rbei_access_token='+t;
-    axios.defaults.headers.common['Authorization'] = token;  
+  let email_local = localStorage.getItem('email');
 
   const [showResources, setShowResources] = useState(false);
-  const [loading,setLoading]=useState(false)
-  const [popup,setPopup]=useState(false)
+  const [popup,setPopup]=useState(false);
 
-  let showemail
+  let showUpload;
 
   let topics = [];
   let presento = [];
   let resorc = [];
+
   for (let i = 0; i < props.topics.length; i++) {
     topics.push(props.topics[i].SUB_TOPIC);
     presento.push(props.topics[i].USER_EMAIL.toLowerCase());
   }
+
   for (let j = 0; j < props.files.length; j++) {
     let t=props.files[j].FILE_NAME.split('-');
     resorc.push([t[t.length-1], props.files[j].FILE_NAME]);
@@ -35,9 +33,9 @@ const PostCard = (props, state) => {
   topics=[...new Set(topics)];
   let str = topics.toString();
 
-  showemail=presentors.includes(email_local.toLowerCase())
+  showUpload=presentors.includes(email_local.toLowerCase())
   if(localStorage.getItem('type')==='A'){
-    showemail=true
+    showUpload=true
   }
 
   let list = (
@@ -60,61 +58,13 @@ const PostCard = (props, state) => {
     </ul>
   )
 
-  let file;
-
   let close=()=>{
     setPopup(false)
   }
-  let formSubmit = (e) => {
-    e.preventDefault();
-    const formData = new FormData();
-    formData.append('files', file);
-    formData.append('session_id', props.session_id);
-    formData.append('uploaded_by',localStorage.getItem('name'));
-    const config = {
-      headers: {
-        'content-type': 'multipart/form-data'
-      }
-    };
-    setLoading(true)
-    axios.post("https://rbei-cloud-foundry-dev-rbei-njs-forum.cfapps.eu10.hana.ondemand.com/file/upload", formData, config)
-      .then((response) => {
-        // console.log(response)
-        setLoading(false)
-        if(response.status===200){
-        alert(response.data.status);
-        }
-      }).catch((e) => {
-          alert(e.response.data.msg);
-      });
-  }
-
-  let onChange = (e) => {
-    file = e.target.files[0];
-    formSubmit(e);
-  }
-
-  let sendEmail=()=>{
-      setLoading(true)
-      axios.get('https://rbei-cloud-foundry-dev-rbei-njs-forum.cfapps.eu10.hana.ondemand.com/admin/publishagenda?session_id='+props.session_id)
-      .then(result=>{
-        setLoading(false)
-      })
-  }
-
-  let emailicon=(
-    <div className="admin-notify">
-        <i data-tip data-for="emailTip" className="boschicon-bosch-ic-mail" onClick={sendEmail}></i>
-          <ReactTooltip id="emailTip" place="top" effect="solid">
-                Email Subscribers
-          </ReactTooltip>
-      </div>
-  )
-
-  let load=(<Loading/>)
 
   return (
     <div className="card">
+    
       <div className="head">
         <label>{props.index + 1}</label>
         <strong onClick={()=>{setPopup(true)}}>{str}</strong>
@@ -130,16 +80,7 @@ const PostCard = (props, state) => {
         {list}
       </div>
 
-      {showemail?<div className='upload'>
-        <form onSubmit={formSubmit}>
-          <i  className="boschicon-bosch-ic-cloud-upload"></i>
-          <ReactTooltip id="uploadTip" place="top" effect="solid">
-                Upload Attachments
-          </ReactTooltip>
-          <input data-tip data-for="uploadTip" type="file" name="files" onChange={onChange} />
-          <div className="clear"></div>
-        </form>
-      </div>:null}
+      {showUpload?<Upload session_id={props.session_id}/>:null}
 
       {resorc && resorc.length ?
         <div className="resources">
@@ -152,12 +93,16 @@ const PostCard = (props, state) => {
           </ReactTooltip>
         </div> : null}
 
-      <div >{showResources ? download : null}</div>
+      <div >
+        {showResources ? download : null}
+      </div>
 
-      <div>{(new Date(props.date) >= new Date() ) && localStorage.getItem('type')==='A' ? emailicon: null}</div>
-      <div className="clear"></div>
-      {loading? load : null}
+      <div>
+        {(new Date(props.date) >= new Date() ) && localStorage.getItem('type')==='A' ? <Email session_id={props.session_id}/>: null}
+      </div>
+
       {popup? <PostcardUpdate close={close} session={props}/>:null}
+      <div className="clear"></div>
     </div>
   );
 };
