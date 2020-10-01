@@ -56,7 +56,7 @@ const List = (props) => {
   };
   return (
     <div className="dropdown" onBlur={() => setDisplay(false)} tabIndex="-1">
-      <i className="boschicon-bosch-ic-refresh"></i>
+      {/* <i className="boschicon-bosch-ic-refresh"></i> */}
       <i className="boschicon-bosch-ic-user" onClick={toggle}></i>
       {display ? list : null}
     </div>

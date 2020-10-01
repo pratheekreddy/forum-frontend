@@ -1,0 +1,48 @@
+.update-popup{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    background: rgba(255,255,255, 0.5);
+}
+.update-pop2{
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white; 
+    width: 650px;
+    min-height: 200px;
+    border: groove;
+
+    label{
+        margin-top: 5px;
+        width: 100px;
+        font-size: 12px;
+        display: inline-block;
+    }
+
+    textarea{
+        width:520px;
+        margin-top: 5px;
+    }
+
+    input{
+        margin-top: 5px;
+        width: calc(30%);
+        display: inline-block;
+        padding: 8px;
+        border-radius: 0;
+        font-size: 12px;
+        border: 1px solid #ccc;
+        
+    }
+
+    button{
+        margin-top: 15px;
+        margin-left: 10px;
+    }
+}

@@ -27,8 +27,8 @@ class Profile extends Component {
         // console.log(result);
         this.setState({profileinfomation : result.data.value[0],
         response:true});
-        console.log(this.state)
-        console.log(this.state.profileinfomation.EMAIL_ID)
+        // console.log(this.state)
+        // console.log(this.state.profileinfomation.EMAIL_ID)
     })
     .catch((e)=>{
         console.log(e)

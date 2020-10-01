@@ -22,6 +22,7 @@ class PostcardContainer extends Component {
         }
         let email_local = localStorage.getItem('email')
         let token='requester='+email_local+';rbei_access_token='+t
+        // console.log(token)
         axios.defaults.headers.common['Authorization'] = token;
         this.setState({loading:false})
         const post = axios.get(
@@ -78,7 +79,7 @@ class PostcardContainer extends Component {
             <div>
             <div className="search-content">
             <input id='search' className="search"  placeholder="Search" onChange={e=>this.searchRequest(e.target.value)}></input>
-            <i style={{width:'25px',height:'25px'}} onClick={this.reset} className="boschicon-bosch-ic-abort-frame"> </i>
+            <i style={{width:'25px',height:'25px'}} onClick={this.reset} className="boschicon-bosch-ic-reset"> </i>
             <List list={this.state.searchlist} search={this.getSearch}></List>
             </div>
             <div className="postcords_div">

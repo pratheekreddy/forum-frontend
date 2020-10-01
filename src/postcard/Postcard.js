@@ -5,16 +5,19 @@ import ReactTooltip from "react-tooltip";
 import DownloadFile from './downloadFile';
 import "./postcard.scss";
 import Loading from '../loading/loading'
+import PostcardUpdate from './postcardUpdate'
 
 const PostCard = (props, state) => {
     let t = localStorage.getItem('token');
     let email_local = localStorage.getItem('email');
     let token='requester='+email_local+';rbei_access_token='+t;
     axios.defaults.headers.common['Authorization'] = token;  
+
   const [showResources, setShowResources] = useState(false);
   const [loading,setLoading]=useState(false)
-  let showemail
+  const [popup,setPopup]=useState(false)
 
+  let showemail
 
   let topics = [];
   let presento = [];
@@ -58,6 +61,10 @@ const PostCard = (props, state) => {
   )
 
   let file;
+
+  let close=()=>{
+    setPopup(false)
+  }
   let formSubmit = (e) => {
     e.preventDefault();
     const formData = new FormData();
@@ -110,7 +117,7 @@ const PostCard = (props, state) => {
     <div className="card">
       <div className="head">
         <label>{props.index + 1}</label>
-        <strong>{str}</strong>
+        <strong onClick={()=>{setPopup(true)}}>{str}</strong>
         <span><b>{props.date}</b></span>
       </div>
 
@@ -147,9 +154,10 @@ const PostCard = (props, state) => {
 
       <div >{showResources ? download : null}</div>
 
-      <div>{(new Date(props.date) > new Date() ) && localStorage.getItem('type')==='A' ? emailicon: null}</div>
+      <div>{(new Date(props.date) >= new Date() ) && localStorage.getItem('type')==='A' ? emailicon: null}</div>
       <div className="clear"></div>
       {loading? load : null}
+      {popup? <PostcardUpdate close={close} session={props}/>:null}
     </div>
   );
 };
