@@ -5,9 +5,10 @@ import Postcard from './Postcard'
 const postcards = (props) => {
     return (
         props.session.map((sessions, index) => {
+            console.log(index);
             return <Postcard
                 title={sessions.TITLE}
-                index={index}
+                index={props.no_of_sessions - index}
                 description={sessions.DESC}
                 date={sessions.DATE}
                 key={sessions.ID}

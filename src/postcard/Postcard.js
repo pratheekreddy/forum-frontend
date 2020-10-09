@@ -66,7 +66,7 @@ const PostCard = (props, state) => {
     <div className="card">
     
       <div className="head">
-        <label>{props.index + 1}</label>
+        <label>{props.index}</label>
         <strong onClick={()=>{setPopup(true)}}>{str}</strong>
         <span><b>{props.date}</b></span>
       </div>
@@ -98,7 +98,7 @@ const PostCard = (props, state) => {
       </div>
 
       <div>
-        {(new Date(props.date) >= new Date() ) && localStorage.getItem('type')==='A' ? <Email session_id={props.session_id}/>: null}
+        {(new Date(props.date).toISOString().substring(0,10) + "T18:29:59.000Z" >= new Date().toISOString()) && localStorage.getItem('type')==='A' ? <Email session_id={props.session_id}/>: null}
       </div>
 
       {popup? <PostcardUpdate close={close} session={props}/>:null}
