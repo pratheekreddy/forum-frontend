@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { BrowserRouter as Router, Switch, Route} from "react-router-dom";//, Link 
+import React, { Component } from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom"; //, Link
 
 import "./postcard/styles.css";
 import Headers from "./header/header";
@@ -7,28 +7,27 @@ import Footers from "./footer/footer";
 import Login from "./login/login";
 import Signup from "./login/signup";
 import Profile from "./profile/profile";
-import PostcardContainer from './postcard/PostcardContainer'
-import PostAgenda from './admin/postagenda'
-import Aprove from './admin/userAprove'
+import PostcardContainer from "./postcard/PostcardContainer";
+import PostAgenda from "./admin/postagenda";
+import Aprove from "./admin/userAprove";
+
 
 class App extends Component {
-
-
   render() {
     return (
       <Router>
         <div>
           <div className="sticky">
-            <Headers/>
+            <Headers />
           </div>
           <Switch>
             <Route exact path="/" component={PostcardContainer} />
             <Route exact path="/index.html" component={PostcardContainer} />
             <Route exact path="/login" component={Login} />
-            <Route exact path="/signup" component={Signup}/>
-            <Route exact path="/profile" component={Profile}/>
-            <Route exact path="/postagenda" component={PostAgenda}/>
-            <Route exact path="/aprove" component={Aprove}/>
+            <Route exact path="/signup" component={Signup} />
+            <Route exact path="/profile" component={Profile} />
+            <Route exact path="/postagenda" component={PostAgenda} />
+            <Route exact path="/aprove" component={Aprove} />
           </Switch>
           <div className="footer">
             <Footers />
