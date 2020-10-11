@@ -27,7 +27,7 @@ class App extends Component {
             <Route exact path="/signup" component={Signup} />
             <Route exact path="/profile" component={Profile} />
             <Route exact path="/postagenda" component={PostAgenda} />
-            <Route exact path="/aprove" component={Aprove} />
+            <Route exact path="/approve" component={Aprove} />
           </Switch>
           <div className="footer">
             <Footers />

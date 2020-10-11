@@ -21,7 +21,7 @@ const List = (props) => {
   };
 
   let approve = () => {
-    props.history.push({ pathname: "/aprove" });
+    props.history.push({ pathname: "/approve" });
     setDisplay(false);
   };
 

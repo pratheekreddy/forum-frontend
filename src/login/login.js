@@ -75,7 +75,7 @@ const Login = (props) => {
         <div>
             <div>
 
-                <label >E-mail/Username </label>
+                <label >E-mail </label>
                 <input disabled={showOTP} id="email" type="text" />
                 {!showOTP ? (<button className="rb-button rb-button--primary" onClick={getOtp}>Get OTP</button>) : null}
             </div>
