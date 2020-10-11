@@ -81,7 +81,7 @@ class PostcardContainer extends Component {
             <List list={this.state.searchlist} search={this.getSearch}></List>
             </div>
             <div className="postcords_div">
-            {this.state.loading?<Postcards session={this.state.session} /> : <Loading/>}
+            {this.state.loading?<Postcards session={this.state.session} no_of_sessions = {this.state.session.length} /> : <Loading/>}
             </div>
             </div>
         )
