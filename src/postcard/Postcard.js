@@ -81,9 +81,10 @@ const PostCard = (props, state) => {
         {list}
       </div>
 
+      <div>
       
       {showUpload?<Upload session_id={props.session_id}/>:null}
-
+      
       {resorc && resorc.length ?
         <div className="resources">
           <i data-tip data-for="attachmentsTip" className="boschicon-bosch-ic-book" onClick={() => {
@@ -94,13 +95,17 @@ const PostCard = (props, state) => {
                 View Attachments
           </ReactTooltip>
         </div> : null}
-
-        {showResources ? download : null}
-
+        
       <div>
         {(new Date(props.date).toISOString().substring(0,10) + "T18:29:59.000Z" >= new Date().toISOString()) && localStorage.getItem('type')==='A' ? <Email session_id={props.session_id}/>: null}
       </div>
 
+      <div className="video">
+      <a rel="noopener noreferrer" target="_blank" href="https://tube.video.bosch.com/media/Sample+Recording/0_37qhkxzx" className="boschicon-bosch-ic-youtube-frame" style={{"float":"right"}}> </a>
+      </div>
+
+      </div>
+      {showResources ? download : null}
       {popup? <PostcardUpdate close={close} session={props}/>:null}
       <div className="clear"></div>
     </div>
