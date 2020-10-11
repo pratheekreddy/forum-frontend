@@ -69,6 +69,7 @@ const PostCard = (props, state) => {
         <label>{props.index + 1}</label>
         <strong onClick={()=>{setPopup(true)}}>{str}</strong>
         <span><b>{props.date}</b></span>
+        <div className="Stars" style={{"--rating": 2.3}} ></div>
       </div>
 
       <div className="desc">
@@ -80,6 +81,7 @@ const PostCard = (props, state) => {
         {list}
       </div>
 
+      <div >
       {showUpload?<Upload session_id={props.session_id}/>:null}
 
       {resorc && resorc.length ?
@@ -93,11 +95,8 @@ const PostCard = (props, state) => {
           </ReactTooltip>
         </div> : null}
 
-      <div >
         {showResources ? download : null}
-      </div>
 
-      <div>
         {(new Date(props.date) >= new Date() ) && localStorage.getItem('type')==='A' ? <Email session_id={props.session_id}/>: null}
       </div>
 
