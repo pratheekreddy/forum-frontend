@@ -35,6 +35,11 @@ const List = (props) => {
     setDisplay(false);
   };
 
+  let feedback = () => {
+    props.history.push({ pathname: "/feedback" });
+    setDisplay(false);
+  }
+
   let admin = (
     <div>
       <li onClick={approve}>Approve users</li>
@@ -48,6 +53,7 @@ const List = (props) => {
       <li onClick={profile}>Your Profile</li>
       {type === "A" ? admin : null}
       <li onClick={signout}>Sign out</li>
+      <li onClick={feedback}>Feedback</li>
     </div>
   );
 
