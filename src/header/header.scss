@@ -35,13 +35,24 @@ h1 {
 }
 .signup {
   float: right;
-  margin-top: 20px;
-  margin-right: 15px;
+  margin: 20px 30px;
   a {
     display: inline-block;
     font-size: 14px;
     margin: 10px;
     color: #005691;
+  }
+  strong{
+    animation: blinker 1s infinite;
+    color: red;
+  }
+  @keyframes blinker {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
   }
 }
 .dropdown {

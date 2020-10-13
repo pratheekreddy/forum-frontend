@@ -4,7 +4,8 @@ import axios from 'axios'
 
 const download=(props)=> {
 
-    let down=props.down
+    let down=props.down;
+    console.log(down);
     const tempName = down[0].split('.');
     // console.log(down)
     let filedown=()=>{
