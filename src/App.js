@@ -11,7 +11,7 @@ import PostcardContainer from "./postcard/PostcardContainer";
 import PostAgenda from "./admin/postagenda";
 import Aprove from "./admin/userAprove";
 import Feedback from "./profile/feedback";
-
+import About from "./profile/about";
 
 class App extends Component {
   render() {
@@ -30,6 +30,7 @@ class App extends Component {
             <Route exact path="/postagenda" component={PostAgenda} />
             <Route exact path="/approve" component={Aprove} />
             <Route exact path="/feedback" component={Feedback}/>
+            <Route exact path="/about" component={About}/>
           </Switch>
           <div className="footer">
             <Footers />

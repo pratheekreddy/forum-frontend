@@ -68,39 +68,13 @@ h1 {
     float: left;
     cursor: pointer;
   }
-  .dropdown-content {
-    min-width: 120px;
-    margin-top: 45px;
-    background: #fff;
-    position: absolute;
-    right: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;    
-    box-shadow: 0 8px 6px -6px #aaa;
-    &:before {
-      width: 0;
-      height: 0;
-      border-left: 8px solid transparent;
-      border-right: 8px solid transparent;
-      border-bottom: 8px solid black;
-      content: "";
-      top: -8px;
-      right: 12px;
-      position: absolute;
+  @keyframes blink {
+    0% {
+      opacity: 1;
     }
-  }
-  .dropdown-content li {
-    padding: 8px;
-    font-size: 12px;
-    display: block;
-    cursor: pointer;
-    text-align: right;
-    &:not(last-child) {
-      border-bottom: 1px solid #ccc;
+    100% {
+      opacity: 0;
     }
-  }
-  .dropdown-content p:hover {
-    background-color: #ddd;
   }
 }
 
