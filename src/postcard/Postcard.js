@@ -50,7 +50,6 @@ const PostCard = (props, state) => {
   let download = (
     <ul className="downloads">
       <h5 style={{"margin-left": "10px"}}>Attachments</h5>
-      
       {resorc.map((down, i) => {
         
         return <DownloadFile key={i} down={down}/>
@@ -70,6 +69,7 @@ const PostCard = (props, state) => {
         <strong onClick={()=>{setPopup(true)}}>{str}</strong>
         <span><b>{props.date}</b></span>
         <div className="Stars" style={{"--rating": 2.3}} ></div>
+        <button style={{"float":"right"}}>give feedback</button>
       </div>
 
       <div className="desc">
@@ -95,18 +95,19 @@ const PostCard = (props, state) => {
                 View Attachments
           </ReactTooltip>
         </div> : null}
-        
-      <div>
-        {(new Date(props.date).toISOString().substring(0,10) + "T18:29:59.000Z" >= new Date().toISOString()) && localStorage.getItem('type')==='A' ? <Email session_id={props.session_id}/>: null}
-      </div>
+
+      {(new Date(props.date).toISOString().substring(0,10) + "T18:29:59.000Z" >= new Date().toISOString()) && localStorage.getItem('type')==='A' ? <Email session_id={props.session_id}/>: null}
 
       <div className="video">
-      <a rel="noopener noreferrer" target="_blank" href="https://tube.video.bosch.com/media/Sample+Recording/0_37qhkxzx" className="boschicon-bosch-ic-youtube-frame" style={{"float":"right"}}> </a>
+      <a rel="noopener noreferrer" target="_blank" href="https://tube.video.bosch.com/media/Sample+Recording/0_37qhkxzx" className="boschicon-bosch-ic-youtube-frame" > </a>
       </div>
 
+      {(new Date(props.date).toISOString().substring(0,10) + "T18:29:59.000Z" >= new Date().toISOString()) ? <label style={{'marginLeft':'15px','color':'darkgray'}}>Upcoming</label>: null}
+      
       </div>
+
       {showResources ? download : null}
-      {popup? <PostcardUpdate close={close} session={props}/>:null}
+      {popup && localStorage.getItem('type')==='A' ? <PostcardUpdate close={close} session={props}/>:null}
       <div className="clear"></div>
     </div>
   );

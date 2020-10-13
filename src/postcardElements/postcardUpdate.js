@@ -26,6 +26,10 @@ const Popup=(props)=>{
         values[i].SUB_TOPIC = event.target.value;
         setFields(values);
       }
+    
+    let update=()=>{
+        
+    }
 
     return(
         <div className='update-popup'>
@@ -48,7 +52,7 @@ const Popup=(props)=>{
                     )
                 })
             }
-            <button className="rb-button rb-button--primary">Update</button>
+            <button className="rb-button rb-button--primary" onClick={update}>Update</button>
             <button className="rb-button rb-button--primary" onClick={props.close} >Close</button>
         </div>
         </div>

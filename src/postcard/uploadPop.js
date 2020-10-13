@@ -8,7 +8,7 @@ const popup =(props)=> {
     let onChange=(e)=>{
         this.setState({file:e.target.files[0]});
     }
-      return (
+      return (  
         <div className='popup'>
           <div className='popup_inner'>
           <button className="button" onClick={props.toggle}>&times;</button>
