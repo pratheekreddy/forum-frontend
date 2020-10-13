@@ -28,6 +28,7 @@ const Feedback =()=> {
     }).then(() => {
         setLoading(false);
         alert('Thank you for your feedback!');
+        document.getElementById("comments").value = '';
     }).catch(e=>{
       setLoading(false);
     })
