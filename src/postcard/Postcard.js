@@ -3,9 +3,9 @@ import ReactTooltip from "react-tooltip";
 
 import DownloadFile from '../postcardElements/downloadFile';
 import "./postcard.scss";
-import PostcardUpdate from '../postcardElements/postcardUpdate'
-import Upload from '../postcardElements/file'
-import Email from '../postcardElements/email'
+import PostcardUpdate from '../postcardElements/postcardUpdate';
+import Upload from '../postcardElements/file';
+import Email from '../postcardElements/email';
 
 const PostCard = (props, state) => {
   let email_local = localStorage.getItem('email');
@@ -99,7 +99,7 @@ const PostCard = (props, state) => {
       {(new Date(props.date).toISOString().substring(0,10) + "T18:29:59.000Z" >= new Date().toISOString()) && localStorage.getItem('type')==='A' ? <Email session_id={props.session_id}/>: null}
 
       <div className="video">
-      <a rel="noopener noreferrer" target="_blank" href="https://tube.video.bosch.com/media/Sample+Recording/0_37qhkxzx" className="boschicon-bosch-ic-youtube-frame" > </a>
+      <a rel="noopener noreferrer" target="_blank" href="https://tube.video.bosch.com/media/Sample+Recording/0_37qhkxzx" > </a>
       </div>
 
       {(new Date(props.date).toISOString().substring(0,10) + "T18:29:59.000Z" >= new Date().toISOString()) ? <label style={{'marginLeft':'15px','color':'darkgray'}}>Upcoming</label>: null}
