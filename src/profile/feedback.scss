@@ -1,19 +1,15 @@
 .feedback {
-  position: fixed;
+  position: relative;
   height: 420px;
   width: 70%;
-  text-align: center;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: #fff;
+  margin: 10px auto 10px auto;
   h1 {
     position: absolute;
+    width: fit-content;
     top: 10%;
-    left: 15%;
+    left: 20%;
     margin: 0;
-    width: 60%;
-    padding: 1em;
+    text-align: start ;
   }
   textarea {
     position: absolute;
@@ -26,8 +22,7 @@
   }
   button {
     position: absolute;
-    bottom: 1%;
-    right: 21%;
-    margin-bottom: 20px;
+    bottom: 0.1%;
+    right: 10%;
   }
 }

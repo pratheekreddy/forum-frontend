@@ -22,20 +22,19 @@ const Feedback =()=> {
       url:
         "https://cors-anywhere.herokuapp.com/https://rbei-cloud-foundry-dev-forum-app-srv.cfapps.eu10.hana.ondemand.com/feedback/application",
       data: {
-        EMAIL: email,
         FEEDBACK: feedback,
       },
       method: "POST",
-    }).then((result) => {
+    }).then(() => {
         setLoading(false);
-        alert('Feedback submitted successfully!');
+        alert('Thank you for your feedback!');
     }).catch(e=>{
       setLoading(false);
     })
   };
     return (
       <div className="feedback">
-        <h1>Please share your valuable feedback</h1>
+        <h1>Please feel free to share your feedback. It will be stored anonymously.</h1>
         <textarea
           id="comments"
           rows="10"
