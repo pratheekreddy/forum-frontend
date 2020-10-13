@@ -1,13 +1,16 @@
 .feedback {
-  position: relative;
+  position: fixed;
   height: 420px;
-  width: 80%;
-  margin: 10px auto 10px auto;
+  width: 70%;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background: #fff;
   h1 {
     position: absolute;
     top: 10%;
-    left: 20%;
+    left: 15%;
     margin: 0;
     width: 60%;
   }
@@ -23,6 +26,7 @@
   button {
     position: absolute;
     bottom: 1%;
-    right: 8%;
+    right: 21%;
+    margin-bottom: 20px;
   }
 }

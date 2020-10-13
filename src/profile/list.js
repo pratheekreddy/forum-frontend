@@ -52,8 +52,8 @@ const List = (props) => {
       <li onClick={home}>Home</li>
       <li onClick={profile}>Your Profile</li>
       {type === "A" ? admin : null}
-      <li onClick={signout}>Sign out</li>
       <li onClick={feedback}>Feedback</li>
+      <li onClick={signout}>Sign out</li>
     </div>
   );
 
