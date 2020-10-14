@@ -6,19 +6,17 @@
   h1 {
     position: absolute;
     width: fit-content;
-    top: 10%;
-    left: 20%;
-    margin: 0;
-    text-align: start ;
+    margin: 10px auto 10px auto;
+    text-align: center ;
   }
   textarea {
     position: absolute;
     top: 30%;
-    left: 20%;
+    left: 14%;
     padding: 20px;
     border: 2px solid #ccc;
     border-radius: 0.5em;
-    box-sizing: border-box;
+    // box-sizing: border-box;
   }
   button {
     position: absolute;
