@@ -17,6 +17,7 @@ const postcards = (props) => {
                 files={sessions.FILES}
                 showPopup={props.showPopup}
                 toggle={props.toggle}
+                boschTubeURL={sessions.URL}
             > </Postcard>
         })
     )
