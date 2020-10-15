@@ -8,10 +8,15 @@ const Email=(props)=>{
 
     const [loading,setLoading]=useState(false);
     let sendEmail=()=>{
-        setLoading(true)
+        setLoading(true);
         axios.get('https://rbei-cloud-foundry-dev-rbei-njs-forum.cfapps.eu10.hana.ondemand.com/admin/publishagenda?session_id='+props.session_id)
         .then(result=>{
-          setLoading(false)
+          setLoading(false);
+          alert('Notified')
+        }).catch(e=>{
+          setLoading(false);
+          console.log(e)
+          alert('error...check logs')
         })
     }
     return(

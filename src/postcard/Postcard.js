@@ -80,8 +80,8 @@ const PostCard = (props, state) => {
         <span>
           <b>{props.date}</b>
         </span>
-        <div className="Stars" style={{ "--rating": 2.3 }}></div>
-        <button style={{ float: "right" }}>give feedback</button>
+        {/* <div className="Stars" style={{ "--rating": 2.3 }}></div>
+        <button style={{ float: "right" }}>give feedback</button> */}
       </div>
 
       <div className="desc">{props.description}</div>
@@ -124,9 +124,7 @@ const PostCard = (props, state) => {
               target="_blank"
               // href="https://tube.video.bosch.com/media/Sample+Recording/0_37qhkxzx"
               href = {props.boschTubeURL}
-            >
-              {" "}
-            </a>
+            > </a>
           </div>
         ) : null}
 
@@ -140,6 +138,7 @@ const PostCard = (props, state) => {
       </div>
 
       {showResources ? download : null}
+
       {popup && localStorage.getItem("type") === "A" ? (
         <PostcardUpdate close={close} session={props} />
       ) : null}

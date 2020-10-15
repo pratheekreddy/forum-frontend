@@ -24,3 +24,52 @@
     right: 10%;
   }
 }
+
+.placeholder{
+  position: fixed;
+  top: 0;
+  left: 0;
+  .about{
+    background-color: white;
+    padding: 10px;
+    width: 1000px;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    label {
+      background-color: ivory;
+      font-size: 24px;
+      display: inline-block;
+    }
+    p{
+      font-size: 16px;
+      padding: 5px;
+      // display: inline-block;
+    }
+    .contact{
+      background-color: lightblue;
+      margin-top: 20px;
+    }
+    .technologies{
+      margin-top: 20px;
+      ul{
+        list-style-type: square;
+        width: 300px;
+        p{
+          list-style:disc outside none;
+          display:list-item; 
+          margin-left: 20px;
+        }
+      }
+      .techlist{
+        padding: 5px;
+        display: flex;
+        p{
+          padding: 5px;
+        }
+      }
+    }
+  }
+}
