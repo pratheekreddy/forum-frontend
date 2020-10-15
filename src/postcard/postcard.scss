@@ -1,20 +1,22 @@
 @import "./../reset.css";
 
 
-
-
 .search-content {
-  position: fixed;
-  background-color: #f6f6f6;
+  top: 35px;
+  z-index: 10;
+  /* background-color: #f6f6f6; */
   min-width: 245px;
-  // overflow: auto;
-  margin-left: 2px;
+  position: fixed;
+  // left: 78%;
+  right: 70px;
+  /* float: right; */
+  /* margin-left: 1100px;*/
 
   i{
     cursor: pointer;
+    position: fixed;
+    top: 37px;
     font-size: 30px;
-    position: absolute;
-    top: 3px;
     margin-left: 5px;
   }
   .search{
@@ -25,9 +27,12 @@
     border: 1px solid #ddd;
     width: 205px;
     font-size: 16px;
+    top: 2px;
   }
 }
-
+.search-content{
+  background-color: white;
+}
 .search-content li {
   color: black;
   padding: 12px 16px;
@@ -42,14 +47,14 @@
 
 li:hover {background-color: #ddd;}
 
-.postcords_div {
-  margin-left: 250px;
-}
+// .postcords_div {
+//   margin-left: 250px;
+// }
 
 .card {
-  // width: 980px;
-  // margin: 0 auto;
-  margin-right: 25px;
+  width: 1000px;
+  margin: 0 auto;
+  // margin-right: 25px;
   background: #fff;
   padding: 15px;
   margin-bottom: 15px;

@@ -19,8 +19,8 @@ const header=(props)=> {
       )
       let nav=(
           <div className="signup">
-          <Link to={{pathname:'/login'}}>Sign in</Link>
-          <strong><Link to={{pathname:'/signup'}} >Sign up</Link></strong>
+            <Link to={{pathname:'/login'}}>Sign in</Link>
+            <strong><Link to={{pathname:'/signup'}} >Sign up</Link></strong>
           </div>
       )
     return (
