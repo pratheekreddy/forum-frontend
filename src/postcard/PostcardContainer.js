@@ -31,7 +31,7 @@ class PostcardContainer extends Component {
         post
             .then((result) => {
                 this.setState({ session: result.data.value ,loading:true,searchlist:[]});
-                // document.getElementById('search').value = ''
+                document.getElementById('search').value = ''
             })
             .catch((e) => {
                 alert('Please login again')
@@ -75,9 +75,11 @@ class PostcardContainer extends Component {
         return (
             <div>
                 <div className="search-content">
-                    <input id='search' className="search"  placeholder="Search" onChange={e=>this.searchRequest(e.target.value)}></input>
+                    <input id='search' type='search' className="search"  placeholder="Search" onChange={e=>this.searchRequest(e.target.value)}></input>
                     <i style={{width:'25px',height:'25px'}} onClick={this.reset} className="boschicon-bosch-ic-reset"> </i>
-                    <List list={this.state.searchlist} search={this.getSearch}></List>
+                    <div className='searchlist'>    
+                        <List list={this.state.searchlist} search={this.getSearch}></List>
+                    </div>
                 </div>
                 <div className="postcords_div">
                     {this.state.loading?<Postcards session={this.state.session} no_of_sessions = {this.state.session.length} /> : <Loading/>}
