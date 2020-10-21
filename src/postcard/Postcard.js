@@ -65,7 +65,7 @@ const PostCard = (props, state) => {
   let close = () => {
     setPopup(false);
   };
-
+ console.log(props.boschTubeURL)
   return (
     <div className="card">
       <div className="head">

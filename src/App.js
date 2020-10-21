@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom"; //, Link
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import "./postcard/styles.css";
 import Headers from "./header/header";
@@ -31,11 +31,7 @@ class App extends Component {
                 </div>
                 <Switch>
                   <Route exact path="/" component={PostcardContainer} />
-                  <Route
-                    exact
-                    path="/index.html"
-                    component={PostcardContainer}
-                  />
+                  <Route exact path="/index.html" component={PostcardContainer} />
                   <Route exact path="/login" component={Login} />
                   <Route exact path="/signup" component={Signup} />
                   <Route exact path="/profile" component={Profile} />

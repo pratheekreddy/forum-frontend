@@ -78,6 +78,9 @@ const Signup = (props) => {
           setUsername("invalid");
         });
     }
+    else{
+      setUsername()
+    }
   };
 
   let load = <Loading />;

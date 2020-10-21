@@ -24,14 +24,14 @@ class PostcardContainer extends Component {
         let token='requester='+email_local+';rbei_access_token='+t
         axios.defaults.headers.common['Authorization'] = token;
 
-        this.setState({loading:false})
+        this.setState({loading:false,searchlist:[]});
+        document.getElementById('search').value = '';
         const post = axios.get(
             "https://cors-anywhere.herokuapp.com/https://rbei-cloud-foundry-dev-forum-app-srv.cfapps.eu10.hana.ondemand.com/agenda/sessions?$expand=TOPICS,FILES&$orderby=DATE%20desc"
         );
         post
             .then((result) => {
                 this.setState({ session: result.data.value ,loading:true,searchlist:[]});
-                document.getElementById('search').value = ''
             })
             .catch((e) => {
                 alert('Please login again')
