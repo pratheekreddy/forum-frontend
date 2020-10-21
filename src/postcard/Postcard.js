@@ -114,27 +114,30 @@ const PostCard = (props, state) => {
         {new Date(props.date).toISOString().substring(0, 10) +
           "T18:29:59.000Z" >=
           new Date().toISOString() && localStorage.getItem("type") === "A" ? (
-          <Email session_id={props.session_id} />
-        ) : null}
+            <Email session_id={props.session_id} />
+          ) : null}
 
         {props.boschTubeURL ? (
-          <div className="video">
+          <div className="resources">
             <a
               rel="noopener noreferrer"
               target="_blank"
               // href="https://tube.video.bosch.com/media/Sample+Recording/0_37qhkxzx"
-              href = {props.boschTubeURL}
-            > </a>
+              href={props.boschTubeURL}
+            ><i data-tip data-for="video" className="boschicon-bosch-ic-start-play-frame"></i></a>
+            <ReactTooltip id="video" place="top" effect="solid">
+              View Session Video
+            </ReactTooltip>
           </div>
         ) : null}
 
         {new Date(props.date).toISOString().substring(0, 10) +
           "T18:29:59.000Z" >=
-        new Date().toISOString() ? (
-          <label style={{ marginLeft: "15px", color: "darkgray" }}>
-            Upcoming
-          </label>
-        ) : null}
+          new Date().toISOString() ? (
+            <label style={{ marginLeft: "15px", color: "darkgray" }}>
+              Upcoming
+            </label>
+          ) : null}
       </div>
 
       {showResources ? download : null}
