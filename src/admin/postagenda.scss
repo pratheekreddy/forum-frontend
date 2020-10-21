@@ -1,48 +1,87 @@
 .agenda{
-    z-index: -1;
-    .desc{
-        width: calc(78.5%);
+    width: 980px;
+    background: #fff;
+    padding: 15px;
+    margin: 0 auto 15px;
+    border: 1.5px solid #fff;
+    h2 {
+        font-weight: bold;
+        color: #005691;
+        padding: 0 0 15px 10px;
+        text-decoration: underline;
     }
-
-    label{
-        width: 150px;
-        font-size: 16px;
-        display: inline-block;
+    ul {
+        display: block;
+        li {
+            display: block;
+            margin-bottom: 10px;
+            &.title {
+                display: inline-block;
+                width: 65%;
+            }
+            &.date {
+                display: inline-block;
+                width: 35%;
+            }
+            &.presenter {
+                display: inline-block;
+                width: 40%;
+            }
+            &.topic {
+                display: inline-block;
+                width: calc(60% - 35px);
+            }
+            &.remove {
+                display: inline-block;
+                width: 35px;
+            }
+            label {
+                width: 120px;
+                display: inline-block;
+                padding: 10px 0 0 10px;
+                vertical-align: top;
+            }
+            input, textarea {
+                padding: 8px;
+                border-radius: 0;
+                font-size: 16px;
+                border: 1px solid #ccc;
+                width: calc(100% - 130px - 18px);
+            }
+            textarea {
+                height: 98px;
+                resize: none;
+            }
+        }
     }
-
-    .desclabel{
-        float: left;
-        // margin-right: 5px;
+    .presenters {
+        i {
+            padding: 5px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        h4 {
+            font-weight: bold;
+            color: #005691;
+            padding: 10px 0 20px 10px;
+            i {
+                float: right;
+                background: #005691;
+                color: #fff;
+            }
+        }
+        .remove {
+            i {
+                margin-left: 9px;
+                background: #ccc;
+                color: #005691;
+            }
+        }
     }
-
-    input{
-        width: calc(33%);
-        display: inline-block;
-        padding: 8px;
-        border-radius: 0;
-        font-size: 16px;
-        border: 1px solid #ccc;
-        
-    }
-
-    i{
-        font-size: 35px;
-        float: right;
-        cursor: pointer;
-        margin-left: 10px;
-        border: solid;
-        margin-right: 50px;
-        margin-top: 90px;
-    }
-
-    button{
-        margin-top: 1px;
-        font-size: 23px;
-        margin-left: 3px;
-    }
-    .submit{
-        float: right;
+    .submit {
         margin-top: 10px;
-        margin-right: 145px;
+        button {
+            float: right;
+        }
     }
 }

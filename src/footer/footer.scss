@@ -1,19 +1,16 @@
 footer {
     width: 100%;
-    margin-top: px;
-    border-top: 1px solid hsl(220, 2%, 75%);
-    background: #fff;
     position: fixed;
     bottom: 0;
-}
-
-p {
-    display: inline-block;
-    width: calc(100%);
-    text-align: left;
+    background: #fff;
+    color: darkgrey;
     font-size: 14px;
-    margin-right: 5px;
-    vertical-align: center;
-    margin-top: 5px;
-    // padding: 5px 0 15px 10px !important;
+    border-top: 1px solid #eee;
+    span {
+        display: inline-block;
+        padding: 5px 10px;
+        &:last-child {
+            float: right;
+        }
+    }
 }
