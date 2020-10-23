@@ -44,7 +44,7 @@ const Signup = (props) => {
         setloading(false);
         alert(result.data.msg);
         if (result.status === 201) {
-          props.history.push({ pathname: "/login" });
+          props.history.push({ pathname: '/index.html#login' });
         }
       })
       .catch((e) => {

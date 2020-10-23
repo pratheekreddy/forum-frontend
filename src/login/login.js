@@ -58,13 +58,13 @@ const Login = (props) => {
                 props.history.push({pathname:'/'});
                 }
                 else{
-                    props.history.push({pathname:'/login'});
+                    props.history.push({pathname:'/index.html#login'});
                 }
             }
             else{
                 setLoading(false)
                 alert(result.data.msg);
-                props.history.push({pathname:'/login'});
+                props.history.push({pathname:'/index.html#login'});
             }
             // console.log(header)
         }).catch((e) => {

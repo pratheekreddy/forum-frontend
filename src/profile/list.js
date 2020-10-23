@@ -11,7 +11,7 @@ const List = (props) => {
   let signout = () => {
     localStorage.clear();
     // console.log(props)
-    props.history.push({ pathname: "/login" });
+    props.history.push({ pathname: '/index.html#login' });
     setDisplay(false);
   };
 
