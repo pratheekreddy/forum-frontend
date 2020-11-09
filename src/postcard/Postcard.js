@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ReactTooltip from "react-tooltip";
+import { withRouter } from "react-router-dom";
 
 import DownloadFile from "../postcardElements/downloadFile";
 import "./postcard.scss";
@@ -55,7 +56,7 @@ const PostCard = (props, state) => {
 
   let download = (
     <ul className="downloads">
-      <h5 style={{ "margin-left": "10px" }}>Attachments</h5>
+      <h5 style={{ "marginLeft": "10px" }}>Attachments</h5>
       {resorc.map((down, i) => {
         return <DownloadFile key={i} down={down} />;
       })}
@@ -65,7 +66,7 @@ const PostCard = (props, state) => {
   let close = () => {
     setPopup(false);
   };
- console.log(props.boschTubeURL)
+//  console.log(props.boschTubeURL)
   return (
     <div className="card">
       <div className="head">
@@ -138,6 +139,12 @@ const PostCard = (props, state) => {
               Upcoming
             </label>
           ) : null}
+          <div className='question-answer'>
+            <i data-tip data-for="q&a" className='boschicon-bosch-ic-chat-question-answer' onClick={()=>{props.history.push({ pathname: "/Q&A/"+props.session_id })}}></i>
+            <ReactTooltip id="q&a" place="top" effect="solid">
+              Discussion
+            </ReactTooltip>
+          </div>
       </div>
 
       {showResources ? download : null}
@@ -145,9 +152,10 @@ const PostCard = (props, state) => {
       {popup && localStorage.getItem("type") === "A" ? (
         <PostcardUpdate close={close} session={props} />
       ) : null}
+
       <div className="clear"></div>
     </div>
   );
 };
 
-export default PostCard;
+export default withRouter(PostCard);

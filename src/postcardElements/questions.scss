@@ -1,0 +1,124 @@
+.questions {
+    text-align: center;
+    background-color: #f6f6f6;
+    width: 100%;
+    .postanswer{
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 9;
+        background: rgba(255,255,255, 0.5);
+        .post{
+            text-align: center;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40%;
+            height: 70%;
+            background: white;
+            border: ridge;
+            p{
+                margin-top: 15px;
+                font-weight: bold;
+            }
+            i{
+                float: right;
+                padding: 5px;
+                cursor: pointer;
+            }
+            textarea{
+                margin-top: 30px;
+                height: calc(60%);
+                width: calc(80%);
+                left :5px;
+                resize: none;
+                padding: 8px;
+                border-radius: 5px;
+                font-size: 16px;
+                border: 1px solid #ccc;
+                margin-left: 0%;
+            }
+            button{
+                margin-top: 10px;
+                margin-right: 50px;
+                border-color: #005691;
+                background-color: #005691;
+                color: #fff;
+            }
+        }
+    }
+    .title{
+        margin-bottom: 10px;
+        label{
+            font-size: 24px;
+            color: #005691;
+            font-weight: bold;
+            margin-left: 15%;
+        }
+        button{
+            cursor: pointer;
+            float: right;
+            margin-right: 15px;
+            font-size: 16px;
+        }
+        i{
+            font-size: 18px;
+            color: white;
+        }
+    }
+    .post{
+        button{
+            float: right;
+            margin-right: 15%;
+            margin-top: 10px;
+            border-color: #005691;
+            background-color: #005691;
+            color: #fff;
+        }
+        textarea {
+            height: 24px;
+            resize: none;
+            padding: 8px;
+            border-radius: 0;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            width: calc(60% );
+            margin-left: 10%;
+        }
+    }
+    .qpostcard{
+        left:10%;
+        margin-top: 55px;
+        text-align: left;
+            button{
+                margin-left: 30px;
+                margin-top: 10px;
+                border-color: #005691;
+                background-color: #005691;
+                color: #fff;
+            }
+            textarea {
+                height: 36px;
+                resize: none;
+                padding: 8px;
+                border-radius: 0;
+                font-size: 16px;
+                border: 1px solid #ccc;
+                width: calc(60% );
+                margin-left: 10%;
+            }
+        p{
+            margin-left: 15px
+        }
+        .answer{
+            margin-top: 10px;
+            margin-left: 25px;
+            i{
+                font-size: 28px;
+            }
+        }
+    }
+  }

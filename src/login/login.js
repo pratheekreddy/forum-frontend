@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import axios from 'axios';
 
-import './login.scss'
 import Loading from '../loading/loading'
 
 const Login = (props) => {
@@ -29,6 +28,7 @@ const Login = (props) => {
         }).catch((e) => {
             alert(e.response.data.msg)
             console.log(e.response.data.msg)
+            setLoading(false)
         })
     }
 
@@ -70,6 +70,7 @@ const Login = (props) => {
         }).catch((e) => {
             console.log(e);
             alert(e.response.data.msg);
+            setLoading(false)
         })
     }
     let emailContainer = (

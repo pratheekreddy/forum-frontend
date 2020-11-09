@@ -17,7 +17,7 @@ const List = (props) => {
 
 const L=(props)=>{
     return(
-        <li   onClick={()=>{props.search(props.id)}} >{props.sub_topic} </li>
+        <li title={props.sub_topic}  onClick={()=>{props.search(props.id)}} >{props.sub_topic} </li>
     )
 }
 export default List;

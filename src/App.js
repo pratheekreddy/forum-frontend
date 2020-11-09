@@ -13,6 +13,7 @@ import Aprove from "./admin/userAprove";
 import Feedback from "./profile/feedback";
 import About from "./profile/about";
 import CacheBuster from "./CacheBuster";
+import Questions from "./postcardElements/question";
 
 class App extends Component {
   render() {
@@ -39,6 +40,7 @@ class App extends Component {
                   <Route exact path="/approve" component={Aprove} />
                   <Route exact path="/feedback" component={Feedback} />
                   <Route exact path="/about" component={About} />
+                  <Route path="/Q&A" component={Questions}/>
                 </Switch>
                 <div className="footer">
                   <Footers />

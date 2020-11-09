@@ -3,8 +3,6 @@ import React from "react";
 import "./loading.css";
 const Loading = () => {
   return (
-    // <img className='img' src={loading} alt='loading...'></img>
-    // <div className="loader" tabIndex='-2'></div>
     <div className="loader">
       <div className="spinner">
         <div className="bounce1"></div>
